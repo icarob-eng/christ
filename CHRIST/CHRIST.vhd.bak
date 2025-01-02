@@ -1,0 +1,64 @@
+entity CHRIST is 
+	port(); -- TODO: PERS
+end CHRIST;
+
+architecture behav of CHRIST is
+	signal OPS_ALU
+	component DataPath is
+		port(
+			ops_alu                        : in BIT_VECTOR(5 downto 0); -- ALU operation
+			FLAGS_ALU                      : out BIT_VECTOR(3 downto 0);
+			RF_READ_A, RF_READ_B, RF_WRITE : in BIT_VECTOR(3 downto 0);  -- Register File Addressing
+			MUX_CTRL                       : in BIT_VECTOR(2 downto 0);  -- RF input Mux
+			RW_CACHE, RW_MEM, RW_PERS      : in bit;
+			CACHE_ADDR                     : in BIT_VECTOR(7 downto 0);
+			MEM_ADDR                       : in BIT_VECTOR(16 downto 0);
+			PERS_ADDR                      : in BIT_VECTOR(3 downto 0);
+			MAIN_BUS                       : out BIT_VECTOR(16 downto 0);
+		);  -- TODO: pers output
+	end component;
+	
+	component ControlUnit is
+		port(
+			OPS_ALU                        : out BIT_VECTOR(5 downto 0); -- ALU operation
+			FLAGS_ALU                      : in BIT_VECTOR(3 downto 0);
+			RF_READ_A, RF_READ_B, RF_WRITE : out BIT_VECTOR(3 downto 0);  -- Register File Addressing
+			MUX_CTRL                       : out BIT_VECTOR(2 downto 0);  -- RF input Mux
+			RW_CACHE, RW_MEM, RW_PERS      : out bit;
+			CACHE_ADDR                     : out BIT_VECTOR(7 downto 0);
+			MEM_ADDR                       : out BIT_VECTOR(16 downto 0);
+			PERS_ADDR                      : out BIT_VECTOR(3 downto 0);
+			IR_OUT, PC_OUT                 : in BIT_VECTOR(16 downto 0);  -- output from IR and PC regs
+			PC_OVERWRITE                   : out BIT_VECTOR(16 downto 0);
+			EXEC_EN, FETCH_EN, NO_UP       : out bit;
+		);
+	end component;
+	
+	component Reg_16b is
+		port(
+			input    : in BIT_VECTOR(16 downto 0);
+			output   : out BIT_VECTOR(16 downto 0);
+			write_en : in bit;
+		);
+	end component;
+	
+	component Mux2x1_16b -- 2 inputs and 16 bits
+		port(
+			a, b : in BIT_VECTOR(16 downto 0);
+			s    : in bit;
+			o    : out BIT_VECTOR(16 downto 0);
+		);
+	end component;
+	
+	component Adder_16b is
+		port(
+			a, b : in BIT_VECTOR(16 downto 0);
+			cin  : in bit;
+			s    : out BIT_VECTOR(16 downto 0);
+			cout : out bit;  -- TODO: consider PC overflow
+		);
+	end component;
+	
+begin -- maping
+	-- TODO
+end architecture behav;
