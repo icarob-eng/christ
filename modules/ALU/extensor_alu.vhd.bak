@@ -1,0 +1,14 @@
+entity extensor_alu is
+port(
+	reg_a, reg_b: in bit_vector(15 downto 0);
+	ops_alu: in bit_vector(3 downto 0);
+	out_ext_a, out_ext_b: out bit_vector(15 downto 0)
+);
+end;
+
+architecture behav of extensor_alu is
+	signal oa, ob: bit_vector(15 downto 0);
+begin
+	
+	u15: port map(ops_alu => ops_alu, ia => reg_a(15), ib => reg_b(15), oa => out_ext_a(15), ob => out_ext_b(15));
+end;

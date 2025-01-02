@@ -1,0 +1,19 @@
+entity abext is
+	port(
+		ops_alu: in bit_vector(3 downto 0);
+		cin: out bit	
+	);
+end;
+
+architecture behav of abext is
+	signal op: bit_vector(3 downto 0);
+begin
+	op <= ops_alu
+	
+	cin <= not op(3) and not op(2) and op(1) and not op(0) or
+			not op(3) and not op(2) and op(1) and not op(0) or
+			not op(3) and not op(2) and op(1) and not op(0) or 
+			not op(3) and not op(2) and op(1) and not op(0) or
+			not op(3) and not op(2) and op(1) and op(0) or
+			not op(3) and not op(2) and op(1) and op(0);
+end;
