@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CHRIST
-Fri Jan  3 16:23:47 2025
+Fri Jan  3 16:46:20 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "Adder_16b:Incrementer"
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "Adder_16b:PC_add"
+ 10. Port Connectivity Checks: "ControlUnit:ControlUnit1"
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan  3 16:23:47 2025          ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan  3 16:46:20 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; CHRIST                                         ;
 ; Top-level Entity Name              ; CHRIST                                         ;
@@ -171,7 +172,6 @@ https://fpgasoftware.intel.com/eula.
 ; ControlUnit.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd ;         ;
 ; Reg_16b.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd     ;         ;
 ; adder_16b.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd   ;         ;
-; Mux2x1_16b.vhd                   ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_16b.vhd  ;         ;
 ; cache.vhd                        ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/cache.vhd       ;         ;
 ; mem.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/mem.vhd         ;         ;
 ; pers.vhd                         ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/pers.vhd        ;         ;
@@ -237,14 +237,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Adder_16b:Incrementer"                                                              ;
+; Port Connectivity Checks: "Adder_16b:PC_add"                                                                   ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+; a    ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; cin  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cin  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ControlUnit:ControlUnit1"                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; pc_a   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pc_b   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; next_s ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; next_e ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; s      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; e      ; Input  ; Info     ; Stuck at GND                                                                        ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -274,7 +289,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Jan  3 16:23:31 2025
+    Info: Processing started: Fri Jan  3 16:46:05 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CHRIST -c CHRIST
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -282,10 +297,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file CHRIST.
     Info (12022): Found design unit 1: CHRIST-behav File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 5
     Info (12023): Found entity 1: CHRIST File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 1
 Info (12127): Elaborating entity "CHRIST" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(11): used implicit default value for signal "PC_A" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 11
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(11): used implicit default value for signal "PC_B" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 11
+Warning (10036): Verilog HDL or VHDL warning at CHRIST.vhd(12): object "NEXT_S" assigned a value but never read File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 12
+Warning (10036): Verilog HDL or VHDL warning at CHRIST.vhd(12): object "NEXT_E" assigned a value but never read File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(12): used implicit default value for signal "S" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(12): used implicit default value for signal "E" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 12
 Warning (12125): Using design file ControlUnit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ControlUnit-behav File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 19
+    Info (12022): Found design unit 1: ControlUnit-behav File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 18
     Info (12023): Found entity 1: ControlUnit File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 1
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ControlUnit1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 108
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ControlUnit1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 105
 Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(3): used implicit default value for signal "alu_ops" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 3
 Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(5): used implicit default value for signal "rf_read_a" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 5
 Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(5): used implicit default value for signal "rf_read_b" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 5
@@ -299,52 +320,46 @@ Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(7): used imp
 Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(8): used implicit default value for signal "cache_addr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 8
 Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(9): used implicit default value for signal "mem_addr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 9
 Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(10): used implicit default value for signal "pers_addr" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 10
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(12): used implicit default value for signal "pc_overwrite" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 12
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(13): used implicit default value for signal "exec_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(13): used implicit default value for signal "fetch_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 13
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(14): used implicit default value for signal "no_up" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 14
-Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(14): used implicit default value for signal "mux_bus_ctrl" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 14
+Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(12): used implicit default value for signal "exec_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(12): used implicit default value for signal "fetch_en" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(12): used implicit default value for signal "next_s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at ControlUnit.vhd(12): used implicit default value for signal "next_e" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 12
 Warning (12125): Using design file Reg_16b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Reg_16b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd Line: 10
     Info (12023): Found entity 1: Reg_16b File: /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd Line: 1
-Info (12128): Elaborating entity "Reg_16b" for hierarchy "Reg_16b:IR" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 120
+Info (12128): Elaborating entity "Reg_16b" for hierarchy "Reg_16b:IR" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 119
 Warning (10541): VHDL Signal Declaration warning at Reg_16b.vhd(4): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd Line: 4
 Warning (12125): Using design file adder_16b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Adder_16b-behav File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 10
     Info (12023): Found entity 1: Adder_16b File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 1
-Info (12128): Elaborating entity "Adder_16b" for hierarchy "Adder_16b:Incrementer" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 121
+Info (12128): Elaborating entity "Adder_16b" for hierarchy "Adder_16b:PC_add" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 120
 Warning (10541): VHDL Signal Declaration warning at adder_16b.vhd(5): used implicit default value for signal "s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 5
 Warning (10541): VHDL Signal Declaration warning at adder_16b.vhd(6): used implicit default value for signal "cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 6
-Warning (12125): Using design file Mux2x1_16b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Mux2x1_16b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_16b.vhd Line: 9
-    Info (12023): Found entity 1: Mux2x1_16b File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_16b.vhd Line: 1
-Info (12128): Elaborating entity "Mux2x1_16b" for hierarchy "Mux2x1_16b:PCMux" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 122
-Warning (10541): VHDL Signal Declaration warning at Mux2x1_16b.vhd(5): used implicit default value for signal "o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_16b.vhd Line: 5
 Warning (12125): Using design file cache.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Cache-behav File: /home/icarob-eng/Projects/christ/CHRIST/cache.vhd Line: 11
     Info (12023): Found entity 1: Cache File: /home/icarob-eng/Projects/christ/CHRIST/cache.vhd Line: 1
-Info (12128): Elaborating entity "Cache" for hierarchy "Cache:Cache1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 126
+Info (12128): Elaborating entity "Cache" for hierarchy "Cache:Cache1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 124
 Warning (10541): VHDL Signal Declaration warning at cache.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/cache.vhd Line: 6
 Warning (12125): Using design file mem.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: Mem-behav File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 11
     Info (12023): Found entity 1: Mem File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 1
-Info (12128): Elaborating entity "Mem" for hierarchy "Mem:Mem1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 127
+Info (12128): Elaborating entity "Mem" for hierarchy "Mem:Mem1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 125
 Warning (10541): VHDL Signal Declaration warning at mem.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 6
 Warning (12125): Using design file pers.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: PERS-behav File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 11
     Info (12023): Found entity 1: PERS File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 1
-Info (12128): Elaborating entity "PERS" for hierarchy "PERS:PERS1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 128
+Info (12128): Elaborating entity "PERS" for hierarchy "PERS:PERS1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 126
 Warning (10541): VHDL Signal Declaration warning at pers.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 6
 Warning (12125): Using design file RF.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: RF-behav File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 10
     Info (12023): Found entity 1: RF File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 1
-Info (12128): Elaborating entity "RF" for hierarchy "RF:RF1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 132
+Info (12128): Elaborating entity "RF" for hierarchy "RF:RF1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 128
 Warning (10541): VHDL Signal Declaration warning at RF.vhd(5): used implicit default value for signal "a_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 5
 Warning (10541): VHDL Signal Declaration warning at RF.vhd(5): used implicit default value for signal "b_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 5
 Warning (12125): Using design file ALU.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: ALU-behav File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 10
     Info (12023): Found entity 1: ALU File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 1
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 134
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 130
 Warning (10541): VHDL Signal Declaration warning at ALU.vhd(5): used implicit default value for signal "flags" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 5
 Warning (10541): VHDL Signal Declaration warning at ALU.vhd(6): used implicit default value for signal "r" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 6
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -354,10 +369,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
-    Info: Peak virtual memory: 400 megabytes
-    Info: Processing ended: Fri Jan  3 16:23:47 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:55
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 409 megabytes
+    Info: Processing ended: Fri Jan  3 16:46:20 2025
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:53
 
 
