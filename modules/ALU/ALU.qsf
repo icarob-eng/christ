@@ -59,5 +59,15 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
 set_global_assignment -name VHDL_FILE full_adder.vhd
 set_global_assignment -name VHDL_FILE adder.vhd
+set_global_assignment -name VHDL_FILE flags_calculator.vhd
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Dev/christ/modules/ALU/sec_test.vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE null.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE add.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sub.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE inc.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE dec.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE and.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE or.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE xor.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE not.vwf
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Dev/christ/modules/ALU/not.vwf"

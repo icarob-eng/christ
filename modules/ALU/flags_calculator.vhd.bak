@@ -1,0 +1,14 @@
+entity flags_calculator is
+	port(
+		a, b, s, couts: in bit_vector(16 downto 1);
+		flag: out bit_vector(3 downto 1);
+	);
+end;
+
+architecture behav of flags_calculator is
+	
+	signal zero, mtz, underflow, overflow: bit;
+	
+begin
+	zero <= not s(16) and not s(15) and not s(14) and not s(13) and not s(12) and not s(11) and not s(10) and not s(9) and not s(8) and not s(7) and not s(6) and not s(5) and not s(4) and not s(3) and not s(2) and not s(1);
+end;

@@ -1,5 +1,5 @@
 Flow report for ALU
-Thu Jan 02 19:31:13 2025
+Fri Jan 03 11:24:10 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,18 +40,18 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Jan 02 19:31:13 2025           ;
+; Flow Status                        ; Successful - Fri Jan 03 11:24:10 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 103 / 33,216 ( < 1 % )                          ;
-;     Total combinational functions  ; 103 / 33,216 ( < 1 % )                          ;
+; Total logic elements               ; 115 / 33,216 ( < 1 % )                          ;
+;     Total combinational functions  ; 115 / 33,216 ( < 1 % )                          ;
 ;     Dedicated logic registers      ; 0 / 33,216 ( 0 % )                              ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 55 / 475 ( 12 % )                               ;
+; Total pins                         ; 56 / 475 ( 12 % )                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                             ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/02/2025 19:28:27 ;
+; Start date & time ; 01/03/2025 11:03:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ALU                 ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 193989706604044.173585690701364 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 193989706604044.173591298104176 ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
@@ -93,26 +93,42 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4627 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:06     ; 1.0                     ; 4879 MB             ; 00:00:05                           ;
-; Assembler                 ; 00:00:02     ; 1.0                     ; 4566 MB             ; 00:00:02                           ;
-; TimeQuest Timing Analyzer ; 00:00:01     ; 1.0                     ; 4551 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4507 MB             ; 00:00:00                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4635 MB             ; 00:00:01                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 4879 MB             ; 00:00:05                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4560 MB             ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:00     ; 1.0                     ; 4540 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4507 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4516 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
-; Total                     ; 00:00:17     ; --                      ; --                  ; 00:00:14                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 4515 MB             ; 00:00:00                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4515 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:25     ; --                      ; --                  ; 00:00:20                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -140,6 +156,22 @@ applicable agreement for further details.
 ; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-O82UG9A  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -151,19 +183,35 @@ quartus_fit --read_settings_files=off --write_settings_files=off ALU -c ALU
 quartus_asm --read_settings_files=off --write_settings_files=off ALU -c ALU
 quartus_sta ALU -c ALU
 quartus_eda --read_settings_files=off --write_settings_files=off ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/teste1.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/teste1.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/teste1.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/teste1.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/null.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/add.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sec_test.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/add.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sub.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/sub.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/inc.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/dec.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/and.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/or.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/xor.vwf --testbench_file=./simulation/qsim/ALU.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog ALU -c ALU --vector_source=D:/Dev/christ/modules/ALU/not.vwf --testbench_file=./simulation/qsim/ALU.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog ALU -c ALU
 
 

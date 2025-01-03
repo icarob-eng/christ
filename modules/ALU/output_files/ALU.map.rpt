@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Thu Jan 02 19:28:29 2025
+Fri Jan 03 11:03:02 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,9 +14,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "adder:u1|full_adder:u15"
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  9. Elapsed Time Per Partition
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +41,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jan 02 19:28:29 2025           ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 03 11:03:02 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 103                                             ;
-;     Total combinational functions  ; 103                                             ;
+; Total logic elements               ; 115                                             ;
+;     Total combinational functions  ; 115                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
-; Total pins                         ; 55                                              ;
+; Total pins                         ; 56                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -155,76 +154,79 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                      ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path               ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
-; abext.vhd                        ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/abext.vhd        ;         ;
-; cinext.vhd                       ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/cinext.vhd       ;         ;
-; ALU.vhd                          ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/ALU.vhd          ;         ;
-; extensor_alu.vhd                 ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/extensor_alu.vhd ;         ;
-; full_adder.vhd                   ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/full_adder.vhd   ;         ;
-; adder.vhd                        ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/adder.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                   ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
+; abext.vhd                        ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/abext.vhd            ;         ;
+; cinext.vhd                       ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/cinext.vhd           ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/ALU.vhd              ;         ;
+; extensor_alu.vhd                 ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/extensor_alu.vhd     ;         ;
+; full_adder.vhd                   ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/full_adder.vhd       ;         ;
+; adder.vhd                        ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/adder.vhd            ;         ;
+; flags_calculator.vhd             ; yes             ; User VHDL File  ; D:/Dev/christ/modules/ALU/flags_calculator.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 103        ;
-;                                             ;            ;
-; Total combinational functions               ; 103        ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 65         ;
-;     -- 3 input functions                    ; 18         ;
-;     -- <=2 input functions                  ; 20         ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 87         ;
-;     -- arithmetic mode                      ; 16         ;
-;                                             ;            ;
-; Total registers                             ; 0          ;
-;     -- Dedicated logic registers            ; 0          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 55         ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-; Maximum fan-out node                        ; ops_alu[3] ;
-; Maximum fan-out                             ; 22         ;
-; Total fan-out                               ; 370        ;
-; Average fan-out                             ; 2.34       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 115   ;
+;                                             ;       ;
+; Total combinational functions               ; 115   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 73    ;
+;     -- 3 input functions                    ; 23    ;
+;     -- <=2 input functions                  ; 19    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 99    ;
+;     -- arithmetic mode                      ; 16    ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 56    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; op[3] ;
+; Maximum fan-out                             ; 25    ;
+; Total fan-out                               ; 416   ;
+; Average fan-out                             ; 2.43  ;
++---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |ALU                       ; 103 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 55   ; 0            ; |ALU                           ; work         ;
-;    |adder:u1|              ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|adder:u1                  ; work         ;
-;       |full_adder:u0|      ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|adder:u1|full_adder:u0    ; work         ;
-;    |extensor_alu:u0|       ; 86 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0           ; work         ;
-;       |abext:u0|           ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u0  ; work         ;
-;       |abext:u10|          ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u10 ; work         ;
-;       |abext:u11|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u11 ; work         ;
-;       |abext:u12|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u12 ; work         ;
-;       |abext:u13|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u13 ; work         ;
-;       |abext:u14|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u14 ; work         ;
-;       |abext:u15|          ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u15 ; work         ;
-;       |abext:u1|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u1  ; work         ;
-;       |abext:u2|           ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u2  ; work         ;
-;       |abext:u3|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u3  ; work         ;
-;       |abext:u4|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u4  ; work         ;
-;       |abext:u5|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u5  ; work         ;
-;       |abext:u6|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u6  ; work         ;
-;       |abext:u7|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u7  ; work         ;
-;       |abext:u8|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u8  ; work         ;
-;       |abext:u9|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u9  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                   ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
+; |ALU                            ; 115 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |ALU                                  ; work         ;
+;    |adder:u1|                   ; 27 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|adder:u1                         ; work         ;
+;       |flags_calculator:u_flag| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|adder:u1|flags_calculator:u_flag ; work         ;
+;       |full_adder:u0|           ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|adder:u1|full_adder:u0           ; work         ;
+;       |full_adder:u15|          ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|adder:u1|full_adder:u15          ; work         ;
+;    |extensor_alu:u0|            ; 88 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0                  ; work         ;
+;       |abext:u0|                ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u0         ; work         ;
+;       |abext:u10|               ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u10        ; work         ;
+;       |abext:u11|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u11        ; work         ;
+;       |abext:u12|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u12        ; work         ;
+;       |abext:u13|               ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u13        ; work         ;
+;       |abext:u14|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u14        ; work         ;
+;       |abext:u15|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u15        ; work         ;
+;       |abext:u1|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u1         ; work         ;
+;       |abext:u2|                ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u2         ; work         ;
+;       |abext:u3|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u3         ; work         ;
+;       |abext:u4|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u4         ; work         ;
+;       |abext:u5|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u5         ; work         ;
+;       |abext:u6|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u6         ; work         ;
+;       |abext:u7|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u7         ; work         ;
+;       |abext:u8|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u8         ; work         ;
+;       |abext:u9|                ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|extensor_alu:u0|abext:u9         ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -243,15 +245,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "adder:u1|full_adder:u15"                                                            ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -267,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jan 02 19:28:27 2025
+    Info: Processing started: Fri Jan 03 11:03:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file abext.vhd
@@ -288,26 +281,27 @@ Info (12021): Found 2 design units, including 1 entities, in source file full_ad
 Info (12021): Found 2 design units, including 1 entities, in source file adder.vhd
     Info (12022): Found design unit 1: adder-behav
     Info (12023): Found entity 1: adder
+Info (12021): Found 2 design units, including 1 entities, in source file flags_calculator.vhd
+    Info (12022): Found design unit 1: flags_calculator-behav
+    Info (12023): Found entity 1: flags_calculator
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(5): used implicit default value for signal "flag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "extensor_alu" for hierarchy "extensor_alu:u0"
 Info (12128): Elaborating entity "abext" for hierarchy "extensor_alu:u0|abext:u15"
 Info (12128): Elaborating entity "cinext" for hierarchy "extensor_alu:u0|cinext:u_cin"
 Info (12128): Elaborating entity "adder" for hierarchy "adder:u1"
 Info (12128): Elaborating entity "full_adder" for hierarchy "adder:u1|full_adder:u15"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "flag[0]" is stuck at GND
-    Warning (13410): Pin "flag[1]" is stuck at GND
-    Warning (13410): Pin "flag[2]" is stuck at GND
+Info (12128): Elaborating entity "flags_calculator" for hierarchy "adder:u1|flags_calculator:u_flag"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 158 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 36 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "op[4]"
+Info (21057): Implemented 171 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 37 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 103 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 4627 megabytes
-    Info: Processing ended: Thu Jan 02 19:28:29 2025
+    Info (21061): Implemented 115 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Fri Jan 03 11:03:02 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
