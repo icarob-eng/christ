@@ -1,8 +1,8 @@
 entity Adder_16b is
     port(
-        a, b : in BIT_VECTOR(16 downto 1);
+        a, b : in BIT_VECTOR(15 downto 0);
         cin  : in bit;
-        s    : out BIT_VECTOR(16 downto 1);
+        s    : out BIT_VECTOR(15 downto 0);
         cout : out bit
     );
 end Adder_16b;

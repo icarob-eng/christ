@@ -3,75 +3,75 @@ entity CHRIST is
 end CHRIST;
 
 architecture behav of CHRIST is
-	constant ZERO: BIT_VECTOR(16 downto 1) := "0000000000000000";
-	signal ALU_OPS                                              : BIT_VECTOR(5 downto 1); -- ALU operation
-	signal ALU_FLAGS, RF_READ_A, RF_READ_B, RF_WRITE, PERS_ADDR : BIT_VECTOR(3 downto 1); -- flags output, RF addressing
-	signal CACHE_ADDR                                           : BIT_VECTOR(7 downto 1);
-	signal MEM_ADDR, IN_BUS, OUT_BUS, MUXED_BUS, ALU_A, ALU_B   : BIT_VECTOR(16 downto 1); -- IN_BUS: mem->RF, OUT_BUS: RF->mem
+	constant ZERO: BIT_VECTOR(15 downto 0) := "0000000000000000";
+	signal ALU_OPS                                              : BIT_VECTOR(4 downto 0); -- ALU operation
+	signal ALU_FLAGS, RF_READ_A, RF_READ_B, RF_WRITE, PERS_ADDR : BIT_VECTOR(2 downto 0); -- flags output, RF addressing
+	signal CACHE_ADDR                                           : BIT_VECTOR(6 downto 0);
+	signal MEM_ADDR, IN_BUS, OUT_BUS, MUXED_BUS, ALU_A, ALU_B   : BIT_VECTOR(15 downto 0); -- IN_BUS: mem->RF, OUT_BUS: RF->mem
 	signal CACHE_R, CACHE_W, MEM_R, MEM_W, PERS_R, PERS_W       : bit; -- Read/Write Enable in memories
-	signal IR_OUT, PC_OUT, PC_OVERWRITE, PC_INCREMENT, PC_MUX   : BIT_VECTOR(16 downto 1);
+	signal IR_OUT, PC_OUT, PC_OVERWRITE, PC_INCREMENT, PC_MUX   : BIT_VECTOR(15 downto 0);
 	signal EXEC_EN, FETCH_EN, NO_UP, MUX_BUS_CTRL               : bit; -- EXEC, FETCH in FSM and NO_UP flag
 
 	component Cache is
 		port(
-			addr       : in BIT_VECTOR(7 downto 1);  -- 2^7 addresses
+			addr       : in BIT_VECTOR(6 downto 0);  -- 2^7 addresses
 			r_en, w_en : in bit; -- Read/Write Enable (0 is read)
-			input      : in BIT_VECTOR(16 downto 1);
-			output     : out BIT_VECTOR(16 downto 1);
+			input      : in BIT_VECTOR(15 downto 0);
+			output     : out BIT_VECTOR(15 downto 0);
 			clk        : in bit
 		);
 	end component;
 
 	component Mem is
 		port(
-			addr       : in BIT_VECTOR(16 downto 1);  -- 2^16 addresses
+			addr       : in BIT_VECTOR(15 downto 0);  -- 2^16 addresses
 			r_en, w_en : in bit; -- Read/Write Enable (0 is read)
-			input      : in BIT_VECTOR(16 downto 1);
-			output     : out BIT_VECTOR(16 downto 1);
+			input      : in BIT_VECTOR(15 downto 0);
+			output     : out BIT_VECTOR(15 downto 0);
 			clk        : in bit
 		);
 	end component;
 
 	component PERS is  -- periferals module. TODO: add external connections
 		port(
-			addr       : in BIT_VECTOR(3 downto 1);  -- 2^3 periferals
+			addr       : in BIT_VECTOR(2 downto 0);  -- 2^3 periferals
 			r_en, w_en : in bit; -- Read/Write Enable (0 is read)
-			input      : in BIT_VECTOR(16 downto 1);
-			output     : out BIT_VECTOR(16 downto 1);
+			input      : in BIT_VECTOR(15 downto 0);
+			output     : out BIT_VECTOR(15 downto 0);
 			clk        : in bit
 		);
 	end component;
 
 	component RF is
 		port(
-			w_addr, r_a_addr, r_b_addr : in BIT_VECTOR(3 downto 1);
-			input                                : in BIT_VECTOR(16 downto 1);
-			a_out, b_out                         : out BIT_VECTOR(16 downto 1);
-			clk                                  : in bit
+			w_addr, r_a_addr, r_b_addr : BIT_VECTOR(2 downto 0);
+			input                      : in BIT_VECTOR(15 downto 0);
+			a_out, b_out               : out BIT_VECTOR(15 downto 0);
+			clk                        : in bit
 		);
 	end component;
 
 	component ALU is
 		port(
-			a, b  : in BIT_VECTOR(16 downto 1);
-			op    : in BIT_VECTOR(5 downto 1);
-			flags : out BIT_VECTOR(3 downto 1);
-			r     : out BIT_VECTOR(16 downto 1)
+			a, b  : in BIT_VECTOR(15 downto 0);
+			op    : in BIT_VECTOR(4 downto 0);
+			flags : out BIT_VECTOR(2 downto 0);
+			r     : out BIT_VECTOR(15 downto 0)
 		);
 	end component;
 
 	component ControlUnit is
 		port(
-			alu_ops                        : out BIT_VECTOR(5 downto 1);
-			alu_flags                      : in BIT_VECTOR(3 downto 1);
-			rf_read_a, rf_read_b, rf_write : out BIT_VECTOR(3 downto 1);
+			alu_ops                        : out BIT_VECTOR(4 downto 0);
+			alu_flags                      : in BIT_VECTOR(2 downto 0);
+			rf_read_a, rf_read_b, rf_write : out BIT_VECTOR(2 downto 0);
 			cache_r, mem_r, pers_r         : out bit;
 			cache_w, mem_w, pers_w         : out bit;
-			cache_addr                     : out BIT_VECTOR(7 downto 1);
-			mem_addr                       : out BIT_VECTOR(16 downto 1);
-			pers_addr                      : out BIT_VECTOR(3 downto 1);
-			ir_out, pc_out                 : in BIT_VECTOR(16 downto 1);  -- output from IR and PC regs
-			pc_overwrite                   : out BIT_VECTOR(16 downto 1);
+			cache_addr                     : out BIT_VECTOR(6 downto 0);
+			mem_addr                       : out BIT_VECTOR(15 downto 0);
+			pers_addr                      : out BIT_VECTOR(2 downto 0);
+			ir_out, pc_out                 : in BIT_VECTOR(15 downto 0);  -- output from IR and PC regs
+			pc_overwrite                   : out BIT_VECTOR(15 downto 0);
 			exec_en, fetch_en              : out bit;
 			no_up, mux_bus_ctrl            : out bit
 		);
@@ -79,8 +79,8 @@ architecture behav of CHRIST is
 	
 	component Reg_16b is
 		port(
-			input    : in BIT_VECTOR(16 downto 1);
-			output   : out BIT_VECTOR(16 downto 1);
+			input    : in BIT_VECTOR(15 downto 0);
+			output   : out BIT_VECTOR(15 downto 0);
 			write_en : in bit;
 			clk      : in bit
 		);
@@ -88,17 +88,17 @@ architecture behav of CHRIST is
 	
 	component Mux2x1_16b -- 2 inputs and 16 bits
 		port(
-			a, b : in BIT_VECTOR(16 downto 1);
+			a, b : in BIT_VECTOR(15 downto 0);
 			s    : in bit;
-			o    : out BIT_VECTOR(16 downto 1)
+			o    : out BIT_VECTOR(15 downto 0)
 		);
 	end component;
 	
 	component Adder_16b is
 		port(
-			a, b : in BIT_VECTOR(16 downto 1);
+			a, b : in BIT_VECTOR(15 downto 0);
 			cin  : in bit;
-			s    : out BIT_VECTOR(16 downto 1);
+			s    : out BIT_VECTOR(15 downto 0);
 			cout : out bit  -- TODO: consider PC overflow
 		);
 	end component;

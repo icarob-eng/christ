@@ -112,6 +112,7 @@ mux_bus_ctrl <= <GND>
 
 
 |CHRIST|Reg_16b:IR
+input[0] => ~NO_FANOUT~
 input[1] => ~NO_FANOUT~
 input[2] => ~NO_FANOUT~
 input[3] => ~NO_FANOUT~
@@ -127,7 +128,7 @@ input[12] => ~NO_FANOUT~
 input[13] => ~NO_FANOUT~
 input[14] => ~NO_FANOUT~
 input[15] => ~NO_FANOUT~
-input[16] => ~NO_FANOUT~
+output[0] <= <GND>
 output[1] <= <GND>
 output[2] <= <GND>
 output[3] <= <GND>
@@ -143,12 +144,12 @@ output[12] <= <GND>
 output[13] <= <GND>
 output[14] <= <GND>
 output[15] <= <GND>
-output[16] <= <GND>
 write_en => ~NO_FANOUT~
 clk => ~NO_FANOUT~
 
 
 |CHRIST|Adder_16b:Incrementer
+a[0] => ~NO_FANOUT~
 a[1] => ~NO_FANOUT~
 a[2] => ~NO_FANOUT~
 a[3] => ~NO_FANOUT~
@@ -164,7 +165,7 @@ a[12] => ~NO_FANOUT~
 a[13] => ~NO_FANOUT~
 a[14] => ~NO_FANOUT~
 a[15] => ~NO_FANOUT~
-a[16] => ~NO_FANOUT~
+b[0] => ~NO_FANOUT~
 b[1] => ~NO_FANOUT~
 b[2] => ~NO_FANOUT~
 b[3] => ~NO_FANOUT~
@@ -180,8 +181,8 @@ b[12] => ~NO_FANOUT~
 b[13] => ~NO_FANOUT~
 b[14] => ~NO_FANOUT~
 b[15] => ~NO_FANOUT~
-b[16] => ~NO_FANOUT~
 cin => ~NO_FANOUT~
+s[0] <= <GND>
 s[1] <= <GND>
 s[2] <= <GND>
 s[3] <= <GND>
@@ -197,11 +198,11 @@ s[12] <= <GND>
 s[13] <= <GND>
 s[14] <= <GND>
 s[15] <= <GND>
-s[16] <= <GND>
 cout <= <GND>
 
 
 |CHRIST|Mux2x1_16b:PCMux
+a[0] => ~NO_FANOUT~
 a[1] => ~NO_FANOUT~
 a[2] => ~NO_FANOUT~
 a[3] => ~NO_FANOUT~
@@ -217,7 +218,7 @@ a[12] => ~NO_FANOUT~
 a[13] => ~NO_FANOUT~
 a[14] => ~NO_FANOUT~
 a[15] => ~NO_FANOUT~
-a[16] => ~NO_FANOUT~
+b[0] => ~NO_FANOUT~
 b[1] => ~NO_FANOUT~
 b[2] => ~NO_FANOUT~
 b[3] => ~NO_FANOUT~
@@ -233,8 +234,8 @@ b[12] => ~NO_FANOUT~
 b[13] => ~NO_FANOUT~
 b[14] => ~NO_FANOUT~
 b[15] => ~NO_FANOUT~
-b[16] => ~NO_FANOUT~
 s => ~NO_FANOUT~
+o[0] <= <GND>
 o[1] <= <GND>
 o[2] <= <GND>
 o[3] <= <GND>
@@ -250,10 +251,10 @@ o[12] <= <GND>
 o[13] <= <GND>
 o[14] <= <GND>
 o[15] <= <GND>
-o[16] <= <GND>
 
 
 |CHRIST|Reg_16b:PC
+input[0] => ~NO_FANOUT~
 input[1] => ~NO_FANOUT~
 input[2] => ~NO_FANOUT~
 input[3] => ~NO_FANOUT~
@@ -269,7 +270,7 @@ input[12] => ~NO_FANOUT~
 input[13] => ~NO_FANOUT~
 input[14] => ~NO_FANOUT~
 input[15] => ~NO_FANOUT~
-input[16] => ~NO_FANOUT~
+output[0] <= <GND>
 output[1] <= <GND>
 output[2] <= <GND>
 output[3] <= <GND>
@@ -285,21 +286,21 @@ output[12] <= <GND>
 output[13] <= <GND>
 output[14] <= <GND>
 output[15] <= <GND>
-output[16] <= <GND>
 write_en => ~NO_FANOUT~
 clk => ~NO_FANOUT~
 
 
 |CHRIST|Cache:Cache1
+addr[0] => ~NO_FANOUT~
 addr[1] => ~NO_FANOUT~
 addr[2] => ~NO_FANOUT~
 addr[3] => ~NO_FANOUT~
 addr[4] => ~NO_FANOUT~
 addr[5] => ~NO_FANOUT~
 addr[6] => ~NO_FANOUT~
-addr[7] => ~NO_FANOUT~
 r_en => ~NO_FANOUT~
 w_en => ~NO_FANOUT~
+input[0] => ~NO_FANOUT~
 input[1] => ~NO_FANOUT~
 input[2] => ~NO_FANOUT~
 input[3] => ~NO_FANOUT~
@@ -315,7 +316,7 @@ input[12] => ~NO_FANOUT~
 input[13] => ~NO_FANOUT~
 input[14] => ~NO_FANOUT~
 input[15] => ~NO_FANOUT~
-input[16] => ~NO_FANOUT~
+output[0] <= <GND>
 output[1] <= <GND>
 output[2] <= <GND>
 output[3] <= <GND>
@@ -331,11 +332,11 @@ output[12] <= <GND>
 output[13] <= <GND>
 output[14] <= <GND>
 output[15] <= <GND>
-output[16] <= <GND>
 clk => ~NO_FANOUT~
 
 
 |CHRIST|Mem:Mem1
+addr[0] => ~NO_FANOUT~
 addr[1] => ~NO_FANOUT~
 addr[2] => ~NO_FANOUT~
 addr[3] => ~NO_FANOUT~
@@ -351,9 +352,9 @@ addr[12] => ~NO_FANOUT~
 addr[13] => ~NO_FANOUT~
 addr[14] => ~NO_FANOUT~
 addr[15] => ~NO_FANOUT~
-addr[16] => ~NO_FANOUT~
 r_en => ~NO_FANOUT~
 w_en => ~NO_FANOUT~
+input[0] => ~NO_FANOUT~
 input[1] => ~NO_FANOUT~
 input[2] => ~NO_FANOUT~
 input[3] => ~NO_FANOUT~
@@ -369,7 +370,7 @@ input[12] => ~NO_FANOUT~
 input[13] => ~NO_FANOUT~
 input[14] => ~NO_FANOUT~
 input[15] => ~NO_FANOUT~
-input[16] => ~NO_FANOUT~
+output[0] <= <GND>
 output[1] <= <GND>
 output[2] <= <GND>
 output[3] <= <GND>
@@ -385,16 +386,16 @@ output[12] <= <GND>
 output[13] <= <GND>
 output[14] <= <GND>
 output[15] <= <GND>
-output[16] <= <GND>
 clk => ~NO_FANOUT~
 
 
 |CHRIST|PERS:PERS1
+addr[0] => ~NO_FANOUT~
 addr[1] => ~NO_FANOUT~
 addr[2] => ~NO_FANOUT~
-addr[3] => ~NO_FANOUT~
 r_en => ~NO_FANOUT~
 w_en => ~NO_FANOUT~
+input[0] => ~NO_FANOUT~
 input[1] => ~NO_FANOUT~
 input[2] => ~NO_FANOUT~
 input[3] => ~NO_FANOUT~
@@ -410,7 +411,7 @@ input[12] => ~NO_FANOUT~
 input[13] => ~NO_FANOUT~
 input[14] => ~NO_FANOUT~
 input[15] => ~NO_FANOUT~
-input[16] => ~NO_FANOUT~
+output[0] <= <GND>
 output[1] <= <GND>
 output[2] <= <GND>
 output[3] <= <GND>
@@ -426,11 +427,11 @@ output[12] <= <GND>
 output[13] <= <GND>
 output[14] <= <GND>
 output[15] <= <GND>
-output[16] <= <GND>
 clk => ~NO_FANOUT~
 
 
 |CHRIST|Mux2x1_16b:in_bus_mux
+a[0] => ~NO_FANOUT~
 a[1] => ~NO_FANOUT~
 a[2] => ~NO_FANOUT~
 a[3] => ~NO_FANOUT~
@@ -446,7 +447,7 @@ a[12] => ~NO_FANOUT~
 a[13] => ~NO_FANOUT~
 a[14] => ~NO_FANOUT~
 a[15] => ~NO_FANOUT~
-a[16] => ~NO_FANOUT~
+b[0] => ~NO_FANOUT~
 b[1] => ~NO_FANOUT~
 b[2] => ~NO_FANOUT~
 b[3] => ~NO_FANOUT~
@@ -462,8 +463,8 @@ b[12] => ~NO_FANOUT~
 b[13] => ~NO_FANOUT~
 b[14] => ~NO_FANOUT~
 b[15] => ~NO_FANOUT~
-b[16] => ~NO_FANOUT~
 s => ~NO_FANOUT~
+o[0] <= <GND>
 o[1] <= <GND>
 o[2] <= <GND>
 o[3] <= <GND>
@@ -479,19 +480,19 @@ o[12] <= <GND>
 o[13] <= <GND>
 o[14] <= <GND>
 o[15] <= <GND>
-o[16] <= <GND>
 
 
 |CHRIST|RF:RF1
+w_addr[0] => ~NO_FANOUT~
 w_addr[1] => ~NO_FANOUT~
 w_addr[2] => ~NO_FANOUT~
-w_addr[3] => ~NO_FANOUT~
+r_a_addr[0] => ~NO_FANOUT~
 r_a_addr[1] => ~NO_FANOUT~
 r_a_addr[2] => ~NO_FANOUT~
-r_a_addr[3] => ~NO_FANOUT~
+r_b_addr[0] => ~NO_FANOUT~
 r_b_addr[1] => ~NO_FANOUT~
 r_b_addr[2] => ~NO_FANOUT~
-r_b_addr[3] => ~NO_FANOUT~
+input[0] => ~NO_FANOUT~
 input[1] => ~NO_FANOUT~
 input[2] => ~NO_FANOUT~
 input[3] => ~NO_FANOUT~
@@ -507,7 +508,7 @@ input[12] => ~NO_FANOUT~
 input[13] => ~NO_FANOUT~
 input[14] => ~NO_FANOUT~
 input[15] => ~NO_FANOUT~
-input[16] => ~NO_FANOUT~
+a_out[0] <= <GND>
 a_out[1] <= <GND>
 a_out[2] <= <GND>
 a_out[3] <= <GND>
@@ -523,7 +524,7 @@ a_out[12] <= <GND>
 a_out[13] <= <GND>
 a_out[14] <= <GND>
 a_out[15] <= <GND>
-a_out[16] <= <GND>
+b_out[0] <= <GND>
 b_out[1] <= <GND>
 b_out[2] <= <GND>
 b_out[3] <= <GND>
@@ -539,11 +540,11 @@ b_out[12] <= <GND>
 b_out[13] <= <GND>
 b_out[14] <= <GND>
 b_out[15] <= <GND>
-b_out[16] <= <GND>
 clk => ~NO_FANOUT~
 
 
 |CHRIST|ALU:ALU1
+a[0] => ~NO_FANOUT~
 a[1] => ~NO_FANOUT~
 a[2] => ~NO_FANOUT~
 a[3] => ~NO_FANOUT~
@@ -559,7 +560,7 @@ a[12] => ~NO_FANOUT~
 a[13] => ~NO_FANOUT~
 a[14] => ~NO_FANOUT~
 a[15] => ~NO_FANOUT~
-a[16] => ~NO_FANOUT~
+b[0] => ~NO_FANOUT~
 b[1] => ~NO_FANOUT~
 b[2] => ~NO_FANOUT~
 b[3] => ~NO_FANOUT~
@@ -575,15 +576,15 @@ b[12] => ~NO_FANOUT~
 b[13] => ~NO_FANOUT~
 b[14] => ~NO_FANOUT~
 b[15] => ~NO_FANOUT~
-b[16] => ~NO_FANOUT~
+op[0] => ~NO_FANOUT~
 op[1] => ~NO_FANOUT~
 op[2] => ~NO_FANOUT~
 op[3] => ~NO_FANOUT~
 op[4] => ~NO_FANOUT~
-op[5] => ~NO_FANOUT~
+flags[0] <= <GND>
 flags[1] <= <GND>
 flags[2] <= <GND>
-flags[3] <= <GND>
+r[0] <= <GND>
 r[1] <= <GND>
 r[2] <= <GND>
 r[3] <= <GND>
@@ -599,6 +600,5 @@ r[12] <= <GND>
 r[13] <= <GND>
 r[14] <= <GND>
 r[15] <= <GND>
-r[16] <= <GND>
 
 
