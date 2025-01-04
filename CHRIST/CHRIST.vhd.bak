@@ -4,8 +4,7 @@ end CHRIST;
 
 architecture behav of CHRIST is
 	signal ALU_OPS                                              : BIT_VECTOR(4 downto 0); -- ALU operation
-	signal RF_READ_A, RF_READ_B, RF_WRITE, PERS_ADDR            : BIT_VECTOR(2 downto 0); -- RF and pers addressing
-	signal ALU_FLAGS, FLAGR_OUT                                 : BIT_VECTOR(2 downto 0); -- Flag input and Flag register output
+	signal ALU_FLAGS, RF_READ_A, RF_READ_B, RF_WRITE, PERS_ADDR : BIT_VECTOR(2 downto 0); -- flags output, RF addressing
 	signal CACHE_ADDR                                           : BIT_VECTOR(6 downto 0);
 	signal MEM_ADDR, MAIN_BUS, ALU_A, ALU_B                     : BIT_VECTOR(15 downto 0); -- IN_BUS: mem->RF, OUT_BUS: RF->mem
 	signal CACHE_R, CACHE_W, MEM_R, MEM_W, PERS_R, PERS_W       : bit; -- Read/Write Enable in memories
@@ -84,15 +83,6 @@ architecture behav of CHRIST is
 		);
 	end component;
 	
-	component Reg_3b is
-		port(
-			input    : in  BIT_VECTOR(2 downto 0);
-			output   : out BIT_VECTOR(2 downto 0);
-			write_en : in  bit;
-			clk      : in  bit
-		);
-	end component;
-	
 	component Reg_16b is
 		port(
 			input    : in  BIT_VECTOR(15 downto 0);
@@ -115,7 +105,7 @@ begin -- mapping
 	-- Control Path
 	ControlUnit1 : ControlUnit port map(
 			alu_ops => ALU_OPS,
-			alu_flags => FLAGR_OUT,
+			alu_flags => ALU_FLAGS,
 			rf_read_a => RF_READ_A, rf_read_b => RF_READ_B, rf_write => RF_WRITE,
 			cache_r => CACHE_R,       mem_r => MEM_R,       pers_r => PERS_R,
 			cache_w => CACHE_W,       mem_w => MEM_W,       pers_w => PERS_W,
@@ -142,6 +132,4 @@ begin -- mapping
 	RF1 : RF port map(w_addr => RF_WRITE, r_a_addr => RF_READ_A, r_b_addr => RF_READ_B, input => MAIN_BUS, a_out => ALU_A, b_out => ALU_B, clk => clk);
 
 	ALU1 : ALU port map(a => ALU_A, b => ALU_B, op => ALU_OPS, flags => ALU_FLAGS, r => MAIN_BUS);
-	FLAGR : Reg_3b port map(input => ALU_FLAGS, output => FLAGR_OUT, write_en => EXEC_EN, clk => clk); -- flag register
-	
 end architecture behav;

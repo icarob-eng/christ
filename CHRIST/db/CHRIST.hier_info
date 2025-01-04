@@ -9,6 +9,7 @@ clk => Cache:Cache1.clk
 clk => Mem:Mem1.clk
 clk => PERS:PERS1.clk
 clk => RF:RF1.clk
+clk => Reg_3b:FLAGR.clk
 
 
 |CHRIST|ControlUnit:ControlUnit1
@@ -814,5 +815,16 @@ r[12] <= <GND>
 r[13] <= <GND>
 r[14] <= <GND>
 r[15] <= <GND>
+
+
+|CHRIST|Reg_3b:FLAGR
+input[0] => ~NO_FANOUT~
+input[1] => ~NO_FANOUT~
+input[2] => ~NO_FANOUT~
+output[0] <= <GND>
+output[1] <= <GND>
+output[2] <= <GND>
+write_en => ~NO_FANOUT~
+clk => ~NO_FANOUT~
 
 
