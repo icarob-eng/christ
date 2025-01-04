@@ -69,7 +69,8 @@ architecture behav of CHRIST is
 			cache_addr                           : out BIT_VECTOR(6 downto 0);
 			mem_addr                             : out BIT_VECTOR(15 downto 0);
 			pers_addr                            : out BIT_VECTOR(2 downto 0);
-			ir_out, pc_out, pc_a, pc_b, main_bus : in  BIT_VECTOR(15 downto 0);  -- output from IR and PC regs
+			ir_out, pc_out, main_bus             : in  BIT_VECTOR(15 downto 0);  -- output from IR and PC regs
+			pc_a, pc_b                           : out BIT_VECTOR(15 downto 0);
 			exec_en, fetch_en, next_s, next_e    : out bit;  -- HLSM representations
 			s, e                                 : in  bit
 		);
@@ -115,10 +116,13 @@ begin -- mapping
 			next_s => NEXT_S, next_e => NEXT_E,
 			s => S, e => E
 		);
-
-	IR : Reg_16b port map(input => MAIN_BUS, output => IR_OUT, write_en => FETCH_EN, clk => clk);
+		
+	e_reg : Reg_1b port map(input => NEXT_E,     output => E,     write_en => clk, clk => clk);
+	s_reg : Reg_1b port map(input => NEXT_S,     output => S,     write_en => clk, clk => clk);
+	
+	IR :    Reg_16b port map(input => MAIN_BUS, output => IR_OUT, write_en => FETCH_EN, clk => clk);
 	PC_add : Adder_16b port map(a => PC_A, b => PC_B, cin => '0', s => PC_IN, cout => open);
-	PC : Reg_16b port map(input => PC_IN, output => PC_OUT, write_en => EXEC_EN, clk => clk);
+	PC :    Reg_16b port map(input => PC_IN,    output => PC_OUT, write_en => EXEC_EN,  clk => clk);
 
 	-- Data Path
 	Cache1 : Cache port map(addr => CACHE_ADDR, r_en => CACHE_R, w_en => CACHE_W, input => MAIN_BUS, output => MAIN_BUS, clk => clk);
