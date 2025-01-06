@@ -4,13 +4,11 @@ port (op: in bit_vector( 4 downto 0);
 		r: out bit_vector(15 downto 0);
 		flags: out bit_vector( 2 downto 0)
 );
-end;
-
--- todo: add comments
+end ALU;
 
 architecture behav of ALU is
 
-	component extensor_alu is
+	component Extensor_ALU is
 		port(
 			a, b: in bit_vector(15 downto 0);
 			op: in bit_vector(3 downto 0);
@@ -19,7 +17,7 @@ architecture behav of ALU is
 		);
 	end component;
 	
-	component adder is
+	component Adder_16b is
 		port(
 			a, b: in bit_vector(15 downto 0);
 			cin: in bit;
@@ -28,12 +26,12 @@ architecture behav of ALU is
 		);
 	end component;
 	
-	signal out_ext_a, out_ext_b: bit_vector(15 downto 0);
-	signal cin : bit;
+	signal OUT_EXT_A, OUT_EXT_B: bit_vector(15 downto 0); -- extensors outputs
+	signal CIN : bit;
 
 begin
 
-	u0: extensor_alu port map (a => a, b => b, op => op(3 downto 0), out_ext_a => out_ext_a, out_ext_b => out_ext_b, cin => cin);
-	u1: adder port map (a => out_ext_a, b => out_ext_b, cin => cin, r => r, flags => flags);
+	extensor: Extensor_ALU port map (a => a, b => b, op => op(3 downto 0), out_ext_a => OUT_EXT_A, out_ext_b => OUT_EXT_B, cin => CIN);
+	adder: Adder_16b port map (a => OUT_EXT_A, b => OUT_EXT_B, cin => CIN, r => r, flags => flags);
 	
 end;

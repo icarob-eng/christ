@@ -1,11 +1,11 @@
-entity full_adder is
+entity Full_Adder is
 	port(
 		a, b, cin: in bit;
 		cout, s: out bit
 	);
 end;
 
-architecture behav of full_adder is
+architecture behav of Full_Adder is
 
 begin
 	cout <= ( b and cin ) or ( a and cin ) or ( a and b  );

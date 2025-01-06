@@ -46,21 +46,14 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name VHDL_FILE abext.vhd
-set_global_assignment -name VHDL_FILE cinext.vhd
 set_global_assignment -name VHDL_FILE ALU.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE extensor_alu.vhd
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name VHDL_FILE full_adder.vhd
-set_global_assignment -name VHDL_FILE adder.vhd
-set_global_assignment -name VHDL_FILE flags_calculator.vhd
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE null.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE add.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE sub.vwf
@@ -70,4 +63,11 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE and.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE or.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE xor.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE not.vwf
+set_global_assignment -name VHDL_FILE ABExt.vhd
+set_global_assignment -name VHDL_FILE CINExt.vhd
+set_global_assignment -name VHDL_FILE Extensor_ALU.vhd
+set_global_assignment -name VHDL_FILE Full_Adder.vhd
+set_global_assignment -name VHDL_FILE Adder_16b.vhd
+set_global_assignment -name VHDL_FILE Flags_Calculator.vhd
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "D:/Dev/christ/modules/ALU/not.vwf"

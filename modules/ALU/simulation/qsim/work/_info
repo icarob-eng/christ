@@ -4,11 +4,11 @@ K3
 cModel Technology
 Z0 dD:\Dev\christ\modules\ALU\simulation\qsim
 vALU
-Z1 !s100 Gi8KI?lcK0;AITX_k>ioi1
-Z2 I;G@R32@9LWFKHIHcZ7E]C2
+Z1 !s100 ?VcXIZ5T@@3j5KG8=gFoN1
+Z2 I<f16n67>?bKlD]JU5_17Y1
 Z3 VhR8LK>_LP=EQQHg>77Yjo1
 Z4 dD:\Dev\christ\modules\ALU\simulation\qsim
-Z5 w1735914250
+Z5 w1736166085
 Z6 8ALU.vo
 Z7 FALU.vo
 L0 31
@@ -20,7 +20,7 @@ Z10 o-work work -O0
 Z11 n@a@l@u
 !i10b 1
 !s85 0
-Z12 !s108 1735914250.788000
+Z12 !s108 1736166086.211000
 Z13 !s107 ALU.vo|
 !s101 -O0
 vALU_vlg_check_tst
@@ -29,57 +29,57 @@ Z14 !s100 [7MQR4jZVKZG[EN?F_Fl21
 Z15 I0LaD`mYognAPYVB186<QJ1
 Z16 VdoMPO`19=m^fJLSS4]J811
 R4
-Z17 w1735914249
-Z18 8ALU.vt
-Z19 FALU.vt
+R5
+Z17 8ALU.vt
+Z18 FALU.vt
 L0 61
 R8
 r1
 !s85 0
 31
-Z20 !s108 1735914250.983000
-Z21 !s107 ALU.vt|
-Z22 !s90 -work|work|ALU.vt|
+Z19 !s108 1736166086.432000
+Z20 !s107 ALU.vt|
+Z21 !s90 -work|work|ALU.vt|
 !s101 -O0
 R10
-Z23 n@a@l@u_vlg_check_tst
+Z22 n@a@l@u_vlg_check_tst
 vALU_vlg_sample_tst
 !i10b 1
-Z24 !s100 ;d?I]XMGDEb`j=jj^ThMW3
-Z25 IhjmH242[dSFNRSNX<nSCf0
-Z26 V]l8iDegjz2fc8Idn3kF851
+Z23 !s100 ;d?I]XMGDEb`j=jj^ThMW3
+Z24 IhjmH242[dSFNRSNX<nSCf0
+Z25 V]l8iDegjz2fc8Idn3kF851
 R4
+R5
 R17
 R18
-R19
 L0 29
 R8
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !s101 -O0
 R10
-Z27 n@a@l@u_vlg_sample_tst
+Z26 n@a@l@u_vlg_sample_tst
 vALU_vlg_vec_tst
 !i10b 1
 !s100 Y2N<[=5_CAC[ijk1o@8S61
 IMiIMlJ^iWi@?M5;Gg3eMo1
-Z28 V>bFnnU[^IecCM5^<l3;]W0
+Z27 V>bFnnU[^IecCM5^<l3;]W0
 R4
+R5
 R17
 R18
-R19
-Z29 L0 487
+Z28 L0 487
 R8
 r1
 !s85 0
 31
+R19
 R20
 R21
-R22
 !s101 -O0
 R10
-Z30 n@a@l@u_vlg_vec_tst
+Z29 n@a@l@u_vlg_vec_tst

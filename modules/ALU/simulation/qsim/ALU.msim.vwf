@@ -692,7 +692,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|devoe")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -702,7 +702,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext2|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -712,7 +712,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext4|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -722,7 +722,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext7|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -732,7 +732,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext9|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -742,7 +742,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext10|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -752,7 +752,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext11|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -762,7 +762,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext12|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -772,7 +772,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext13|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -782,7 +782,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~5_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -792,7 +792,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~5_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -802,7 +802,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -812,7 +812,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|ob~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext7|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -822,7 +822,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|ob~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext11|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -832,7 +832,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext13|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -842,7 +842,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -852,7 +852,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -862,7 +862,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -872,7 +872,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|oa~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -882,7 +882,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~4_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -892,7 +892,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~4_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~1_cout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~1_cout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -902,7 +902,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~1_cout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -912,7 +912,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext1|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -922,7 +922,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext1|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -932,7 +932,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -942,7 +942,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext10|oa~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -952,7 +952,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u1|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~3")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext1|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -962,7 +962,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~3")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~4_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext1|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -972,7 +972,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~4_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext1|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -982,7 +982,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~3")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -992,7 +992,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~4_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1002,7 +1002,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u0|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext2|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1012,7 +1012,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext2|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1022,7 +1022,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~5")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext2|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1032,7 +1032,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~5")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~6_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext2|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1042,7 +1042,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~6_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext2|oa~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1052,7 +1052,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~5")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1062,7 +1062,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~6_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1072,7 +1072,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext3|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1082,7 +1082,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext3|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1092,7 +1092,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext3|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1102,7 +1102,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u3|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~7")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext3|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1112,7 +1112,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~7")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~8_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext3|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1122,7 +1122,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~8_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~7")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1132,7 +1132,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~8_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1142,7 +1142,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext4|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1152,7 +1152,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u2|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext4|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1162,7 +1162,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext4|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1172,7 +1172,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u4|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~9")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext4|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1182,7 +1182,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~9")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~10_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~9")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1192,7 +1192,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~10_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~10_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1202,7 +1202,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext5|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1212,7 +1212,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext5|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1222,7 +1222,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext5|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1232,7 +1232,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u5|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~11")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext5|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1242,7 +1242,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~11")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~12_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext5|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1252,7 +1252,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~12_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~11")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1262,7 +1262,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~12_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1272,7 +1272,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext6|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1282,7 +1282,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext6|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1292,7 +1292,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext6|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1302,7 +1302,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u6|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~13")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext6|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1312,7 +1312,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~13")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~14_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext6|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1322,7 +1322,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~14_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~13")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1332,7 +1332,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~14_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1342,7 +1342,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext7|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1352,7 +1352,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext7|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1362,7 +1362,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u7|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~15")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext7|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1372,7 +1372,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~15")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~16_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~15")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1382,7 +1382,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~16_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~16_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1392,7 +1392,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext8|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1402,7 +1402,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext8|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1412,7 +1412,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext8|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1422,7 +1422,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u8|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~17")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext8|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1432,7 +1432,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~17")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~18_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext8|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1442,7 +1442,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~18_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~17")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1452,7 +1452,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~18_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1462,7 +1462,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext9|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1472,7 +1472,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext9|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1482,7 +1482,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u9|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~19")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext9|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1492,7 +1492,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~19")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~20_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext9|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1502,7 +1502,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~20_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~19")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1512,7 +1512,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~20_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1522,7 +1522,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext10|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1532,7 +1532,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|oa~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext10|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1542,7 +1542,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext10|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1552,7 +1552,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u10|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~21")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext10|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1562,7 +1562,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~21")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~22_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~21")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1572,7 +1572,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~22_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~22_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1582,7 +1582,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext11|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1592,7 +1592,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext11|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1602,7 +1602,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext11|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1612,7 +1612,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~23")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1622,7 +1622,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u11|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~23")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~24_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1632,7 +1632,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~23")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~24_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext12|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1642,7 +1642,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~24_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext12|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1652,7 +1652,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|oa~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext12|oa~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1662,7 +1662,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|oa~1_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext12|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1672,7 +1672,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~25")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1682,7 +1682,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~26_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1692,7 +1692,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u12|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~25")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext13|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1702,7 +1702,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~25")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~26_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext13|oa~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1712,7 +1712,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~26_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|oa~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext13|oa~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1722,7 +1722,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|oa~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~27")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1732,7 +1732,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~28_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1742,7 +1742,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u13|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~27")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|oa~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1752,7 +1752,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~27")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~28_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|oa~4_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1762,7 +1762,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~28_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1772,7 +1772,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|ob~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext14|ob~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1782,7 +1782,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|ob~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~29")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1792,7 +1792,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~30_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1802,7 +1802,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~4_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext0|oa~4_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1812,7 +1812,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u14|oa~4_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~29")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|ob~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1822,7 +1822,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~29")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~30_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|oa~4_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1832,7 +1832,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~30_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~31")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|oa~11_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1842,7 +1842,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~31")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~32_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|oa~9_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1852,7 +1852,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u0|s~32_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|ob~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|oa~10_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1862,7 +1862,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|ob~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|ob~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|ob~1_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1872,7 +1872,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|ob~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|extensor|abext15|ob~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1882,7 +1882,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~31")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1892,7 +1892,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~4_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder0|s~32_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1902,7 +1902,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u0|u15|oa~4_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u15|s~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|full_adder15|s~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1912,7 +1912,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u15|s~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|underflow~0_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~4_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1922,7 +1922,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|underflow~0_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~2_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~3_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1932,7 +1932,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~2_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~3_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~0_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -1942,47 +1942,7 @@ SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~3_combout")
 	PARENT = "";
 }
 
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~0_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~4_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|flags[0]~0_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u15|cout~0_combout")
-{
-	VALUE_TYPE = NINE_LEVEL_BIT;
-	SIGNAL_TYPE = SINGLE_BIT;
-	WIDTH = 1;
-	LSB_INDEX = -1;
-	DIRECTION = INPUT;
-	PARENT = "";
-}
-
-SIGNAL("ALU_vlg_vec_tst|i1|u1|u_flag|flags[2]~1_combout")
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~2_combout")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2033,6 +1993,36 @@ SIGNAL("ALU_vlg_vec_tst|i1|op~combout[1]")
 }
 
 SIGNAL("ALU_vlg_vec_tst|i1|op~combout[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -2700,7 +2690,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|flags[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -2929,7 +2919,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|devoe")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|oa~1_combout")
 {
 	NODE
 	{
@@ -2938,7 +2928,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext2|oa~1_combout")
 {
 	NODE
 	{
@@ -2947,7 +2937,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext4|oa~0_combout")
 {
 	NODE
 	{
@@ -2956,7 +2946,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u4|oa~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext7|oa~1_combout")
 {
 	NODE
 	{
@@ -2965,7 +2955,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u4|oa~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext9|oa~1_combout")
 {
 	NODE
 	{
@@ -2974,7 +2964,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u7|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext10|oa~1_combout")
 {
 	NODE
 	{
@@ -2983,7 +2973,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u7|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|oa~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext11|oa~1_combout")
 {
 	NODE
 	{
@@ -2992,7 +2982,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|oa~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext12|oa~1_combout")
 {
 	NODE
 	{
@@ -3001,16 +2991,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~5_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext13|oa~0_combout")
 {
 	NODE
 	{
@@ -3019,7 +3000,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~5_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|oa~2_combout")
 {
 	NODE
 	{
@@ -3028,7 +3009,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~1_combout")
 {
 	NODE
 	{
@@ -3037,7 +3018,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|ob~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|ob~2_combout")
 {
 	NODE
 	{
@@ -3046,7 +3027,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|ob~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext7|ob~2_combout")
 {
 	NODE
 	{
@@ -3055,7 +3036,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext11|ob~2_combout")
 {
 	NODE
 	{
@@ -3064,16 +3045,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext13|ob~2_combout")
 {
 	NODE
 	{
@@ -3082,16 +3054,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|oa~0_combout")
 {
 	NODE
 	{
@@ -3100,7 +3063,16 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~4_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|oa~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|oa~1_combout")
 {
 	NODE
 	{
@@ -3109,7 +3081,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~4_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~1_cout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|oa~3_combout")
 {
 	NODE
 	{
@@ -3118,7 +3090,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~1_cout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|ob~3_combout")
 {
 	NODE
 	{
@@ -3127,7 +3099,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|oa~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~1_cout")
 {
 	NODE
 	{
@@ -3136,16 +3108,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|oa~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~2_combout")
 {
 	NODE
 	{
@@ -3154,7 +3117,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext1|ob~2_combout")
 {
 	NODE
 	{
@@ -3163,25 +3126,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u1|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~3")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~4_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext1|ob~3_combout")
 {
 	NODE
 	{
@@ -3190,7 +3135,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|oa~0_combout")
 {
 	NODE
 	{
@@ -3199,97 +3144,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u0|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|oa~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~5")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~6_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u3|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u3|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u3|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u3|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u3|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext10|oa~3_combout")
 {
 	NODE
 	{
@@ -3298,7 +3153,25 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u3|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~7")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext1|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext1|oa~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext1|oa~2_combout")
 {
 	NODE
 	{
@@ -3307,7 +3180,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~7")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~8_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~3")
 {
 	NODE
 	{
@@ -3316,79 +3189,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~8_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u4|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u4|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u2|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u4|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u4|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~9")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~10_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~4_combout")
 {
 	NODE
 	{
@@ -3397,7 +3198,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext2|ob~2_combout")
 {
 	NODE
 	{
@@ -3406,7 +3207,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext2|ob~3_combout")
 {
 	NODE
 	{
@@ -3415,7 +3216,88 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u5|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~11")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext2|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext2|oa~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext2|oa~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~5")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~6_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext3|ob~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext3|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext3|oa~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext3|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext3|oa~2_combout")
 {
 	NODE
 	{
@@ -3424,7 +3306,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~11")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~12_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~7")
 {
 	NODE
 	{
@@ -3433,43 +3315,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~12_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u6|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u6|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u6|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u6|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u6|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~8_combout")
 {
 	NODE
 	{
@@ -3478,7 +3324,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u6|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~13")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext4|ob~2_combout")
 {
 	NODE
 	{
@@ -3487,7 +3333,88 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~13")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~14_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext4|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext4|oa~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext4|oa~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~9")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~10_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext5|ob~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext5|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext5|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext5|oa~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext5|oa~2_combout")
 {
 	NODE
 	{
@@ -3496,43 +3423,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~14_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u7|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u7|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u7|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u7|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~15")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~11")
 {
 	NODE
 	{
@@ -3541,43 +3432,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~15")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~16_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~12_combout")
 {
 	NODE
 	{
@@ -3586,7 +3441,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u8|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~17")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext6|ob~2_combout")
 {
 	NODE
 	{
@@ -3595,7 +3450,34 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~17")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~18_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext6|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext6|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext6|oa~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext6|oa~2_combout")
 {
 	NODE
 	{
@@ -3604,7 +3486,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~18_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~13")
 {
 	NODE
 	{
@@ -3613,34 +3495,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u9|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~19")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~14_combout")
 {
 	NODE
 	{
@@ -3649,7 +3504,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~19")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~20_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext7|oa~0_combout")
 {
 	NODE
 	{
@@ -3658,7 +3513,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~20_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext7|oa~2_combout")
 {
 	NODE
 	{
@@ -3667,7 +3522,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext7|ob~3_combout")
 {
 	NODE
 	{
@@ -3676,97 +3531,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|oa~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u10|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~21")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~22_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u11|oa~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u11|oa~1_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u11|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u11|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u11|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~23")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~15")
 {
 	NODE
 	{
@@ -3775,7 +3540,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~23")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~24_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~16_combout")
 {
 	NODE
 	{
@@ -3784,7 +3549,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~24_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|oa~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext8|oa~1_combout")
 {
 	NODE
 	{
@@ -3793,7 +3558,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|oa~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|oa~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext8|oa~0_combout")
 {
 	NODE
 	{
@@ -3802,7 +3567,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|oa~1_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext8|oa~2_combout")
 {
 	NODE
 	{
@@ -3811,7 +3576,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext8|ob~2_combout")
 {
 	NODE
 	{
@@ -3820,7 +3585,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext8|ob~3_combout")
 {
 	NODE
 	{
@@ -3829,7 +3594,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u12|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~25")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~17")
 {
 	NODE
 	{
@@ -3838,7 +3603,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~25")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~26_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~18_combout")
 {
 	NODE
 	{
@@ -3847,7 +3612,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~26_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|oa~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext9|oa~0_combout")
 {
 	NODE
 	{
@@ -3856,7 +3621,34 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|oa~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|oa~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext9|oa~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext9|ob~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext9|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~19")
 {
 	NODE
 	{
@@ -3865,7 +3657,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|oa~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|ob~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~20_combout")
 {
 	NODE
 	{
@@ -3874,7 +3666,88 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u13|ob~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~27")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext10|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext10|oa~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext10|ob~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext10|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~21")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~22_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext11|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext11|oa~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext11|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~23")
 {
 	NODE
 	{
@@ -3883,7 +3756,43 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~27")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~28_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~24_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext12|ob~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext12|ob~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext12|oa~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext12|oa~2_combout")
 {
 	NODE
 	{
@@ -3892,7 +3801,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~28_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|ob~2_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~25")
 {
 	NODE
 	{
@@ -3901,34 +3810,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|ob~2_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|ob~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|oa~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|oa~4_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~26_combout")
 {
 	NODE
 	{
@@ -3937,7 +3819,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u14|oa~4_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~29")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext13|ob~3_combout")
 {
 	NODE
 	{
@@ -3946,7 +3828,16 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~29")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~30_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext13|oa~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext13|oa~2_combout")
 {
 	NODE
 	{
@@ -3955,7 +3846,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~30_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~31")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~27")
 {
 	NODE
 	{
@@ -3964,43 +3855,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~31")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u0|s~32_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|ob~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|ob~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~3_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~28_combout")
 {
 	NODE
 	{
@@ -4009,7 +3864,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~3_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~4_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|oa~3_combout")
 {
 	NODE
 	{
@@ -4018,7 +3873,16 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u0|u15|oa~4_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u15|s~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|oa~4_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|ob~2_combout")
 {
 	NODE
 	{
@@ -4027,7 +3891,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u15|s~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|underflow~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext14|ob~3_combout")
 {
 	NODE
 	{
@@ -4036,43 +3900,7 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|underflow~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~2_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~3_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~0_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|mtz~4_combout")
-{
-	NODE
-	{
-		REPEAT = 1;
-		LEVEL 1 FOR 1000.0;
-	}
-}
-
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|flags[0]~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~29")
 {
 	NODE
 	{
@@ -4081,7 +3909,25 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|flags[0]~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u15|cout~0_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~30_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext0|oa~4_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|ob~0_combout")
 {
 	NODE
 	{
@@ -4090,12 +3936,120 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u15|cout~0_combout")
 	}
 }
 
-TRANSITION_LIST("ALU_vlg_vec_tst|i1|u1|u_flag|flags[2]~1_combout")
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|oa~4_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|oa~11_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|oa~9_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|oa~10_combout")
 {
 	NODE
 	{
 		REPEAT = 1;
 		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|ob~1_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|extensor|abext15|ob~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~31")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder0|s~32_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|full_adder15|s~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~4_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~3_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~0_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~2_combout")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -4136,6 +4090,33 @@ TRANSITION_LIST("ALU_vlg_vec_tst|i1|op~combout[1]")
 }
 
 TRANSITION_LIST("ALU_vlg_vec_tst|i1|op~combout[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 1000.0;
+	}
+}
+
+TRANSITION_LIST("ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[0]")
 {
 	NODE
 	{
@@ -5068,7 +5049,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 66;
@@ -5077,7 +5058,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u1|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext2|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 67;
@@ -5086,7 +5067,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u2|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext4|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 68;
@@ -5095,7 +5076,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u4|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext7|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 69;
@@ -5104,7 +5085,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u5|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext9|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 70;
@@ -5113,7 +5094,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u7|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext10|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 71;
@@ -5122,7 +5103,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u8|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext11|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 72;
@@ -5131,7 +5112,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u13|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext12|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 73;
@@ -5140,7 +5121,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|mtz~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext13|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 74;
@@ -5149,7 +5130,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|oa~5_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 75;
@@ -5158,7 +5139,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u9|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 76;
@@ -5167,7 +5148,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u13|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 77;
@@ -5176,7 +5157,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|ob~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext7|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 78;
@@ -5185,7 +5166,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext11|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 79;
@@ -5194,7 +5175,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext13|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 80;
@@ -5203,7 +5184,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u10|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 81;
@@ -5212,7 +5193,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 82;
@@ -5221,7 +5202,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 83;
@@ -5230,7 +5211,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|oa~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|oa~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 84;
@@ -5239,7 +5220,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|oa~4_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 85;
@@ -5248,7 +5229,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~1_cout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~1_cout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 86;
@@ -5257,7 +5238,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 87;
@@ -5266,7 +5247,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u1|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext1|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 88;
@@ -5275,7 +5256,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u1|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext1|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 89;
@@ -5284,7 +5265,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u1|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 90;
@@ -5293,7 +5274,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u1|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext10|oa~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 91;
@@ -5302,7 +5283,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~3";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext1|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 92;
@@ -5311,7 +5292,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~4_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext1|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 93;
@@ -5320,7 +5301,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u2|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext1|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 94;
@@ -5329,7 +5310,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u2|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 95;
@@ -5338,7 +5319,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u0|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~4_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 96;
@@ -5347,7 +5328,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u2|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext2|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 97;
@@ -5356,7 +5337,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u2|oa~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext2|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 98;
@@ -5365,7 +5346,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~5";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext2|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 99;
@@ -5374,7 +5355,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~6_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext2|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 100;
@@ -5383,7 +5364,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u3|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext2|oa~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 101;
@@ -5392,7 +5373,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u3|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~5";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 102;
@@ -5401,7 +5382,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u3|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~6_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 103;
@@ -5410,7 +5391,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext3|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 104;
@@ -5419,7 +5400,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u3|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext3|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 105;
@@ -5428,7 +5409,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u3|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext3|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 106;
@@ -5437,7 +5418,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~7";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext3|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 107;
@@ -5446,7 +5427,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~8_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext3|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 108;
@@ -5455,7 +5436,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u4|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~7";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 109;
@@ -5464,7 +5445,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u4|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~8_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 110;
@@ -5473,7 +5454,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u2|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext4|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 111;
@@ -5482,7 +5463,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u4|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext4|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 112;
@@ -5491,7 +5472,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u4|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext4|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 113;
@@ -5500,7 +5481,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~9";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext4|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 114;
@@ -5509,7 +5490,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~10_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~9";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 115;
@@ -5518,7 +5499,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u5|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~10_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 116;
@@ -5527,7 +5508,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u5|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext5|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 117;
@@ -5536,7 +5517,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u5|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext5|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 118;
@@ -5545,7 +5526,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u5|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext5|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 119;
@@ -5554,7 +5535,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~11";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext5|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 120;
@@ -5563,7 +5544,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~12_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext5|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 121;
@@ -5572,7 +5553,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u6|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~11";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 122;
@@ -5581,7 +5562,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u6|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~12_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 123;
@@ -5590,7 +5571,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u6|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext6|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 124;
@@ -5599,7 +5580,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u6|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext6|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 125;
@@ -5608,7 +5589,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u6|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext6|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 126;
@@ -5617,7 +5598,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~13";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext6|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 127;
@@ -5626,7 +5607,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~14_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext6|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 128;
@@ -5635,7 +5616,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u7|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~13";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 129;
@@ -5644,7 +5625,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u7|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~14_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 130;
@@ -5653,7 +5634,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u7|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext7|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 131;
@@ -5662,7 +5643,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u7|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext7|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 132;
@@ -5671,7 +5652,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~15";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext7|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 133;
@@ -5680,7 +5661,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~16_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~15";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 134;
@@ -5689,7 +5670,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u8|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~16_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 135;
@@ -5698,7 +5679,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u8|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext8|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 136;
@@ -5707,7 +5688,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u8|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext8|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 137;
@@ -5716,7 +5697,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u8|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext8|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 138;
@@ -5725,7 +5706,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~17";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext8|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 139;
@@ -5734,7 +5715,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~18_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext8|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 140;
@@ -5743,7 +5724,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u9|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~17";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 141;
@@ -5752,7 +5733,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u9|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~18_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 142;
@@ -5761,7 +5742,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u9|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext9|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 143;
@@ -5770,7 +5751,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u9|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext9|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 144;
@@ -5779,7 +5760,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~19";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext9|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 145;
@@ -5788,7 +5769,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~20_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext9|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 146;
@@ -5797,7 +5778,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u10|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~19";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 147;
@@ -5806,7 +5787,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u10|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~20_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 148;
@@ -5815,7 +5796,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u10|oa~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext10|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 149;
@@ -5824,7 +5805,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u10|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext10|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 150;
@@ -5833,7 +5814,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u10|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext10|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 151;
@@ -5842,7 +5823,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~21";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext10|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 152;
@@ -5851,7 +5832,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~22_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~21";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 153;
@@ -5860,7 +5841,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u11|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~22_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 154;
@@ -5869,7 +5850,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u11|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext11|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 155;
@@ -5878,7 +5859,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u11|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext11|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 156;
@@ -5887,7 +5868,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u11|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext11|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 157;
@@ -5896,7 +5877,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u11|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~23";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 158;
@@ -5905,7 +5886,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~23";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~24_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 159;
@@ -5914,7 +5895,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~24_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext12|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 160;
@@ -5923,7 +5904,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u12|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext12|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 161;
@@ -5932,7 +5913,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u12|oa~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext12|oa~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 162;
@@ -5941,7 +5922,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u12|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext12|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 163;
@@ -5950,7 +5931,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u12|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~25";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 164;
@@ -5959,7 +5940,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u12|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~26_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 165;
@@ -5968,7 +5949,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~25";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext13|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 166;
@@ -5977,7 +5958,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~26_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext13|oa~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 167;
@@ -5986,7 +5967,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u13|oa~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext13|oa~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 168;
@@ -5995,7 +5976,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u13|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~27";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 169;
@@ -6004,7 +5985,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u13|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~28_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 170;
@@ -6013,7 +5994,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~27";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|oa~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 171;
@@ -6022,7 +6003,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~28_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|oa~4_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 172;
@@ -6031,7 +6012,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 173;
@@ -6040,7 +6021,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|ob~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext14|ob~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 174;
@@ -6049,7 +6030,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|oa~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~29";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 175;
@@ -6058,7 +6039,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~30_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 176;
@@ -6067,7 +6048,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u14|oa~4_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext0|oa~4_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 177;
@@ -6076,7 +6057,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~29";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|ob~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 178;
@@ -6085,7 +6066,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~30_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|oa~4_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 179;
@@ -6094,7 +6075,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~31";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|oa~11_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 180;
@@ -6103,7 +6084,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u0|s~32_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|oa~9_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 181;
@@ -6112,7 +6093,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|ob~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|oa~10_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 182;
@@ -6121,7 +6102,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|ob~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|ob~1_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 183;
@@ -6130,7 +6111,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|oa~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|extensor|abext15|ob~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 184;
@@ -6139,7 +6120,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|oa~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~31";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 185;
@@ -6148,7 +6129,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u0|u15|oa~4_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder0|s~32_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 186;
@@ -6157,7 +6138,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u15|s~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|full_adder15|s~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 187;
@@ -6166,7 +6147,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|underflow~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~4_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 188;
@@ -6175,7 +6156,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|mtz~2_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~3_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 189;
@@ -6184,7 +6165,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|mtz~3_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~0_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 190;
@@ -6193,7 +6174,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|mtz~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]~2_combout";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 191;
@@ -6202,7 +6183,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|mtz~4_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 192;
@@ -6211,7 +6192,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|flags[0]~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 193;
@@ -6220,7 +6201,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u15|cout~0_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 194;
@@ -6229,7 +6210,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|u1|u_flag|flags[2]~1_combout";
+	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 195;
@@ -6238,7 +6219,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[4]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 196;
@@ -6247,7 +6228,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[3]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 197;
@@ -6256,7 +6237,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[2]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 198;
@@ -6265,7 +6246,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[1]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|adder|flag_calculator0|flags[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 199;
@@ -6274,7 +6255,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|op~combout[0]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[15]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 200;
@@ -6283,7 +6264,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[15]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[14]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 201;
@@ -6292,7 +6273,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[14]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[13]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 202;
@@ -6301,7 +6282,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[13]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[12]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 203;
@@ -6310,7 +6291,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[12]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[11]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 204;
@@ -6319,7 +6300,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[11]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[10]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 205;
@@ -6328,7 +6309,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[10]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[9]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 206;
@@ -6337,7 +6318,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[9]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 207;
@@ -6346,7 +6327,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[8]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 208;
@@ -6355,7 +6336,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[7]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 209;
@@ -6364,7 +6345,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[6]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 210;
@@ -6373,7 +6354,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[5]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 211;
@@ -6382,7 +6363,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[4]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 212;
@@ -6391,7 +6372,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[3]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 213;
@@ -6400,7 +6381,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[2]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 214;
@@ -6409,7 +6390,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[1]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 215;
@@ -6418,7 +6399,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|b~combout[0]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[15]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 216;
@@ -6427,7 +6408,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[15]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[14]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 217;
@@ -6436,7 +6417,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[14]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[13]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 218;
@@ -6445,7 +6426,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[13]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[12]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 219;
@@ -6454,7 +6435,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[12]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[11]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 220;
@@ -6463,7 +6444,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[11]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[10]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 221;
@@ -6472,7 +6453,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[10]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[9]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 222;
@@ -6481,7 +6462,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[9]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[8]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 223;
@@ -6490,7 +6471,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[8]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 224;
@@ -6499,7 +6480,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[7]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 225;
@@ -6508,7 +6489,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[6]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 226;
@@ -6517,7 +6498,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[5]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 227;
@@ -6526,7 +6507,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[4]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 228;
@@ -6535,7 +6516,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[3]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 229;
@@ -6544,7 +6525,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[2]";
+	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 230;
@@ -6553,19 +6534,10 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[1]";
-	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
-	TREE_INDEX = 231;
-	TREE_LEVEL = 0;
-}
-
-DISPLAY_LINE
-{
 	CHANNEL = "ALU_vlg_vec_tst|i1|a~combout[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 232;
+	TREE_INDEX = 231;
 	TREE_LEVEL = 0;
 }
 ;
