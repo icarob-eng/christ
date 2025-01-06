@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ALU
-Mon Jan 06 09:16:59 2025
+Mon Jan 06 20:37:23 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -41,13 +41,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jan 06 09:16:59 2025           ;
+; Analysis & Synthesis Status        ; Successful - Mon Jan 06 20:37:23 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; ALU                                             ;
 ; Top-level Entity Name              ; ALU                                             ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 114                                             ;
-;     Total combinational functions  ; 114                                             ;
+; Total logic elements               ; 112                                             ;
+;     Total combinational functions  ; 112                                             ;
 ;     Dedicated logic registers      ; 0                                               ;
 ; Total registers                    ; 0                                               ;
 ; Total pins                         ; 56                                              ;
@@ -174,16 +174,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 114   ;
+; Estimated Total logic elements              ; 112   ;
 ;                                             ;       ;
-; Total combinational functions               ; 114   ;
+; Total combinational functions               ; 112   ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 73    ;
-;     -- 3 input functions                    ; 20    ;
-;     -- <=2 input functions                  ; 21    ;
+;     -- 3 input functions                    ; 19    ;
+;     -- <=2 input functions                  ; 20    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 98    ;
+;     -- normal mode                          ; 96    ;
 ;     -- arithmetic mode                      ; 16    ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
@@ -194,7 +194,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; op[1] ;
 ; Maximum fan-out                             ; 25    ;
-; Total fan-out                               ; 411   ;
+; Total fan-out                               ; 406   ;
 ; Average fan-out                             ; 2.42  ;
 +---------------------------------------------+-------+
 
@@ -204,9 +204,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                    ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------+--------------+
-; |ALU                                      ; 114 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |ALU                                                   ; work         ;
-;    |Adder_16b:adder|                      ; 26 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Adder_16b:adder                                   ; work         ;
-;       |Flags_Calculator:flag_calculator0| ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Adder_16b:adder|Flags_Calculator:flag_calculator0 ; work         ;
+; |ALU                                      ; 112 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 56   ; 0            ; |ALU                                                   ; work         ;
+;    |Adder_16b:adder|                      ; 24 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Adder_16b:adder                                   ; work         ;
+;       |Flags_Calculator:flag_calculator0| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Adder_16b:adder|Flags_Calculator:flag_calculator0 ; work         ;
 ;       |Full_Adder:full_adder0|            ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Adder_16b:adder|Full_Adder:full_adder0            ; work         ;
 ;       |Full_Adder:full_adder15|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Adder_16b:adder|Full_Adder:full_adder15           ; work         ;
 ;    |Extensor_ALU:extensor|                ; 88 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |ALU|Extensor_ALU:extensor                             ; work         ;
@@ -260,7 +260,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jan 06 09:16:57 2025
+    Info: Processing started: Mon Jan 06 20:37:21 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ALU -c ALU
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
@@ -295,13 +295,13 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "op[4]"
-Info (21057): Implemented 170 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 168 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 37 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 114 logic cells
+    Info (21061): Implemented 112 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Mon Jan 06 09:16:59 2025
+    Info: Processing ended: Mon Jan 06 20:37:23 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
