@@ -1,0 +1,13 @@
+entity ALU is
+port (ops_alu: in bit_vector( 5 downto 0);
+		reg_a, reg_b: in bit_vector( 15 downto 0);
+		res: out bit_vector(15 downto 0);
+		flag: out bit_vector( 2 downto 0)
+);
+end;
+
+architecture behav of ALU is
+
+begin
+
+end;
