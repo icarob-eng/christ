@@ -1187,42 +1187,27 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 
 |ALU|Adder_16b:adder|Flags_Calculator:flag_calculator0
 s[0] => flags.IN1
-s[0] => flags.IN1
-s[1] => flags.IN1
 s[1] => flags.IN1
 s[2] => flags.IN1
-s[2] => flags.IN1
-s[3] => flags.IN1
 s[3] => flags.IN1
 s[4] => flags.IN1
-s[4] => flags.IN1
-s[5] => flags.IN1
 s[5] => flags.IN1
 s[6] => flags.IN1
-s[6] => flags.IN1
-s[7] => flags.IN1
 s[7] => flags.IN1
 s[8] => flags.IN1
-s[8] => flags.IN1
-s[9] => flags.IN1
 s[9] => flags.IN1
 s[10] => flags.IN1
-s[10] => flags.IN1
-s[11] => flags.IN1
 s[11] => flags.IN1
 s[12] => flags.IN1
-s[12] => flags.IN1
-s[13] => flags.IN0
 s[13] => flags.IN1
-s[14] => flags.IN1
 s[14] => flags.IN0
-s[15] => flags.IN1
+s[15] => flags[1].DATAIN
 s[15] => flags.IN1
 a_15 => ~NO_FANOUT~
 cout_15 => flags.IN0
 cout_14 => flags.IN1
 flags[0] <= flags.DB_MAX_OUTPUT_PORT_TYPE
-flags[1] <= flags.DB_MAX_OUTPUT_PORT_TYPE
+flags[1] <= s[15].DB_MAX_OUTPUT_PORT_TYPE
 flags[2] <= flags.DB_MAX_OUTPUT_PORT_TYPE
 
 
