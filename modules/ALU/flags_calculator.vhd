@@ -15,9 +15,9 @@ begin
 -- vvvvvvv zero
 	flags(2) <= not s(15) and not s(14) and not s(13) and not s(12) and not s(11) and not s(10) and not s(9) and not s(8) and not s(7) and not s(6) and not s(5) and not s(4) and not s(3) and not s(2) and not s(1) and not s(0);
 	
--- vvvvvvv more than zero 	
+-- vvvvvvv less than zero 	
 	flags(1) <= s(15);
-	
+
 -- vvvvvvv overflow
 	flags(0) <= (cout_15 xor cout_14); 
 	
