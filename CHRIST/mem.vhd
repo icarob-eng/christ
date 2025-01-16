@@ -9,7 +9,18 @@ entity Mem is
 end Mem;
 
 architecture behav of Mem is
-
+	signal selected : BIT_VECTOR(15 downto 0);
 begin
+    selection: with addr select selected
+<= "0011000000000000" when "0000000000000000", -- first op is NOPE, for simplicity
+-- -- code goes here: "instruction" WHEN "sequential binary"
+"0100010100110000" when "0000000000000001",
+"0100010100110000" when "0000000000000010",
+"0100010100110000" when "0000000000000011",
+-- code ends here.
+"0000000000000000" when others;  -- if invalid address, halts]
 
+    with r_en select output <= "0000000000000000" when '0',
+	                            selected           when '1';
+	
 end architecture behav;

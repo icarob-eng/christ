@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CHRIST
-Fri Jan  3 22:13:20 2025
+Wed Jan 15 22:26:50 2025
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -49,7 +49,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan  3 22:13:20 2025          ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 15 22:26:50 2025          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; CHRIST                                         ;
 ; Top-level Entity Name              ; CHRIST                                         ;
@@ -332,7 +332,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Jan  3 22:13:07 2025
+    Info: Processing started: Wed Jan 15 22:26:41 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CHRIST -c CHRIST
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -391,7 +391,6 @@ Warning (12125): Using design file mem.vhd, which is not specified as a design f
     Info (12022): Found design unit 1: Mem-behav File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 11
     Info (12023): Found entity 1: Mem File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 1
 Info (12128): Elaborating entity "Mem" for hierarchy "Mem:Mem1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 139
-Warning (10541): VHDL Signal Declaration warning at mem.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 6
 Warning (12125): Using design file pers.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: PERS-behav File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 11
     Info (12023): Found entity 1: PERS File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 1
@@ -421,10 +420,10 @@ Warning (21074): Design contains 1 input pin(s) that do not drive logic
 Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
     Info: Peak virtual memory: 400 megabytes
-    Info: Processing ended: Fri Jan  3 22:13:20 2025
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:43
+    Info: Processing ended: Wed Jan 15 22:26:50 2025
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:29
 
 
