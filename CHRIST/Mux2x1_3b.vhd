@@ -10,5 +10,11 @@ end Mux2x1_3b;
 architecture behav of Mux2x1_3b is
 
 begin
+    o(0) <= (NOT s AND i0(0)) OR
+		    (s AND NOT i1(0));
+	o(1) <= (NOT s AND i0(1)) OR
+		    (s AND NOT i1(1));
+	o(2) <= (NOT s AND i0(2)) OR
+		    (s AND NOT i1(2));
 
 end architecture behav;
