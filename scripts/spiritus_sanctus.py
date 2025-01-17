@@ -4,7 +4,7 @@ from typing import List, Dict
 import json
 
 ##
-##  python3 assembler.py <asm filename>
+##  python3 spiritus_sanctus.py <asm filename>
 ##
 
 class Label:
