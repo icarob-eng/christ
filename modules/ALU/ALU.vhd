@@ -1,8 +1,9 @@
 entity ALU is
-port (op: in bit_vector( 4 downto 0);
-		a, b: in bit_vector( 15 downto 0);
-		r: out bit_vector(15 downto 0);
-		flags: out bit_vector( 2 downto 0)
+port (
+	op: in bit_vector( 4 downto 0);
+	a, b: in bit_vector( 15 downto 0);
+	r: out bit_vector(15 downto 0);
+	flags: out bit_vector( 2 downto 0)
 );
 end ALU;
 
@@ -17,7 +18,7 @@ architecture behav of ALU is
 		);
 	end component;
 	
-	component Adder_16b is
+	component Adder_16b_ALU is
 		port(
 			a, b: in bit_vector(15 downto 0);
 			cin: in bit;
@@ -32,6 +33,6 @@ architecture behav of ALU is
 begin
 
 	extensor: Extensor_ALU port map (a => a, b => b, op => op(3 downto 0), out_ext_a => OUT_EXT_A, out_ext_b => OUT_EXT_B, cin => CIN);
-	adder: Adder_16b port map (a => OUT_EXT_A, b => OUT_EXT_B, cin => CIN, r => r, flags => flags);
+	adder: Adder_16b_ALU port map (a => OUT_EXT_A, b => OUT_EXT_B, cin => CIN, r => r, flags => flags);
 	
 end;
