@@ -10,5 +10,12 @@ end Reg_3b;
 architecture behav of Reg_3b is
 
 begin
-
+	process(clk)
+	begin
+		if (rising_edge(clk)) then
+			if write_en = '1' then
+				output <= input;
+			end if;
+		end if;
+	end process;
 end architecture behav;
