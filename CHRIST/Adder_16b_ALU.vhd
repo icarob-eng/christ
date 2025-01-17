@@ -1,4 +1,4 @@
-entity Adder_16b is
+entity Adder_16b_ALU is
 	port(
 		a, b: in bit_vector(15 downto 0);
 		cin: in bit;
@@ -7,7 +7,7 @@ entity Adder_16b is
 	);
 end;
 
-architecture behav of Adder_16b is
+architecture behav of Adder_16b_ALU is
 
 	component Full_Adder is
 		port(
