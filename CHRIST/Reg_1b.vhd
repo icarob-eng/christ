@@ -11,7 +11,7 @@ architecture behav of Reg_1b is
 begin
     process(clk)
 	begin
-		if (rising_edge(clk)) then
+		if (clk ' event and clk = '1') then
 			if write_en = '1' then
 				output <= input;
 			end if;
