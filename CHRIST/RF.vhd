@@ -10,31 +10,49 @@ end RF;
 architecture Behavioral of RF is
     type RegisterArray is array (0 to 7) of BIT_VECTOR(15 downto 0); -- 8 registradores de 16 bits
     signal Registers : RegisterArray := (others => (others => '0')); -- Inicialização para 0
+	 
 begin
     -- Escrita no arquivo de registradores
     process(clk)
     begin
-        if rising_edge(clk) then
-            if write_en = '1' and write_addr /= "000" then -- Ignorar escrita no reg(0)
-                Registers(to_integer(unsigned(write_addr))) <= write_data;
+        if (clk ' event and clk = '1') then
+            case w_addr is
+					when "001" => Registers(1) <= input;
+					when "010" => Registers(2) <= input;
+					when "011" => Registers(3) <= input;
+					when "100" => Registers(4) <= input;
+					when "101" => Registers(5) <= input;
+					when "110" => Registers(6) <= input;
+					when "111" => Registers(7) <= input;
+					when others => Registers(0) <= "0000000000000000";
+				end case;
         end if;
     end process;
 
     -- Leituras simultâneas
-    process(read_addr_A, read_addr_B, Registers)
+    process(r_a_addr, r_b_addr, Registers)
     begin
-        -- Leitura do registrador A
-        if read_addr_A = "000" then
-            READ_A <= (others => '0'); -- Registrador 0 sempre retorna 0
-        else
-            READ_A <= Registers(to_integer(unsigned(read_addr_A)));
-        end if;
-
-        -- Leitura do registrador B
-        if read_addr_B = "000" then
-            READ_B <= (others => '0'); -- Registrador 0 sempre retorna 0
-        else
-            READ_B <= Registers(to_integer(unsigned(read_addr_B)));
-        end if;
-    end process;
+		case r_a_addr is
+			when "001" => a_out <= Registers(1);
+			when "010" => a_out <= Registers(2);
+			when "011" => a_out <= Registers(3);
+			when "100" => a_out <= Registers(4);
+			when "101" => a_out <= Registers(5);
+			when "110" => a_out <= Registers(6);
+			when "111" => a_out <= Registers(7);
+			when others => a_out <= Registers(0);
+		end case;
+		
+		case r_b_addr is
+			when "001" => b_out <= Registers(1);
+			when "010" => b_out <= Registers(2);
+			when "011" => b_out <= Registers(3);
+			when "100" => b_out <= Registers(4);
+			when "101" => b_out <= Registers(5);
+			when "110" => b_out <= Registers(6);
+			when "111" => b_out <= Registers(7);
+			when others => b_out <= Registers(0);
+		end case;
+	end process;
+	
 end Behavioral;

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for CHRIST
-Wed Jan 15 22:26:50 2025
-Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Sat Jan 18 12:44:54 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -20,174 +20,174 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
  12. Port Connectivity Checks: "ControlUnit:ControlUnit1|Mux2x1_3b:rf_a_MUX"
  13. Port Connectivity Checks: "ControlUnit:ControlUnit1|Mux4x1_16b:pc_b_MUX"
  14. Port Connectivity Checks: "ControlUnit:ControlUnit1|Mux2x1_5b:ALU_ops_MUX"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2023  Intel Corporation. All rights reserved.
-Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Intel Program License 
-Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel FPGA IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Intel and sold by Intel or its authorized distributors.  Please
-refer to the applicable agreement for further details, at
-https://fpgasoftware.intel.com/eula.
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                        ;
-+------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 15 22:26:50 2025          ;
-; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
-; Revision Name                      ; CHRIST                                         ;
-; Top-level Entity Name              ; CHRIST                                         ;
-; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 0                                              ;
-;     Total combinational functions  ; 0                                              ;
-;     Dedicated logic registers      ; 0                                              ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 1                                              ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
-+------------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Jan 18 12:44:54 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; CHRIST                                          ;
+; Top-level Entity Name              ; CHRIST                                          ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 81                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; CHRIST             ; CHRIST             ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; CHRIST             ; CHRIST             ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------+---------+
-; CHRIST.vhd                       ; yes             ; User VHDL File        ; /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd      ;         ;
-; ControlUnit.vhd                  ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd ;         ;
-; Mux2x1_5b.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_5b.vhd   ;         ;
-; Mux4x1_16b.vhd                   ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_16b.vhd  ;         ;
-; Mux2x1_3b.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_3b.vhd   ;         ;
-; Mux4x1_3b.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_3b.vhd   ;         ;
-; Reg_1b.vhd                       ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Reg_1b.vhd      ;         ;
-; Reg_16b.vhd                      ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd     ;         ;
-; adder_16b.vhd                    ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd   ;         ;
-; cache.vhd                        ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/cache.vhd       ;         ;
-; mem.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/mem.vhd         ;         ;
-; pers.vhd                         ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/pers.vhd        ;         ;
-; RF.vhd                           ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/RF.vhd          ;         ;
-; ALU.vhd                          ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd         ;         ;
-; Reg_3b.vhd                       ; yes             ; Auto-Found VHDL File  ; /home/icarob-eng/Projects/christ/CHRIST/Reg_3b.vhd      ;         ;
-+----------------------------------+-----------------+-----------------------+---------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
+; RF.vhd                           ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/RF.vhd               ;         ;
+; Reg_16b.vhd                      ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Reg_16b.vhd          ;         ;
+; Reg_3b.vhd                       ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Reg_3b.vhd           ;         ;
+; Reg_1b.vhd                       ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Reg_1b.vhd           ;         ;
+; pers.vhd                         ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/pers.vhd             ;         ;
+; Mux4x1_16b.vhd                   ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Mux4x1_16b.vhd       ;         ;
+; Mux4x1_3b.vhd                    ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Mux4x1_3b.vhd        ;         ;
+; Mux2x1_5b.vhd                    ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Mux2x1_5b.vhd        ;         ;
+; Mux2x1_3b.vhd                    ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Mux2x1_3b.vhd        ;         ;
+; mem.vhd                          ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/mem.vhd              ;         ;
+; full_adder.vhd                   ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/full_adder.vhd       ;         ;
+; flags_calculator.vhd             ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/flags_calculator.vhd ;         ;
+; extensor_alu.vhd                 ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/extensor_alu.vhd     ;         ;
+; ControlUnit.vhd                  ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/ControlUnit.vhd      ;         ;
+; cinext.vhd                       ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/cinext.vhd           ;         ;
+; cache.vhd                        ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/cache.vhd            ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/ALU.vhd              ;         ;
+; Adder_16b_ALU.vhd                ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/Adder_16b_ALU.vhd    ;         ;
+; adder_16b.vhd                    ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/adder_16b.vhd        ;         ;
+; abext.vhd                        ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/abext.vhd            ;         ;
+; CHRIST.vhd                       ; yes             ; User VHDL File  ; D:/Dev/christ/CHRIST/CHRIST.vhd           ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -210,24 +210,22 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 1     ;
-;                                             ;       ;
+; I/O pins                                    ; 81    ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
+; Total fan-out                               ; 81    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |CHRIST                    ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 1    ; 0            ; |CHRIST             ; CHRIST      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |CHRIST                    ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 81   ; 0            ; |CHRIST             ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -305,18 +303,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------+-------+----------+--------------------------------------------------+
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-------------------+---------------------------------+
-; Type              ; Count                           ;
-+-------------------+---------------------------------+
-; boundary_port     ; 1                               ;
-;                   ;                                 ;
-; Max LUT depth     ; 0.00                            ;
-; Average LUT depth ; 0.00                            ;
-+-------------------+---------------------------------+
-
-
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -330,100 +316,196 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Wed Jan 15 22:26:41 2025
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Jan 18 12:44:52 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CHRIST -c CHRIST
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file CHRIST.vhd
-    Info (12022): Found design unit 1: CHRIST-behav File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 5
-    Info (12023): Found entity 1: CHRIST File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file rf.vhd
+    Info (12022): Found design unit 1: RF-Behavioral
+    Info (12023): Found entity 1: RF
+Info (12021): Found 2 design units, including 1 entities, in source file reg_16b.vhd
+    Info (12022): Found design unit 1: Reg_16b-behav
+    Info (12023): Found entity 1: Reg_16b
+Info (12021): Found 2 design units, including 1 entities, in source file reg_3b.vhd
+    Info (12022): Found design unit 1: Reg_3b-behav
+    Info (12023): Found entity 1: Reg_3b
+Info (12021): Found 2 design units, including 1 entities, in source file reg_1b.vhd
+    Info (12022): Found design unit 1: Reg_1b-behav
+    Info (12023): Found entity 1: Reg_1b
+Info (12021): Found 2 design units, including 1 entities, in source file pers.vhd
+    Info (12022): Found design unit 1: PERS-behav
+    Info (12023): Found entity 1: PERS
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_16b.vhd
+    Info (12022): Found design unit 1: Mux4x1_16b-behav
+    Info (12023): Found entity 1: Mux4x1_16b
+Info (12021): Found 2 design units, including 1 entities, in source file mux4x1_3b.vhd
+    Info (12022): Found design unit 1: Mux4x1_3b-behav
+    Info (12023): Found entity 1: Mux4x1_3b
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_5b.vhd
+    Info (12022): Found design unit 1: Mux2x1_5b-behav
+    Info (12023): Found entity 1: Mux2x1_5b
+Info (12021): Found 2 design units, including 1 entities, in source file mux2x1_3b.vhd
+    Info (12022): Found design unit 1: Mux2x1_3b-behav
+    Info (12023): Found entity 1: Mux2x1_3b
+Info (12021): Found 2 design units, including 1 entities, in source file mem.vhd
+    Info (12022): Found design unit 1: Mem-behav
+    Info (12023): Found entity 1: Mem
+Info (12021): Found 2 design units, including 1 entities, in source file full_adder.vhd
+    Info (12022): Found design unit 1: Full_Adder-behav
+    Info (12023): Found entity 1: Full_Adder
+Info (12021): Found 2 design units, including 1 entities, in source file flags_calculator.vhd
+    Info (12022): Found design unit 1: Flags_Calculator-behav
+    Info (12023): Found entity 1: Flags_Calculator
+Info (12021): Found 2 design units, including 1 entities, in source file extensor_alu.vhd
+    Info (12022): Found design unit 1: Extensor_ALU-behav
+    Info (12023): Found entity 1: Extensor_ALU
+Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
+    Info (12022): Found design unit 1: ControlUnit-behav
+    Info (12023): Found entity 1: ControlUnit
+Info (12021): Found 2 design units, including 1 entities, in source file cinext.vhd
+    Info (12022): Found design unit 1: CINExt-behav
+    Info (12023): Found entity 1: CINExt
+Info (12021): Found 2 design units, including 1 entities, in source file cache.vhd
+    Info (12022): Found design unit 1: Cache-behav
+    Info (12023): Found entity 1: Cache
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-behav
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 2 design units, including 1 entities, in source file adder_16b_alu.vhd
+    Info (12022): Found design unit 1: Adder_16b_ALU-behav
+    Info (12023): Found entity 1: Adder_16b_ALU
+Info (12021): Found 2 design units, including 1 entities, in source file adder_16b.vhd
+    Info (12022): Found design unit 1: Adder_16b-behav
+    Info (12023): Found entity 1: Adder_16b
+Info (12021): Found 2 design units, including 1 entities, in source file abext.vhd
+    Info (12022): Found design unit 1: ABExt-behav
+    Info (12023): Found entity 1: ABExt
+Info (12021): Found 2 design units, including 1 entities, in source file christ.vhd
+    Info (12022): Found design unit 1: CHRIST-behav
+    Info (12023): Found entity 1: CHRIST
 Info (12127): Elaborating entity "CHRIST" for the top level hierarchy
-Warning (12125): Using design file ControlUnit.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ControlUnit-behav File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 18
-    Info (12023): Found entity 1: ControlUnit File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 1
-Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ControlUnit1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 116
-Warning (10540): VHDL Signal Declaration warning at ControlUnit.vhd(19): used explicit default value for signal "ZERO" because signal was never assigned a value File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 19
-Warning (10036): Verilog HDL or VHDL warning at ControlUnit.vhd(23): object "I_Ctl" assigned a value but never read File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 23
-Warning (12125): Using design file Mux2x1_5b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Mux2x1_5b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_5b.vhd Line: 10
-    Info (12023): Found entity 1: Mux2x1_5b File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_5b.vhd Line: 1
-Info (12128): Elaborating entity "Mux2x1_5b" for hierarchy "ControlUnit:ControlUnit1|Mux2x1_5b:ALU_ops_MUX" File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 84
-Warning (10541): VHDL Signal Declaration warning at Mux2x1_5b.vhd(5): used implicit default value for signal "o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_5b.vhd Line: 5
-Warning (12125): Using design file Mux4x1_16b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Mux4x1_16b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_16b.vhd Line: 10
-    Info (12023): Found entity 1: Mux4x1_16b File: /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_16b.vhd Line: 1
-Info (12128): Elaborating entity "Mux4x1_16b" for hierarchy "ControlUnit:ControlUnit1|Mux4x1_16b:pc_b_MUX" File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 92
-Warning (10541): VHDL Signal Declaration warning at Mux4x1_16b.vhd(5): used implicit default value for signal "o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_16b.vhd Line: 5
-Warning (12125): Using design file Mux2x1_3b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Mux2x1_3b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_3b.vhd Line: 10
-    Info (12023): Found entity 1: Mux2x1_3b File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_3b.vhd Line: 1
-Info (12128): Elaborating entity "Mux2x1_3b" for hierarchy "ControlUnit:ControlUnit1|Mux2x1_3b:rf_a_MUX" File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 102
-Warning (10541): VHDL Signal Declaration warning at Mux2x1_3b.vhd(5): used implicit default value for signal "o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Mux2x1_3b.vhd Line: 5
-Warning (12125): Using design file Mux4x1_3b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Mux4x1_3b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_3b.vhd Line: 10
-    Info (12023): Found entity 1: Mux4x1_3b File: /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_3b.vhd Line: 1
-Info (12128): Elaborating entity "Mux4x1_3b" for hierarchy "ControlUnit:ControlUnit1|Mux4x1_3b:rf_w_MUX" File: /home/icarob-eng/Projects/christ/CHRIST/ControlUnit.vhd Line: 114
-Warning (10541): VHDL Signal Declaration warning at Mux4x1_3b.vhd(5): used implicit default value for signal "o" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Mux4x1_3b.vhd Line: 5
-Warning (12125): Using design file Reg_1b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Reg_1b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Reg_1b.vhd Line: 9
-    Info (12023): Found entity 1: Reg_1b File: /home/icarob-eng/Projects/christ/CHRIST/Reg_1b.vhd Line: 1
-Info (12128): Elaborating entity "Reg_1b" for hierarchy "Reg_1b:e_reg" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 130
-Warning (10541): VHDL Signal Declaration warning at Reg_1b.vhd(4): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Reg_1b.vhd Line: 4
-Warning (12125): Using design file Reg_16b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Reg_16b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd Line: 10
-    Info (12023): Found entity 1: Reg_16b File: /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd Line: 1
-Info (12128): Elaborating entity "Reg_16b" for hierarchy "Reg_16b:IR" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 133
-Warning (10541): VHDL Signal Declaration warning at Reg_16b.vhd(4): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Reg_16b.vhd Line: 4
-Warning (12125): Using design file adder_16b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Adder_16b-behav File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 10
-    Info (12023): Found entity 1: Adder_16b File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 1
-Info (12128): Elaborating entity "Adder_16b" for hierarchy "Adder_16b:PC_add" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 134
-Warning (10541): VHDL Signal Declaration warning at adder_16b.vhd(5): used implicit default value for signal "s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 5
-Warning (10541): VHDL Signal Declaration warning at adder_16b.vhd(6): used implicit default value for signal "cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/adder_16b.vhd Line: 6
-Warning (12125): Using design file cache.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Cache-behav File: /home/icarob-eng/Projects/christ/CHRIST/cache.vhd Line: 11
-    Info (12023): Found entity 1: Cache File: /home/icarob-eng/Projects/christ/CHRIST/cache.vhd Line: 1
-Info (12128): Elaborating entity "Cache" for hierarchy "Cache:Cache1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 138
-Warning (10541): VHDL Signal Declaration warning at cache.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/cache.vhd Line: 6
-Warning (12125): Using design file mem.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Mem-behav File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 11
-    Info (12023): Found entity 1: Mem File: /home/icarob-eng/Projects/christ/CHRIST/mem.vhd Line: 1
-Info (12128): Elaborating entity "Mem" for hierarchy "Mem:Mem1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 139
-Warning (12125): Using design file pers.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: PERS-behav File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 11
-    Info (12023): Found entity 1: PERS File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 1
-Info (12128): Elaborating entity "PERS" for hierarchy "PERS:PERS1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 140
-Warning (10541): VHDL Signal Declaration warning at pers.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/pers.vhd Line: 6
-Warning (12125): Using design file RF.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: RF-behav File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 10
-    Info (12023): Found entity 1: RF File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 1
-Info (12128): Elaborating entity "RF" for hierarchy "RF:RF1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 142
-Warning (10541): VHDL Signal Declaration warning at RF.vhd(5): used implicit default value for signal "a_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 5
-Warning (10541): VHDL Signal Declaration warning at RF.vhd(5): used implicit default value for signal "b_out" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/RF.vhd Line: 5
-Warning (12125): Using design file ALU.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: ALU-behav File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 10
-    Info (12023): Found entity 1: ALU File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 1
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 144
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(5): used implicit default value for signal "flags" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 5
-Warning (10541): VHDL Signal Declaration warning at ALU.vhd(6): used implicit default value for signal "r" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/ALU.vhd Line: 6
-Warning (12125): Using design file Reg_3b.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: Reg_3b-behav File: /home/icarob-eng/Projects/christ/CHRIST/Reg_3b.vhd Line: 10
-    Info (12023): Found entity 1: Reg_3b File: /home/icarob-eng/Projects/christ/CHRIST/Reg_3b.vhd Line: 1
-Info (12128): Elaborating entity "Reg_3b" for hierarchy "Reg_3b:FLAGR" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 145
-Warning (10541): VHDL Signal Declaration warning at Reg_3b.vhd(4): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: /home/icarob-eng/Projects/christ/CHRIST/Reg_3b.vhd Line: 4
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(4): used implicit default value for signal "ext_out_leds" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(5): used implicit default value for signal "ext_out_7seg_10" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at CHRIST.vhd(6): used implicit default value for signal "ext_out_7seg_32" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "ControlUnit" for hierarchy "ControlUnit:ControlUnit1"
+Warning (10540): VHDL Signal Declaration warning at ControlUnit.vhd(19): used explicit default value for signal "ZERO" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at ControlUnit.vhd(23): object "I_Ctl" assigned a value but never read
+Info (12128): Elaborating entity "Mux2x1_5b" for hierarchy "ControlUnit:ControlUnit1|Mux2x1_5b:ALU_ops_MUX"
+Info (12128): Elaborating entity "Mux4x1_16b" for hierarchy "ControlUnit:ControlUnit1|Mux4x1_16b:pc_b_MUX"
+Info (12128): Elaborating entity "Mux2x1_3b" for hierarchy "ControlUnit:ControlUnit1|Mux2x1_3b:rf_a_MUX"
+Info (12128): Elaborating entity "Mux4x1_3b" for hierarchy "ControlUnit:ControlUnit1|Mux4x1_3b:rf_w_MUX"
+Info (12128): Elaborating entity "Reg_1b" for hierarchy "Reg_1b:e_reg"
+Info (12128): Elaborating entity "Reg_16b" for hierarchy "Reg_16b:IR"
+Info (12128): Elaborating entity "Adder_16b" for hierarchy "Adder_16b:PC_add"
+Warning (10541): VHDL Signal Declaration warning at adder_16b.vhd(5): used implicit default value for signal "s" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at adder_16b.vhd(6): used implicit default value for signal "cout" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "Cache" for hierarchy "Cache:Cache1"
+Warning (10541): VHDL Signal Declaration warning at cache.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "Mem" for hierarchy "Mem:Mem1"
+Info (12128): Elaborating entity "PERS" for hierarchy "PERS:PERS1"
+Warning (10541): VHDL Signal Declaration warning at pers.vhd(6): used implicit default value for signal "output" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "RF" for hierarchy "RF:RF1"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU1"
+Info (12128): Elaborating entity "Extensor_ALU" for hierarchy "ALU:ALU1|Extensor_ALU:extensor"
+Info (12128): Elaborating entity "ABExt" for hierarchy "ALU:ALU1|Extensor_ALU:extensor|ABExt:abext15"
+Info (12128): Elaborating entity "CINExt" for hierarchy "ALU:ALU1|Extensor_ALU:extensor|CINExt:cinext0"
+Info (12128): Elaborating entity "Adder_16b_ALU" for hierarchy "ALU:ALU1|Adder_16b_ALU:adder"
+Info (12128): Elaborating entity "Full_Adder" for hierarchy "ALU:ALU1|Adder_16b_ALU:adder|Full_Adder:full_adder15"
+Info (12128): Elaborating entity "Flags_Calculator" for hierarchy "ALU:ALU1|Adder_16b_ALU:adder|Flags_Calculator:flag_calculator0"
+Info (12128): Elaborating entity "Reg_3b" for hierarchy "Reg_3b:FLAGR"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ext_out_leds[0]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[1]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[2]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[3]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[4]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[5]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[6]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[7]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[8]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[9]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[10]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[11]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[12]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[13]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[14]" is stuck at GND
+    Warning (13410): Pin "ext_out_leds[15]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[0]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[1]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[2]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[3]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[4]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[5]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[6]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[7]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[8]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[9]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[10]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[11]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[12]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[13]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[14]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_10[15]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[0]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[1]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[2]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[3]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[4]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[5]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[6]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[7]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[8]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[9]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[10]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[11]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[12]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[13]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[14]" is stuck at GND
+    Warning (13410): Pin "ext_out_7seg_32[15]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: /home/icarob-eng/Projects/christ/CHRIST/CHRIST.vhd Line: 2
-Info (21057): Implemented 1 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 400 megabytes
-    Info: Processing ended: Wed Jan 15 22:26:50 2025
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:29
+Warning (21074): Design contains 33 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "clk"
+    Warning (15610): No output dependent on input pin "ext_in_switches[0]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[1]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[2]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[3]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[4]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[5]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[6]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[7]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[8]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[9]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[10]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[11]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[12]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[13]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[14]"
+    Warning (15610): No output dependent on input pin "ext_in_switches[15]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[0]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[1]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[2]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[3]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[4]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[5]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[6]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[7]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[8]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[9]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[10]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[11]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[12]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[13]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[14]"
+    Warning (15610): No output dependent on input pin "ext_in_buttons[15]"
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 33 input pins
+    Info (21059): Implemented 48 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 93 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Sat Jan 18 12:44:54 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
