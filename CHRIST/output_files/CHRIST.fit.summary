@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sat Jan 18 12:44:59 2025
+Fitter Status : Successful - Sat Jan 18 14:32:56 2025
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : CHRIST
 Top-level Entity Name : CHRIST
-Family : Cyclone IV E
-Device : EP4CE6F17C6
+Family : Cyclone II
+Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 0 / 6,272 ( 0 % )
-    Total combinational functions : 0 / 6,272 ( 0 % )
-    Dedicated logic registers : 0 / 6,272 ( 0 % )
+Total logic elements : 0 / 33,216 ( 0 % )
+    Total combinational functions : 0 / 33,216 ( 0 % )
+    Dedicated logic registers : 0 / 33,216 ( 0 % )
 Total registers : 0
-Total pins : 81 / 180 ( 45 % )
+Total pins : 81 / 475 ( 17 % )
 Total virtual pins : 0
-Total memory bits : 0 / 276,480 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
-Total PLLs : 0 / 2 ( 0 % )
+Total memory bits : 0 / 483,840 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
