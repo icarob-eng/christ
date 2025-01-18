@@ -37,8 +37,8 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE AUTO
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
 set_global_assignment -name TOP_LEVEL_ENTITY CHRIST
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:07:52  DEZEMBRO 23, 2024"
@@ -73,4 +73,72 @@ set_global_assignment -name VHDL_FILE Adder_16b_ALU.vhd
 set_global_assignment -name VHDL_FILE adder_16b.vhd
 set_global_assignment -name VHDL_FILE abext.vhd
 set_global_assignment -name VHDL_FILE CHRIST.vhd
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_N2 -to clk
+set_location_assignment PIN_W26 -to ext_in_buttons[3]
+set_location_assignment PIN_P23 -to ext_in_buttons[2]
+set_location_assignment PIN_N23 -to ext_in_buttons[1]
+set_location_assignment PIN_G26 -to ext_in_buttons[0]
+set_location_assignment PIN_U4 -to ext_in_switches[15]
+set_location_assignment PIN_U3 -to ext_in_switches[14]
+set_location_assignment PIN_T7 -to ext_in_switches[13]
+set_location_assignment PIN_P2 -to ext_in_switches[12]
+set_location_assignment PIN_P1 -to ext_in_switches[11]
+set_location_assignment PIN_N1 -to ext_in_switches[10]
+set_location_assignment PIN_A13 -to ext_in_switches[9]
+set_location_assignment PIN_B13 -to ext_in_switches[8]
+set_location_assignment PIN_C13 -to ext_in_switches[7]
+set_location_assignment PIN_AC13 -to ext_in_switches[6]
+set_location_assignment PIN_AD13 -to ext_in_switches[5]
+set_location_assignment PIN_AF14 -to ext_in_switches[4]
+set_location_assignment PIN_AE14 -to ext_in_switches[3]
+set_location_assignment PIN_P25 -to ext_in_switches[2]
+set_location_assignment PIN_N26 -to ext_in_switches[1]
+set_location_assignment PIN_N25 -to ext_in_switches[0]
+set_location_assignment PIN_R3 -to ext_out_7seg_10[13]
+set_location_assignment PIN_R4 -to ext_out_7seg_10[12]
+set_location_assignment PIN_R5 -to ext_out_7seg_10[11]
+set_location_assignment PIN_T9 -to ext_out_7seg_10[10]
+set_location_assignment PIN_P7 -to ext_out_7seg_10[9]
+set_location_assignment PIN_P6 -to ext_out_7seg_10[8]
+set_location_assignment PIN_T2 -to ext_out_7seg_10[7]
+set_location_assignment PIN_T3 -to ext_out_7seg_10[6]
+set_location_assignment PIN_R6 -to ext_out_7seg_10[5]
+set_location_assignment PIN_R7 -to ext_out_7seg_10[4]
+set_location_assignment PIN_T4 -to ext_out_7seg_10[3]
+set_location_assignment PIN_U2 -to ext_out_7seg_10[2]
+set_location_assignment PIN_U1 -to ext_out_7seg_10[1]
+set_location_assignment PIN_U9 -to ext_out_7seg_10[0]
+set_location_assignment PIN_N9 -to ext_out_7seg_32[13]
+set_location_assignment PIN_P9 -to ext_out_7seg_32[12]
+set_location_assignment PIN_L7 -to ext_out_7seg_32[11]
+set_location_assignment PIN_L6 -to ext_out_7seg_32[10]
+set_location_assignment PIN_L9 -to ext_out_7seg_32[9]
+set_location_assignment PIN_L2 -to ext_out_7seg_32[8]
+set_location_assignment PIN_L3 -to ext_out_7seg_32[7]
+set_location_assignment PIN_M4 -to ext_out_7seg_32[6]
+set_location_assignment PIN_M5 -to ext_out_7seg_32[5]
+set_location_assignment PIN_M3 -to ext_out_7seg_32[4]
+set_location_assignment PIN_M2 -to ext_out_7seg_32[3]
+set_location_assignment PIN_P3 -to ext_out_7seg_32[2]
+set_location_assignment PIN_P4 -to ext_out_7seg_32[1]
+set_location_assignment PIN_R2 -to ext_out_7seg_32[0]
+set_location_assignment PIN_AE13 -to ext_out_leds[15]
+set_location_assignment PIN_AF13 -to ext_out_leds[14]
+set_location_assignment PIN_AE15 -to ext_out_leds[13]
+set_location_assignment PIN_AD15 -to ext_out_leds[12]
+set_location_assignment PIN_AC14 -to ext_out_leds[11]
+set_location_assignment PIN_AA13 -to ext_out_leds[10]
+set_location_assignment PIN_Y13 -to ext_out_leds[9]
+set_location_assignment PIN_AA14 -to ext_out_leds[8]
+set_location_assignment PIN_AC21 -to ext_out_leds[7]
+set_location_assignment PIN_AD21 -to ext_out_leds[6]
+set_location_assignment PIN_AD23 -to ext_out_leds[5]
+set_location_assignment PIN_AD22 -to ext_out_leds[4]
+set_location_assignment PIN_AC22 -to ext_out_leds[3]
+set_location_assignment PIN_AB21 -to ext_out_leds[2]
+set_location_assignment PIN_AF23 -to ext_out_leds[1]
+set_location_assignment PIN_AE23 -to ext_out_leds[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
