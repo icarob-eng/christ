@@ -2,8 +2,8 @@ entity CHRIST is
 	port(
 		clk : in bit; -- TODO: PERS
 		ext_out_leds	   : out BIT_VECTOR(15 downto 0);
-		ext_out_7seg_10    : out BIT_VECTOR(15 downto 0);
-		ext_out_7seg_32    : out BIT_VECTOR(15 downto 0);
+		ext_out_7seg_10    : out BIT_VECTOR(13 downto 0);
+		ext_out_7seg_32    : out BIT_VECTOR(13 downto 0);
 		ext_in_switches    : in BIT_VECTOR(15 downto 0);
 		ext_in_buttons     : in BIT_VECTOR(15 downto 0)
 	);
