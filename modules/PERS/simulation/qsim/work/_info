@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\GSNN\Projetos\ComputadorAgoraVai2\christ\modules\PERS\simulation\qsim
+vPERS
+Z1 !s100 l`QdHKWTFQAG[gnXDj@CK3
+Z2 IUh@P8PomzPef7@nPGH?iQ0
+Z3 VA8WDn8m8KG7`JQ[Y@9o1e2
+Z4 dC:\Users\GSNN\Projetos\ComputadorAgoraVai2\christ\modules\PERS\simulation\qsim
+Z5 w1737323299
+Z6 8PERS.vo
+Z7 FPERS.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|PERS.vo|
+Z10 o-work work -O0
+Z11 n@p@e@r@s
+!i10b 1
+!s85 0
+Z12 !s108 1737323299.954000
+Z13 !s107 PERS.vo|
+!s101 -O0
+vPERS_vlg_check_tst
+!i10b 1
+Z14 !s100 L5=NO7aQ:B6M:H;Nf9U;C2
+Z15 I[:WJLP9RcA@<YXF<@2GLO2
+Z16 VM^gkhF0:>MHKcI8PN__ZP0
+R4
+Z17 w1737323298
+Z18 8PERS.vt
+Z19 FPERS.vt
+L0 69
+R8
+r1
+!s85 0
+31
+Z20 !s108 1737323300.080000
+Z21 !s107 PERS.vt|
+Z22 !s90 -work|work|PERS.vt|
+!s101 -O0
+R10
+Z23 n@p@e@r@s_vlg_check_tst
+vPERS_vlg_sample_tst
+!i10b 1
+Z24 !s100 Q;7_oD3>U5egj13j@Di@>3
+Z25 I?fj6_KHbmQaNjKa^OmaNX3
+Z26 VGzM<GM2JYfDC<jU=>M[_N3
+R4
+R17
+R18
+R19
+L0 29
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z27 n@p@e@r@s_vlg_sample_tst
+vPERS_vlg_vec_tst
+!i10b 1
+Z28 !s100 kj_j:ZMB@:Jf>zT73DTeb1
+Z29 IBWR2KfzSLTAVNon=0AJYl0
+Z30 V8[]ICMN:A6RKS=e3ccTOR0
+R4
+R17
+R18
+R19
+Z31 L0 1265
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R10
+Z32 n@p@e@r@s_vlg_vec_tst
