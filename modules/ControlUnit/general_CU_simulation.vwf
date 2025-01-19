@@ -20,6 +20,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -3784,7 +3786,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "alu_ops";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 95;
 	TREE_LEVEL = 0;
 	CHILDREN = 96, 97, 98, 99, 100;
@@ -3794,7 +3796,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "alu_ops[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 96;
 	TREE_LEVEL = 1;
 	PARENT = 95;
@@ -3804,7 +3806,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "alu_ops[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 97;
 	TREE_LEVEL = 1;
 	PARENT = 95;
@@ -3814,7 +3816,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "alu_ops[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 98;
 	TREE_LEVEL = 1;
 	PARENT = 95;
@@ -3824,7 +3826,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "alu_ops[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 99;
 	TREE_LEVEL = 1;
 	PARENT = 95;
@@ -3834,7 +3836,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "alu_ops[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 100;
 	TREE_LEVEL = 1;
 	PARENT = 95;
@@ -3844,7 +3846,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 101;
 	TREE_LEVEL = 0;
 	CHILDREN = 102, 103, 104, 105, 106, 107, 108;
@@ -3854,7 +3856,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 102;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3864,7 +3866,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 103;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3874,7 +3876,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 104;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3884,7 +3886,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 105;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3894,7 +3896,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 106;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3904,7 +3906,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 107;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3914,7 +3916,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "cache_addr[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 108;
 	TREE_LEVEL = 1;
 	PARENT = 101;
@@ -3942,7 +3944,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 111;
 	TREE_LEVEL = 0;
 	CHILDREN = 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127;
@@ -3952,7 +3954,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[15]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 112;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -3962,7 +3964,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[14]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 113;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -3972,7 +3974,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[13]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 114;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -3982,7 +3984,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[12]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 115;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -3992,7 +3994,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[11]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 116;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4002,7 +4004,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[10]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 117;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4012,7 +4014,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[9]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 118;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4022,7 +4024,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[8]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 119;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4032,7 +4034,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[7]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 120;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4042,7 +4044,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[6]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 121;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4052,7 +4054,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 122;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4062,7 +4064,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 123;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4072,7 +4074,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 124;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4082,7 +4084,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 125;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4092,7 +4094,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 126;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4102,7 +4104,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "mem_addr[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 127;
 	TREE_LEVEL = 1;
 	PARENT = 111;
@@ -4130,7 +4132,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pers_addr";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 130;
 	TREE_LEVEL = 0;
 	CHILDREN = 131, 132, 133;
@@ -4140,7 +4142,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pers_addr[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 131;
 	TREE_LEVEL = 1;
 	PARENT = 130;
@@ -4150,7 +4152,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pers_addr[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 132;
 	TREE_LEVEL = 1;
 	PARENT = 130;
@@ -4160,7 +4162,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "pers_addr[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 133;
 	TREE_LEVEL = 1;
 	PARENT = 130;
@@ -4188,7 +4190,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_a";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 136;
 	TREE_LEVEL = 0;
 	CHILDREN = 137, 138, 139;
@@ -4198,7 +4200,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_a[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 137;
 	TREE_LEVEL = 1;
 	PARENT = 136;
@@ -4208,7 +4210,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_a[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 138;
 	TREE_LEVEL = 1;
 	PARENT = 136;
@@ -4218,7 +4220,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_a[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 139;
 	TREE_LEVEL = 1;
 	PARENT = 136;
@@ -4228,7 +4230,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_b";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 140;
 	TREE_LEVEL = 0;
 	CHILDREN = 141, 142, 143;
@@ -4238,7 +4240,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_b[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 141;
 	TREE_LEVEL = 1;
 	PARENT = 140;
@@ -4248,7 +4250,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_b[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 142;
 	TREE_LEVEL = 1;
 	PARENT = 140;
@@ -4258,7 +4260,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_read_b[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 143;
 	TREE_LEVEL = 1;
 	PARENT = 140;
@@ -4268,7 +4270,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_write";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 144;
 	TREE_LEVEL = 0;
 	CHILDREN = 145, 146, 147;
@@ -4278,7 +4280,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_write[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 145;
 	TREE_LEVEL = 1;
 	PARENT = 144;
@@ -4288,7 +4290,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_write[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 146;
 	TREE_LEVEL = 1;
 	PARENT = 144;
@@ -4298,7 +4300,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "rf_write[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Unsigned;
+	RADIX = Binary;
 	TREE_INDEX = 147;
 	TREE_LEVEL = 1;
 	PARENT = 144;
