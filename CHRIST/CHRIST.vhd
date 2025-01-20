@@ -20,7 +20,7 @@ architecture behav of CHRIST is
 	signal ALU_FLAGS, FLAGR_OUT                           : BIT_VECTOR(2 downto 0); -- Flag input and Flag register output
 	signal CACHE_ADDR                                     : BIT_VECTOR(6 downto 0);
 	signal MEM_ADDR, MAIN_BUS, ALU_A, ALU_B               : BIT_VECTOR(15 downto 0);
-	signal RF_OUT, PERS_OUT, MEM_OUT, CACHE_OUT           : BIT_VECTOR(15 downto 0);
+	signal ALU_OUT, PERS_OUT, MEM_OUT, CACHE_OUT           : BIT_VECTOR(15 downto 0);
 	signal MUX_CTRL                                       : BIT_VECTOR(1 downto 0);
 	signal CACHE_R, CACHE_W, MEM_R, MEM_W, PERS_R, PERS_W : bit; -- Read/Write Enable in memories
 	signal IR_OUT, PC_OUT, PC_IN, PC_A, PC_B              : BIT_VECTOR(15 downto 0);
@@ -191,7 +191,7 @@ begin -- mapping
 	);
 
 	Mux : Mux4x1_16b port map(
-		i00 => RF_OUT,
+		i00 => ALU_OUT,
 		i01 => PERS_OUT,
 		i10 => MEM_OUT,
 		i11 => CACHE_OUT,
@@ -201,7 +201,7 @@ begin -- mapping
 
 	RF1 : RF port map(w_addr => RF_WRITE, r_a_addr => RF_READ_A, r_b_addr => RF_READ_B, input => MAIN_BUS, a_out => ALU_A, b_out => ALU_B, clk => clk);
 
-	ALU1 : ALU port map(a => ALU_A, b => ALU_B, op => ALU_OPS, flags => ALU_FLAGS, r => MAIN_BUS);
+	ALU1 : ALU port map(a => ALU_A, b => ALU_B, op => ALU_OPS, flags => ALU_FLAGS, r => ALU_OUT);
 	FLAGR : Reg_3b port map(input => ALU_FLAGS, output => FLAGR_OUT, write_en => EXEC_EN, clk => clk); -- flag register
 	
 end architecture behav;
