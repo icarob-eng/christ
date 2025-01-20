@@ -10,17 +10,19 @@ entity ControlUnit is
 			pers_addr                            : out BIT_VECTOR(2 downto 0);
 			ir_out, pc_out, main_bus             : in  BIT_VECTOR(15 downto 0);  -- output from IR and PC regs
 			pc_a, pc_b                           : out BIT_VECTOR(15 downto 0);
+			mux_ctrl                             : out BIT_VECTOR(1 downto 0);
 			exec_en, fetch_en, next_s, next_e    : out bit;  -- HLSM representations
 			s, e                                 : in  bit
 		);
 end ControlUnit;
 
 architecture behav of ControlUnit is
-	signal ZERO                : BIT_VECTOR(15 downto 0) := "0000000000000000";
-	signal I                   : BIT_VECTOR(5 downto 0);
-	signal A, B, C             : BIT_VECTOR(2 downto 0);
-	signal D                   : bit;
-	signal I_Ctl, I_Dat, I_ALU : bit; -- flags the type of instruction
+	signal ZERO                   : BIT_VECTOR(15 downto 0) := "0000000000000000";
+	signal I                      : BIT_VECTOR(5 downto 0);
+	signal A, B, C                : BIT_VECTOR(2 downto 0);
+	signal D                      : bit;
+	signal I_Ctl, I_Dat, I_ALU    : bit; -- flags the type of instruction
+	signal CACHE_R, MEM_R, PERS_R : bit;
 	
 	function to_bit(input: boolean) return bit is
 	begin
@@ -71,7 +73,8 @@ begin
 	
 	---- s == 0 -> FETCH
 	fetch_en <= not s;
-	mem_r    <= not s; -- provisory: memory only for reading code to IR
+	MER_R    <= not s; -- provisory: memory only for reading code to IR
+	mem_r    <= MER_R;
 	mem_w    <= '0';
 	mem_addr <= pc_out;  -- provisory (will not read without mem_r)
 	
@@ -120,14 +123,19 @@ begin
 		s1  => I_ALU or (to_bit(I = "010100") and not s), -- results in (0,A) for all cases except R2R and ALU
 		o   => rf_write
 	);
-	
-	cache_r <= not s and to_bit(I = "010011");
+
+	CACHE_R <= not s and to_bit(I = "010011");
+	cache_r <= CACHE_R;
 	cache_w <= not s and to_bit(I = "010111");
 	cache_addr <= B & C & D;
 	
-	pers_r <= not s and to_bit(I = "010001");
+	PERS_R <= not s and to_bit(I = "010001");
+	pers_r <= PERS_R;
 	pers_w <= not s and to_bit(I = "010101");
 	pers_addr <= B;
+
+	mux_ctrl(0) <= I_Dat and (PERS_R or CACHE_R);
+	mux_ctrl(1) <= I_Dat and (MEM_R or CACHE_R);
 	
 	---- Next states:
 	next_e <= '0';  -- add EXECUTE extender conditions here
