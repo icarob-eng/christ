@@ -22,7 +22,7 @@ architecture behav of ControlUnit is
 	signal A, B, C                : BIT_VECTOR(2 downto 0);
 	signal D                      : bit;
 	signal I_Ctl, I_Dat, I_ALU    : bit; -- flags the type of instruction
-	signal CACHE_R, MEM_R, PERS_R : bit;
+	signal S_CACHE_R, S_MEM_R, S_PERS_R : bit;
 	
 	function to_bit(input: boolean) return bit is
 	begin
@@ -73,8 +73,8 @@ begin
 	
 	---- s == 0 -> FETCH
 	fetch_en <= not s;
-	MER_R    <= not s; -- provisory: memory only for reading code to IR
-	mem_r    <= MER_R;
+	S_MEM_R    <= not s; -- provisory: memory only for reading code to IR
+	mem_r    <= S_MEM_R;
 	mem_w    <= '0';
 	mem_addr <= pc_out;  -- provisory (will not read without mem_r)
 	
@@ -124,18 +124,18 @@ begin
 		o   => rf_write
 	);
 
-	CACHE_R <= not s and to_bit(I = "010011");
-	cache_r <= CACHE_R;
+	S_CACHE_R <= not s and to_bit(I = "010011");
+	cache_r <= S_CACHE_R;
 	cache_w <= not s and to_bit(I = "010111");
 	cache_addr <= B & C & D;
 	
-	PERS_R <= not s and to_bit(I = "010001");
-	pers_r <= PERS_R;
+	S_PERS_R <= not s and to_bit(I = "010001");
+	pers_r <= S_PERS_R;
 	pers_w <= not s and to_bit(I = "010101");
 	pers_addr <= B;
 
-	mux_ctrl(0) <= I_Dat and (PERS_R or CACHE_R);
-	mux_ctrl(1) <= I_Dat and (MEM_R or CACHE_R);
+	mux_ctrl(0) <= I_Dat and (S_PERS_R or S_CACHE_R);
+	mux_ctrl(1) <= I_Dat and (S_MEM_R or S_CACHE_R);
 	
 	---- Next states:
 	next_e <= '0';  -- add EXECUTE extender conditions here
