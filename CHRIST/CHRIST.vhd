@@ -1,11 +1,16 @@
 entity CHRIST is 
 	port(
 		clk : in bit; -- TODO: PERS
-		ext_out_leds	   : out BIT_VECTOR(15 downto 0);
-		ext_out_7seg_10    : out BIT_VECTOR(13 downto 0);
-		ext_out_7seg_32    : out BIT_VECTOR(13 downto 0);
-		ext_in_switches    : in BIT_VECTOR(15 downto 0);
-		ext_in_buttons     : in BIT_VECTOR(15 downto 0)
+		  
+        ext_out_leds	      : out BIT_VECTOR(15 downto 0);
+		  
+        ext_out_7seg_3     : out BIT_VECTOR(6 downto 0);
+        ext_out_7seg_2     : out BIT_VECTOR(6 downto 0);
+		  ext_out_7seg_1     : out BIT_VECTOR(6 downto 0);
+		  ext_out_7seg_0     : out BIT_VECTOR(6 downto 0);
+		  
+		  ext_in_switches    : in BIT_VECTOR(15 downto 0);
+		  ext_in_buttons     : in BIT_VECTOR(15 downto 0)
 	);
 end CHRIST;
 
@@ -40,14 +45,28 @@ architecture behav of CHRIST is
 	end component;
 
 	component PERS is  -- periferals module. TODO: add external connections
-		port(
-			addr       : in  BIT_VECTOR(2 downto 0);  -- 2^3 periferals
-			r_en, w_en : in  bit; -- Read/Write Enable (0 is read)
-			input      : in  BIT_VECTOR(15 downto 0);
-			output     : out BIT_VECTOR(15 downto 0);
-			clk        : in  bit
-		);
+		 port(
+			  addr       			: in BIT_VECTOR(2 downto 0);  -- 2^3 periferals
+			  r_en, w_en 			: in bit; -- Read/Write Enable (0 is read)
+			  bus_in      			: in BIT_VECTOR(15 downto 0); 
+			  bus_out     			: out BIT_VECTOR(15 downto 0);
+			  
+			  ext_out_leds	      : out BIT_VECTOR(15 downto 0);
+			  
+			  ext_out_7seg_3     : out BIT_VECTOR(6 downto 0);
+			  ext_out_7seg_2     : out BIT_VECTOR(6 downto 0);
+			  ext_out_7seg_1     : out BIT_VECTOR(6 downto 0);
+			  ext_out_7seg_0     : out BIT_VECTOR(6 downto 0);
+			  
+			  ext_in_switches    : in BIT_VECTOR(15 downto 0);
+			  ext_in_buttons     : in BIT_VECTOR(15 downto 0);
+			  
+			  clk        : in bit
+		 );
 	end component;
+	
+	
+
 
 	component RF is
 		port(
@@ -119,6 +138,7 @@ architecture behav of CHRIST is
 	end component;
 	
 begin -- mapping
+
 	-- Control Path
 	ControlUnit1 : ControlUnit port map(
 			alu_ops => ALU_OPS,
@@ -134,6 +154,9 @@ begin -- mapping
 			s => S, e => E
 		);
 		
+		
+		
+		
 	e_reg : Reg_1b port map(input => NEXT_E,     output => E,     write_en => clk, clk => clk);
 	s_reg : Reg_1b port map(input => NEXT_S,     output => S,     write_en => clk, clk => clk);
 	
@@ -144,7 +167,24 @@ begin -- mapping
 	-- Data Path
 	Cache1 : Cache port map(addr => CACHE_ADDR, r_en => CACHE_R, w_en => CACHE_W, input => MAIN_BUS, output => MAIN_BUS, clk => clk);
 	Mem1   : Mem   port map(addr => MEM_ADDR,   r_en => MEM_R,   w_en => MEM_W,   input => MAIN_BUS, output => MAIN_BUS, clk => clk);
-	PERS1  : PERS  port map(addr => PERS_ADDR,  r_en => PERS_R,  w_en => PERS_W,  input => MAIN_BUS, output => MAIN_BUS, clk => clk);
+	
+	PERS1  : PERS  
+	port map(
+		addr => PERS_ADDR,
+		r_en => PERS_R,
+		w_en => PERS_W,
+		bus_in => MAIN_BUS,
+		bus_out => MAIN_BUS,
+		ext_out_leds => ext_out_leds,
+		ext_out_7seg_3 => ext_out_7seg_3,
+		ext_out_7seg_2 => ext_out_7seg_2,
+		ext_out_7seg_1 => ext_out_7seg_1,
+		ext_out_7seg_0 => ext_out_7seg_0,
+		ext_in_switches => ext_in_switches,
+		ext_in_buttons => ext_in_buttons,
+		clk => clk
+	);
+	
 
 	RF1 : RF port map(w_addr => RF_WRITE, r_a_addr => RF_READ_A, r_b_addr => RF_READ_B, input => MAIN_BUS, a_out => ALU_A, b_out => ALU_B, clk => clk);
 
