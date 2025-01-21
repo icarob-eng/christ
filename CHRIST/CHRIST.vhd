@@ -163,8 +163,8 @@ begin -- mapping
 			s => S, e => E
 		);
 
-	e_reg  : Reg_1b port map(input => NEXT_E,     output => E,     write_en => clk, clk => clk);
-	s_reg  : Reg_1b port map(input => NEXT_S,     output => S,     write_en => clk, clk => clk);
+	e_reg  : Reg_1b port map(input => NEXT_E,     output => E,     write_en => '1', clk => clk);
+	s_reg  : Reg_1b port map(input => NEXT_S,     output => S,     write_en => '1', clk => clk);
 	
 	IR     : Reg_16b port map(input => MAIN_BUS, output => IR_OUT, write_en => FETCH_EN, clk => clk);
 	PC_add : Adder_16b port map(a => PC_A, b => PC_B, cin => '0', s => PC_IN, cout => open);
