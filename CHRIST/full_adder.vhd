@@ -1,7 +1,10 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity Full_Adder is
 	port(
-		a, b, cin: in bit;
-		cout, s: out bit
+		a, b, cin: in std_logic;
+		cout, s: out std_logic
 	);
 end;
 

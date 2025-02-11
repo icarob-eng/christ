@@ -1,8 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity Flags_Calculator is
 	port(
-		s: in bit_vector(15 downto 0);
-		a_15, cout_15, cout_14: in bit;
-		flags: out bit_vector(2 downto 0)
+		s: in std_logic_vector(15 downto 0);
+		a_15, cout_15, cout_14: in std_logic;
+		flags: out std_logic_vector(2 downto 0)
 	);
 end;
 

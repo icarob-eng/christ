@@ -1,9 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity ALU is
     port(
-        a, b  : in BIT_VECTOR(15 downto 0);
-        op    : in BIT_VECTOR(4 downto 0);
-        flags : out BIT_VECTOR(2 downto 0);
-        r     : out BIT_VECTOR(15 downto 0)
+        a, b  : in std_logic_vector(15 downto 0);
+        op    : in std_logic_vector(4 downto 0);
+        flags : out std_logic_vector(2 downto 0);
+        r     : out std_logic_vector(15 downto 0)
     );
 end ALU;
 
@@ -12,24 +15,24 @@ architecture behav of ALU is
 
 	component Extensor_ALU is
 		port(
-			a, b: in bit_vector(15 downto 0);
-			op: in bit_vector(3 downto 0);
-			out_ext_a, out_ext_b: out bit_vector(15 downto 0);
-			cin : out bit
+			a, b: in std_logic_vector(15 downto 0);
+			op: in std_logic_vector(3 downto 0);
+			out_ext_a, out_ext_b: out std_logic_vector(15 downto 0);
+			cin : out std_logic
 		);
 	end component;
 	
 	component Adder_16b_ALU is
 		port(
-			a, b: in bit_vector(15 downto 0);
-			cin: in bit;
-			flags: out bit_vector(2 downto 0);
-			r: out bit_vector(15 downto 0)
+			a, b: in std_logic_vector(15 downto 0);
+			cin: in std_logic;
+			flags: out std_logic_vector(2 downto 0);
+			r: out std_logic_vector(15 downto 0)
 		);
 	end component;
 	
-	signal OUT_EXT_A, OUT_EXT_B: bit_vector(15 downto 0); -- extensors outputs
-	signal CIN : bit;
+	signal OUT_EXT_A, OUT_EXT_B: std_logic_vector(15 downto 0); -- extensors outputs
+	signal CIN : std_logic;
 
 begin
 

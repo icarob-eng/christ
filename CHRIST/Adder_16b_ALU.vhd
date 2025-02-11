@@ -1,9 +1,12 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity Adder_16b_ALU is
 	port(
-		a, b: in bit_vector(15 downto 0);
-		cin: in bit;
-		flags: out bit_vector(2 downto 0);
-		r: out bit_vector(15 downto 0)
+		a, b: in std_logic_vector(15 downto 0);
+		cin: in std_logic;
+		flags: out std_logic_vector(2 downto 0);
+		r: out std_logic_vector(15 downto 0)
 	);
 end;
 
@@ -11,22 +14,22 @@ architecture behav of Adder_16b_ALU is
 
 	component Full_Adder is
 		port(
-			a, b, cin: in bit;
-			cout, s: out bit
+			a, b, cin: in std_logic;
+			cout, s: out std_logic
 		);
 	end component;
 	
 	component Flags_Calculator is
 		port(
-			s: in bit_vector(15 downto 0);
-			a_15, cout_15, cout_14: in bit;
-			flags: out bit_vector(2 downto 0)
+			s: in std_logic_vector(15 downto 0);
+			a_15, cout_15, cout_14: in std_logic;
+			flags: out std_logic_vector(2 downto 0)
 		);
 	end component;
 	
-	signal COUTS: bit_vector(15 downto 0); -- stores full adders couts
+	signal COUTS: std_logic_vector(15 downto 0); -- stores full adders couts
 	
-	signal S_ADDERS: bit_vector(15 downto 0); -- stores adders results
+	signal S_ADDERS: std_logic_vector(15 downto 0); -- stores adders results
 	
 begin
 	full_adder15: Full_Adder port map(a => a(15), b => b(15), cin => COUTS(14), s => S_ADDERS(15), cout => COUTS(15));

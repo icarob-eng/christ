@@ -1,3 +1,6 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity CHRIST is 
 	port(
 		clk : in bit; -- TODO: PERS
@@ -133,7 +136,7 @@ architecture behav of CHRIST is
 			a, b : in  BIT_VECTOR(15 downto 0);
 			cin  : in  bit;
 			s    : out BIT_VECTOR(15 downto 0);
-			cout : out bit  -- TODO: consider PC overflow
+			cout : out bit
 		);
 	end component;
 

@@ -1,9 +1,47 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity CINExt is
+	port(
+		op: in std_logic_vector(3 downto 0);
+		cin: out std_logic
+	);
+end CINExt;
+
+architecture behav of CINExt is
+begin
+	cin <= ( not op(3) and not op(2) and op(1)  );
+end;
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ABExt is
+	port(
+		op: in std_logic_vector(3 downto 0);
+		ia, ib: in std_logic;
+		oa, ob: out std_logic
+	);
+end ABExt;
+
+architecture behav of ABExt is
+
+begin
+	oa <= ( not op(3) and not op(2) and ia ) or ( not op(3) and not op(0) and ia ) or ( not op(3) and not op(1) and ia and ib ) or ( not op(3) and op(1) and ia and not ib ) or ( not op(3) and op(2) and op(1) and not ia and ib ) or ( op(3) and not op(2) and not op(1) and not op(0) and not ia  );
+
+	ob <= ( not op(3) and op(2) and not op(1) and not op(0) ) or ( not op(3) and not op(2) and not op(1) and op(0) and ib ) or ( not op(3) and not op(2) and op(1) and not op(0) and not ib  );
+end;
+
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity Extensor_ALU is
 	port(
-		a, b: in bit_vector(15 downto 0);
-		op: in bit_vector(3 downto 0);
-		out_ext_a, out_ext_b: out bit_vector(15 downto 0);
-		cin : out bit
+		a, b: in std_logic_vector(15 downto 0);
+		op: in std_logic_vector(3 downto 0);
+		out_ext_a, out_ext_b: out std_logic_vector(15 downto 0);
+		cin : out std_logic
 	);
 end;
 
@@ -11,16 +49,16 @@ architecture behav of Extensor_ALU is
 	
 	component ABExt is
 		port(
-			op: in bit_vector(3 downto 0);
-			ia, ib: in bit;
-			oa, ob: out bit	
+			op: in std_logic_vector(3 downto 0);
+			ia, ib: in std_logic;
+			oa, ob: out std_logic
 		);
 	end component;
 	
 	component CINExt is
 		port(
-			op: in bit_vector(3 downto 0);
-			cin: out bit	
+			op: in std_logic_vector(3 downto 0);
+			cin: out std_logic
 		);
 	end component;
 	

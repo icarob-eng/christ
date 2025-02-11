@@ -1,14 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity RF is
     port(
-        w_addr, r_a_addr, r_b_addr : in BIT_VECTOR(2 downto 0);
-        input                                : in BIT_VECTOR(15 downto 0);
-        a_out, b_out                         : out BIT_VECTOR(15 downto 0);
-        clk                                  : in bit
+        w_addr, r_a_addr, r_b_addr : in std_logic_vector(2 downto 0);
+        input                                : in std_logic_vector(15 downto 0);
+        a_out, b_out                         : out std_logic_vector(15 downto 0);
+        clk                                  : in std_logic
     );
 end RF;
 
 architecture Behavioral of RF is
-    type RegisterArray is array (0 to 7) of BIT_VECTOR(15 downto 0); -- 8 registradores de 16 bits
+    type RegisterArray is array (0 to 7) of std_logic_vector(15 downto 0); -- 8 registradores de 16 bits
     signal Registers : RegisterArray := (others => (others => '0')); -- Inicialização para 0
 	 
 begin

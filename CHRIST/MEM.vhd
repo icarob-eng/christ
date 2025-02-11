@@ -1,15 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
 entity Mem is
     port(
-        addr       : in BIT_VECTOR(15 downto 0);  -- 2^16 addresses
-        r_en, w_en : in bit; -- Read/Write Enable (0 is read)
-        input      : in BIT_VECTOR(15 downto 0);
-        output     : out BIT_VECTOR(15 downto 0);
-        clk        : in bit
+        addr       : in std_logic_vector(15 downto 0);  -- 2^16 addresses
+        r_en, w_en : in std_logic; -- Read/Write Enable (0 is read)
+        input      : in std_logic_vector(15 downto 0);
+        output     : out std_logic_vector(15 downto 0);
+        clk        : in std_logic
     );
 end Mem;
 
 architecture behav of Mem is
-	signal selected : BIT_VECTOR(15 downto 0);
+	signal selected : std_logic_vector(15 downto 0);
 begin
     selection: with addr select selected
 		-- <= "0011000000000000" when "0000000000000000", -- first op is NOPE, for simplicity
