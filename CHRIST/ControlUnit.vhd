@@ -3,145 +3,169 @@ use ieee.std_logic_1164.all;
 
 entity ControlUnit is
     port(
-			alu_ops                              : out std_logic_vector(4 downto 0);
-			alu_flags                            : in  std_logic_vector(2 downto 0);
-			rf_read_a, rf_read_b, rf_write       : out std_logic_vector(2 downto 0);
-			cache_r, mem_r, pers_r               : out std_logic;
-			cache_w, mem_w, pers_w               : out std_logic;
-			cache_addr                           : out std_logic_vector(6 downto 0);
-			mem_addr                             : out std_logic_vector(15 downto 0);
-			pers_addr                            : out std_logic_vector(2 downto 0);
-			ir_out, pc_out, main_bus             : in  std_logic_vector(15 downto 0);  -- output from IR and PC regs
-			pc_a, pc_b                           : out std_logic_vector(15 downto 0);
-			mux_ctrl                             : out std_logic_vector(1 downto 0);
-			exec_en, fetch_en, next_s, next_e    : out std_logic;  -- HLSM representations
-			s, e                                 : in  std_logic
+		alu_ops                           : out std_logic_vector(4 downto 0);
+		alu_flags                         : in  std_logic_vector(2 downto 0);
+		rf_read_a, rf_read_b, rf_write    : out std_logic_vector(2 downto 0);
+		cache_r, mem_r, pers_r            : out std_logic;
+		cache_w, mem_w, pers_w            : out std_logic;
+		cache_addr                        : out std_logic_vector(6 downto 0);
+		mem_addr                          : out std_logic_vector(15 downto 0);
+		pers_addr                         : out std_logic_vector(2 downto 0);
+		ir_out, pc_out, main_bus          : in  std_logic_vector(15 downto 0);  -- output from IR and PC regs
+		pc_a, pc_b                        : out std_logic_vector(15 downto 0);
+		mux_ctrl                          : out std_logic_vector(1 downto 0);
+		exec_en, fetch_en, next_s, next_e : out std_logic;  -- HLSM representations
+		s, e                              : in  std_logic
 		);
 end ControlUnit;
 
 architecture behav of ControlUnit is
-	signal ZERO                   : std_logic_vector(15 downto 0) := "0000000000000000";
-	signal I                      : std_logic_vector(5 downto 0);
-	signal A, B, C                : std_logic_vector(2 downto 0);
-	signal D                      : std_logic;
-	signal I_Ctl, I_Dat, I_ALU    : std_logic; -- flags the type of instruction
-	signal S_CACHE_R, S_MEM_R, S_PERS_R : std_logic;
-	
-	function to_std_logic(input: boolean) return std_logic is
-	begin
-		if input then
-			return '1';
-		end if;
-	return '0';	end function;
-	
-	component Mux2x1_3b is
-		port(
-			i0, i1 : in  std_logic_vector(2 downto 0);
-			s      : in  std_logic;
-			o      : out std_logic_vector(2 downto 0)
-		);
-	end component;
-		
-	component Mux2x1_5b is
-		port(
-			i0, i1 : in  std_logic_vector(4 downto 0);
-			s      : in  std_logic;
-			o      : out std_logic_vector(4 downto 0)
-		);
-	end component;
-	
-	component Mux4x1_3b is
-		port(
-			i00, i01, i10, i11 : in  std_logic_vector(2 downto 0);
-			s0, s1             : in  std_logic;
-			o                  : out std_logic_vector(2 downto 0)
-		);
-	end component;
-	
-	component Mux4x1_16b is
-		port(
-			i00, i01, i10, i11 : in  std_logic_vector(15 downto 0);
-			s0, s1             : in  std_logic;
-			o                  : out std_logic_vector(15 downto 0)
-		);
-	end component;
+	signal ZERO    : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal I       : std_logic_vector(5 downto 0);
+	signal A, B, C : std_logic_vector(2 downto 0);
+	signal D       : std_logic;
 
+	type mux_selector is (ALU, PERS, MEM, CACHE);
 begin
+	-- internal singals
 	-- breakup of Word
 	I <= ir_out(15 downto 10);  -- instruction
 	A <= ir_out(9 downto 7);
 	B <= ir_out(6 downto 4);
 	C <= ir_out(3 downto 1);
 	D <= ir_out(0);
-	
-	---- s == 0 -> FETCH
-	fetch_en <= not s;
-	S_MEM_R    <= not s; -- provisory: memory only for reading code to IR
-	mem_r    <= S_MEM_R;
-	mem_w    <= '0';
-	mem_addr <= pc_out;  -- provisory (will not read without mem_r)
-	
-	---- s == 1 -> EXECUTE
-	exec_en <= s;  -- eq to PC write
-	I_Ctl   <= s and (not I(5) and not I(4)); -- I == 00xxxx -> Ctrl
-	I_Dat   <= s and not I(5) and I(4);     -- I == 01xxxx -> Dat
-	I_ALU   <= s and I(5);                   -- I == 1xxxxx -> ALU
-	
-	ALU_ops_MUX : Mux2x1_5b port map(
-		i0 => ZERO(4 downto 0),
-		i1 =>    I(4 downto 0),
-		s  => I_ALU,
-		o  => alu_ops
-	);
-	
-	pc_a <= pc_out; -- provisory
-	pc_b_MUX : Mux4x1_16b port map(
-		i00 => ZERO,                               -- stop PC (HALT, 000000)
-		i01 => ZERO(15 downto 1) & "1",            -- increments PC
-		i10 => ZERO(15 downto 10) & A & B & C & D, -- adds arguments to PC (JMPRD,  000001)
-		i11 => ZERO(15 downto 7) &      B & C & D, -- adds arguments to PC (JMPRDC, 000101)
-		s0  => not (to_std_logic(I = "000000") or to_std_logic(I = "000001")),
-		s1  => to_std_logic(I = "000001") or to_std_logic(I = "000101"), -- JUMP operations
-		o   => pc_b
-	);
-	
-	rf_a_MUX : Mux2x1_3b port map(
-		i0 => ZERO(2 downto 0),
-		i1 => A,
-		s  => I_ALU or (I_Dat and not I(2)),  -- ALU or read from reg operation
-		o  => rf_read_a
-	);
-	rf_b_MUX : Mux2x1_3b port map(
-		i0 => ZERO(2 downto 0),
-		i1 => B,
-		s  => I_ALU,
-		o  => rf_read_b
-	);
-	rf_w_MUX : Mux4x1_3b port map(
-		i00 => ZERO(2 downto 0),
-		i01 => A,
-		i10 => B,
-		i11 => C,
-		s0  => I_ALU or (I_Dat and not I(2)),     -- results in (0,B) for all cases except writing in reg and ALU
-		s1  => I_ALU or (to_std_logic(I = "010100") and not s), -- results in (0,A) for all cases except R2R and ALU
-		o   => rf_write
-	);
 
-	S_CACHE_R <= not s and to_std_logic(I = "010011");
-	cache_r <= S_CACHE_R;
-	cache_w <= not s and to_std_logic(I = "010111");
-	cache_addr <= B & C & D;
-	
-	S_PERS_R <= not s and to_std_logic(I = "010001");
-	pers_r <= S_PERS_R;
-	pers_w <= not s and to_std_logic(I = "010101");
-	pers_addr <= B;
+	-- TODO: using mux, read can always be true
+	cache_r <= '1';
+	mem_r   <= '1';
+	pers_r  <= '1';
 
-	mux_ctrl(0) <= I_Dat and (S_PERS_R or S_CACHE_R);
-	mux_ctrl(1) <= I_Dat and (S_MEM_R or S_CACHE_R);
-	
-	---- Next states:
-	next_e <= '0';  -- add EXECUTE extender conditions here
-	next_s <= not s or e;
+	instruction_proc: process(s, e) is
+	variable mux_input : mux_selector := ALU;
+	begin
+		-- outputs with side effects (to overwrite)
+		rf_write <= "000";
+		cache_w  <= '0';
+		mem_w    <= '0';
+		pers_w   <= '0';
+
+		if s='0' and not e='0' then  -- s == 1 and e == 0 -> EXECUTE
+			-- HLSM transition
+			-- TODO: use e
+			fetch_en <= '0';
+			exec_en  <= '1';
+			next_e <= '0';
+			next_s <= '0';
+
+			-- PC <- PC + 1 (to overwrite)
+			pc_a <= pc_out;
+			pc_b <= ZERO(15 downto 1) & "1";
+
+			-- conventions (to overwrite)
+			rf_read_b <= "000";  -- TODO: check if alu ops make this obsolete
+			rf_read_a <= A;
+			alu_ops <= ZERO(4 downto 0);
+
+			-- optmizations for ALU ops
+			if I(5)='1' then
+				alu_ops <= I(4 downto 0);
+				rf_write <= A;
+			end if;
+
+			case I is
+				when "000000" =>  -- HALT
+					-- PC <- PC + 0
+					pc_b <= ZERO;
+				when "000001" =>  -- JMPRD
+					-- PC <- PC + ABCD
+					pc_b <= ZERO(5 downto 0)&A&B&C&D;  -- TODO: check bytesize
+				when "000101" =>  -- JMPRDC
+					if alu_flags = A then
+						-- PC <- PC + BCD
+						pc_b <= ZERO(8 downto 0)&B&C&D;
+					end if;
+				when "001100" =>  -- NOPE
+					-- No operation...
+				when "010001" =>  -- P2R
+					-- R[A] <- P[B]
+					mux_input := PERS;
+					pers_addr <= B;
+					rf_write <= A;
+				when "010011" =>  -- C2R
+					-- R[A] <- Cache[BCD]
+					mux_input := CACHE;
+					cache_addr <= B&C&D;
+					rf_write <= A;
+				when "010100" =>  -- R2R
+					-- R[B] <- R[A]
+					rf_write <= B;
+				when "010101" =>  -- R2P
+					-- P[B] <- R[A]
+					pers_w <= '1';
+					pers_addr <= B;
+				when "010111" =>  -- R2C
+					-- Cache[BCD] <- R[A]
+					cache_w <= '1';
+					cache_addr <= B&C&D;
+				when "100000" =>  -- NULL
+					-- R[A] <- R[A] + 0
+				when "100001" =>  -- ADD
+					-- R[A] <- R[B] + R[C]
+					rf_read_a <= B;
+					rf_read_b <= C;
+				when "100010" =>  -- SUB
+					-- R[A] <- R[B] - R[C]
+					rf_read_a <= B;
+					rf_read_b <= C;
+				when "100011" =>  -- INC
+					-- R[A] <- R[A] + 1
+				when "100100" =>  -- DEC
+					-- R[A] <- R[A] - 1
+				when "100101" =>  -- AND
+					-- R[A] <- R[B] & R[C]
+					rf_read_a <= B;
+					rf_read_b <= C;
+				when "100110" =>  -- OR
+					-- R[A] <- R[B] | R[C]
+					rf_read_a <= B;
+					rf_read_b <= C;
+				when "100111" =>  -- XOR
+					-- R[A] <- R[B] xor R[C]
+					rf_read_a <= B;
+					rf_read_b <= C;
+				when "101000" =>  -- NOT
+					-- R[A] <- not(R[A])
+				when others =>    -- INVALID: HALT
+					-- PC <- PC + 0
+					pc_b <= ZERO;
+			end case;
+
+		elsif s='1' and e='1' then   -- s == 1 and e == 1 -> EXECUTE EXTENDED
+			-- HLSM transition
+			fetch_en <= '0';
+			exec_en  <= '1';
+			next_e <= '0';
+			next_s <= '0';
+
+		else                            -- s == 0 -> FETCH
+			-- HLSM transition
+			fetch_en <= '1';
+			exec_en  <= '0';
+			next_e <= '0';
+			next_s <= '1';
+
+			-- IR <- MEM[PC]
+			mem_w <= '0';
+			mem_addr <= pc_out;
+			mux_input := MEM;
+		end if;
+
+		case mux_input is
+			when ALU   => mux_ctrl <= "00";
+			when PERS  => mux_ctrl <= "01";
+			when MEM   => mux_ctrl <= "10";
+			when CACHE => mux_ctrl <= "11";
+		end case;
+	end process;
 
 end architecture behav;
