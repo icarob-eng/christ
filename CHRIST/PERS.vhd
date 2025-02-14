@@ -3,22 +3,18 @@ use ieee.std_logic_1164.all;
 
 entity PERS is  -- periferals module
     port(
-        addr       : in std_logic_vector(2 downto 0);  -- 2^3 periferals
-        r_en, w_en : in std_logic; -- Read/Write Enable (0 is read)
-        bus_in      : in std_logic_vector(15 downto 0);
-        bus_out     : out std_logic_vector(15 downto 0);
-		  
-        ext_out_leds	      : out std_logic_vector(15 downto 0);
-		  
-        ext_out_7seg_3     : out std_logic_vector(6 downto 0);
-        ext_out_7seg_2     : out std_logic_vector(6 downto 0);
-		  ext_out_7seg_1     : out std_logic_vector(6 downto 0);
-		  ext_out_7seg_0     : out std_logic_vector(6 downto 0);
-		  
-		  ext_in_switches    : in std_logic_vector(15 downto 0);
-		  ext_in_buttons     : in std_logic_vector(15 downto 0);
-		  
-        clk        : in std_logic
+		addr            : in std_logic_vector(2 downto 0);  -- 2^3 periferals
+		r_en, w_en      : in std_logic; -- Read/Write Enable (0 is read)
+		bus_in          : in std_logic_vector(15 downto 0);
+		bus_out         : out std_logic_vector(15 downto 0);
+		ext_out_leds    : out std_logic_vector(15 downto 0);
+		ext_out_7seg_3  : out std_logic_vector(6 downto 0);
+		ext_out_7seg_2  : out std_logic_vector(6 downto 0);
+		ext_out_7seg_1  : out std_logic_vector(6 downto 0);
+		ext_out_7seg_0  : out std_logic_vector(6 downto 0);
+		ext_in_switches : in std_logic_vector(15 downto 0);
+		ext_in_buttons  : in std_logic_vector(15 downto 0);
+		clk             : in std_logic
     );
 end PERS;
 
@@ -49,20 +45,19 @@ port (
 	out_display_2 : out std_logic_vector(6 downto 0);
 	out_display_1 : out std_logic_vector(6 downto 0);
 	out_display_0 : out std_logic_vector(6 downto 0);
-	clk			  : in  std_logic
+	clk           : in  std_logic
 );
 end component Decoder_4x_7_seg_hex;
 
 
 component My_Mux8x1_16b is
     port(
-        i000, i001, i010, i011, i100, i101, i110, i111 : in  std_logic_vector(15 downto 0);
-        s0, s1, s2                                     : in  std_logic;
-		  en															 : in std_logic;
+		i000, i001, i010, i011, i100, i101, i110, i111 : in  std_logic_vector(15 downto 0);
+		s0, s1, s2                                     : in  std_logic;
+		en                                             : in std_logic;
         o                                              : out std_logic_vector(15 downto 0)
     );
 end component;
-
 
 	alias addr2 : std_logic is addr(2);
 	alias addr1 : std_logic is addr(1);
