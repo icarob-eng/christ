@@ -6,7 +6,6 @@ entity ControlUnit is
 		alu_ops                           : out std_logic_vector(4 downto 0);
 		alu_flags                         : in  std_logic_vector(2 downto 0);
 		rf_read_a, rf_read_b, rf_write    : out std_logic_vector(2 downto 0);
-		cache_r, mem_r, pers_r            : out std_logic;
 		cache_w, mem_w, pers_w            : out std_logic;
 		cache_addr                        : out std_logic_vector(6 downto 0);
 		mem_addr                          : out std_logic_vector(15 downto 0);
@@ -21,10 +20,12 @@ end ControlUnit;
 
 architecture behav of ControlUnit is
 	signal ZERO    : std_logic_vector(15 downto 0) := "0000000000000000";
+	signal ONE     : std_logic_vector(15 downto 0) := "1111111111111111";
 	signal I       : std_logic_vector(5 downto 0);
 	signal A, B, C : std_logic_vector(2 downto 0);
 	signal D       : std_logic;
 
+	signal
 	type mux_selector is (ALU, PERS, MEM, CACHE);
 begin
 	-- internal singals
@@ -35,13 +36,9 @@ begin
 	C <= ir_out(3 downto 1);
 	D <= ir_out(0);
 
-	-- TODO: using mux, read can always be true
-	cache_r <= '1';
-	mem_r   <= '1';
-	pers_r  <= '1';
-
 	instruction_proc: process(s, e) is
 	variable mux_input : mux_selector := ALU;
+	variable PC_APPEND : std_logic_vector := ZERO;
 	begin
 		-- outputs with side effects (to overwrite)
 		rf_write <= "000";
@@ -78,11 +75,14 @@ begin
 					pc_b <= ZERO;
 				when "000001" =>  -- JMPRD
 					-- PC <- PC + ABCD
-					pc_b <= ZERO(5 downto 0)&A&B&C&D;  -- TODO: check bytesize
+					-- appends one if increment is negative
+					PC_APPEND <= ONE when A(2) else ZERO;
+					pc_b <= PC_APPEND(5 downto 0)&A&B&C&D;
 				when "000101" =>  -- JMPRDC
 					if alu_flags = A then
 						-- PC <- PC + BCD
-						pc_b <= ZERO(8 downto 0)&B&C&D;
+						PC_APPEND <= ONE when B(2) else ZERO;
+						pc_b <= PC_APPEND(8 downto 0)&B&C&D;
 					end if;
 				when "001100" =>  -- NOPE
 					-- No operation...

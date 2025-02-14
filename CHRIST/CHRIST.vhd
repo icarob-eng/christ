@@ -46,7 +46,7 @@ architecture behav of CHRIST is
 		);
 	end component;
 
-	component PERS is  -- periferals module. TODO: add external connections
+	component PERS is  -- periferals module
 		 port(
 			  addr            : in std_logic_vector(2 downto 0);  -- 2^3 periferals
 			  w_en            : in std_logic; -- Write Enable
