@@ -20,16 +20,15 @@ end architecture behav;
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity My_Mux8x1_16b is
+entity Mux8x1_16b is
     port(
         i000, i001, i010, i011, i100, i101, i110, i111 : in  std_logic_vector(15 downto 0);
-        en                                             : in  std_logic;
         s0, s1, s2                                     : in  std_logic;
         o                                              : out std_logic_vector(15 downto 0)
     );
-end My_Mux8x1_16b;
+end Mux8x1_16b;
 
-architecture behav of My_Mux8x1_16b is
+architecture behav of Mux8x1_16b is
 	signal s_aux : std_logic_vector(2 downto 0);
 begin
 	s_aux <= s2 & s1 & s0;

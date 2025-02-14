@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity PERS is  -- periferals module
     port(
 		addr            : in std_logic_vector(2 downto 0);  -- 2^3 periferals
-		r_en, w_en      : in std_logic; -- Read/Write Enable (0 is read)
+		w_en            : in std_logic; -- Write Enable
 		bus_in          : in std_logic_vector(15 downto 0);
 		bus_out         : out std_logic_vector(15 downto 0);
 		ext_out_leds    : out std_logic_vector(15 downto 0);
@@ -50,11 +50,10 @@ port (
 end component Decoder_4x_7_seg_hex;
 
 
-component My_Mux8x1_16b is
+component Mux8x1_16b is
     port(
 		i000, i001, i010, i011, i100, i101, i110, i111 : in  std_logic_vector(15 downto 0);
 		s0, s1, s2                                     : in  std_logic;
-		en                                             : in std_logic;
         o                                              : out std_logic_vector(15 downto 0)
     );
 end component;
@@ -143,7 +142,6 @@ begin
 	-- output connetions 
 
 	ext_out_leds <= BUS_REG_PER_1;
-		
 
 	
 	decoder_displays_7seg : Decoder_4x_7_seg_hex
@@ -157,7 +155,7 @@ begin
 	);
 
 
-	mux_out : My_Mux8x1_16b
+	mux_out : Mux8x1_16b
 	port map(
 		i000 => BUS_REG_PER_0,
 		i001 => BUS_REG_PER_1,
@@ -167,9 +165,7 @@ begin
 		i101 => BUS_REG_PER_5,
 		i110 => BUS_REG_PER_6,
 		i111 => BUS_REG_PER_7,
-		
-		en => r_en,
-		
+
 		s0 => addr0,
 		s1 => addr1,
 		s2 => addr2,

@@ -3,148 +3,144 @@ use ieee.std_logic_1164.all;
 
 entity CHRIST is 
 	port(
-		clk : in bit; -- TODO: PERS
-		  
-        ext_out_leds	      : out BIT_VECTOR(15 downto 0);
-		  
-        ext_out_7seg_3     : out BIT_VECTOR(6 downto 0);
-        ext_out_7seg_2     : out BIT_VECTOR(6 downto 0);
-		  ext_out_7seg_1     : out BIT_VECTOR(6 downto 0);
-		  ext_out_7seg_0     : out BIT_VECTOR(6 downto 0);
-		  
-		  ext_in_switches    : in BIT_VECTOR(15 downto 0);
-		  ext_in_buttons     : in BIT_VECTOR(15 downto 0)
+		clk             : in std_logic;
+		ext_out_leds    : out std_logic_vector(15 downto 0);
+		ext_out_7seg_3  : out std_logic_vector(6 downto 0);
+		ext_out_7seg_2  : out std_logic_vector(6 downto 0);
+		ext_out_7seg_1  : out std_logic_vector(6 downto 0);
+		ext_out_7seg_0  : out std_logic_vector(6 downto 0);
+		ext_in_switches : in std_logic_vector(15 downto 0);
+		ext_in_buttons  : in std_logic_vector(15 downto 0)
 	);
 end CHRIST;
 
 architecture behav of CHRIST is
-	signal ALU_OPS                                        : BIT_VECTOR(4 downto 0); -- ALU operation
-	signal RF_READ_A, RF_READ_B, RF_WRITE, PERS_ADDR      : BIT_VECTOR(2 downto 0); -- RF and pers addressing
-	signal ALU_FLAGS, FLAGR_OUT                           : BIT_VECTOR(2 downto 0); -- Flag input and Flag register output
-	signal CACHE_ADDR                                     : BIT_VECTOR(6 downto 0);
-	signal MEM_ADDR, MAIN_BUS, ALU_A, ALU_B               : BIT_VECTOR(15 downto 0);
-	signal ALU_OUT, PERS_OUT, MEM_OUT, CACHE_OUT           : BIT_VECTOR(15 downto 0);
-	signal MUX_CTRL                                       : BIT_VECTOR(1 downto 0);
-	signal CACHE_R, CACHE_W, MEM_R, MEM_W, PERS_R, PERS_W : bit; -- Read/Write Enable in memories
-	signal IR_OUT, PC_OUT, PC_IN, PC_A, PC_B              : BIT_VECTOR(15 downto 0);
-	signal EXEC_EN, FETCH_EN, NEXT_S, NEXT_E, S, E        : bit; -- EXEC and FETCH from HLSM
+	signal ALU_OPS                                   : std_logic_vector(4 downto 0); -- ALU operation
+	signal RF_READ_A, RF_READ_B, RF_WRITE, PERS_ADDR : std_logic_vector(2 downto 0); -- RF and pers addressing
+	signal ALU_FLAGS, FLAGR_OUT                      : std_logic_vector(2 downto 0); -- Flag input and Flag register output
+	signal CACHE_ADDR                                : std_logic_vector(6 downto 0);
+	signal MEM_ADDR, MAIN_BUS, ALU_A, ALU_B          : std_logic_vector(15 downto 0);
+	signal ALU_OUT, PERS_OUT, MEM_OUT, CACHE_OUT     : std_logic_vector(15 downto 0);
+	signal MUX_CTRL                                  : std_logic_vector(1 downto 0);
+	signal CACHE_W, MEM_W, PERS_W                    : std_logic; -- Write Enable in memories (read redundant due to mux)
+	signal IR_OUT, PC_OUT, PC_IN, PC_A, PC_B         : std_logic_vector(15 downto 0);
+	signal EXEC_EN, FETCH_EN, NEXT_S, NEXT_E, S, E   : std_logic; -- EXEC and FETCH from HLSM
 
 	component Cache is
 		port(
-			addr       : in  BIT_VECTOR(6 downto 0);  -- 2^7 addresses
-			r_en, w_en : in  bit; -- Read/Write Enable (0 is read)
-			input      : in  BIT_VECTOR(15 downto 0);
-			output     : out BIT_VECTOR(15 downto 0);
-			clk        : in  bit
+			addr   : in  std_logic_vector(6 downto 0);  -- 2^7 addresses
+			w_en   : in  std_logic; -- Write Enable
+			input  : in  std_logic_vector(15 downto 0);
+			output : out std_logic_vector(15 downto 0);
+			clk    : in  std_logic
 		);
 	end component;
 
 	component Mem is
 		port(
-			addr       : in  BIT_VECTOR(15 downto 0);  -- 2^16 addresses
-			r_en, w_en : in  bit; -- Read/Write Enable (0 is read)
-			input      : in  BIT_VECTOR(15 downto 0);
-			output     : out BIT_VECTOR(15 downto 0);
-			clk        : in  bit
+			addr   : in  std_logic_vector(15 downto 0);  -- 2^16 addresses
+			w_en   : in  std_logic; -- Write Enable
+			input  : in  std_logic_vector(15 downto 0);
+			output : out std_logic_vector(15 downto 0);
+			clk    : in  std_logic
 		);
 	end component;
 
 	component PERS is  -- periferals module. TODO: add external connections
 		 port(
-			  addr            : in BIT_VECTOR(2 downto 0);  -- 2^3 periferals
-			  r_en, w_en      : in bit; -- Read/Write Enable (0 is read)
-			  bus_in          : in BIT_VECTOR(15 downto 0);
-			  bus_out         : out BIT_VECTOR(15 downto 0);
+			  addr            : in std_logic_vector(2 downto 0);  -- 2^3 periferals
+			  w_en            : in std_logic; -- Write Enable
+			  bus_in          : in std_logic_vector(15 downto 0);
+			  bus_out         : out std_logic_vector(15 downto 0);
 			  
-			  ext_out_leds    : out BIT_VECTOR(15 downto 0);
+			  ext_out_leds    : out std_logic_vector(15 downto 0);
 			  
-			  ext_out_7seg_3  : out BIT_VECTOR(6 downto 0);
-			  ext_out_7seg_2  : out BIT_VECTOR(6 downto 0);
-			  ext_out_7seg_1  : out BIT_VECTOR(6 downto 0);
-			  ext_out_7seg_0  : out BIT_VECTOR(6 downto 0);
+			  ext_out_7seg_3  : out std_logic_vector(6 downto 0);
+			  ext_out_7seg_2  : out std_logic_vector(6 downto 0);
+			  ext_out_7seg_1  : out std_logic_vector(6 downto 0);
+			  ext_out_7seg_0  : out std_logic_vector(6 downto 0);
 			  
-			  ext_in_switches : in BIT_VECTOR(15 downto 0);
-			  ext_in_buttons  : in BIT_VECTOR(15 downto 0);
+			  ext_in_switches : in std_logic_vector(15 downto 0);
+			  ext_in_buttons  : in std_logic_vector(15 downto 0);
 			  
-			  clk        : in bit
+			  clk        : in std_logic
 		 );
 	end component;
 
 	component RF is
 		port(
-			w_addr, r_a_addr, r_b_addr : in  BIT_VECTOR(2 downto 0);
-			input                      : in  BIT_VECTOR(15 downto 0);
-			a_out, b_out               : out BIT_VECTOR(15 downto 0);
-			clk                        : in  bit
+			w_addr, r_a_addr, r_b_addr : in  std_logic_vector(2 downto 0);
+			input                      : in  std_logic_vector(15 downto 0);
+			a_out, b_out               : out std_logic_vector(15 downto 0);
+			clk                        : in  std_logic
 		);
 	end component;
 
 	component ALU is
 		port(
-			a, b  : in  BIT_VECTOR(15 downto 0);
-			op    : in  BIT_VECTOR(4 downto 0);
-			flags : out BIT_VECTOR(2 downto 0);
-			r     : out BIT_VECTOR(15 downto 0)
+			a, b  : in  std_logic_vector(15 downto 0);
+			op    : in  std_logic_vector(4 downto 0);
+			flags : out std_logic_vector(2 downto 0);
+			r     : out std_logic_vector(15 downto 0)
 		);
 	end component;
 
 	component ControlUnit is
 		port(
-			alu_ops                              : out BIT_VECTOR(4 downto 0);
-			alu_flags                            : in  BIT_VECTOR(2 downto 0);
-			rf_read_a, rf_read_b, rf_write       : out BIT_VECTOR(2 downto 0);
-			cache_r, mem_r, pers_r               : out bit;
-			cache_w, mem_w, pers_w               : out bit;
-			cache_addr                           : out BIT_VECTOR(6 downto 0);
-			mem_addr                             : out BIT_VECTOR(15 downto 0);
-			pers_addr                            : out BIT_VECTOR(2 downto 0);
-			ir_out, pc_out, main_bus             : in  BIT_VECTOR(15 downto 0);  -- output from IR and PC regs
-			pc_a, pc_b                           : out BIT_VECTOR(15 downto 0);
-			mux_ctrl                             : out BIT_VECTOR(1 downto 0);
-			exec_en, fetch_en, next_s, next_e    : out bit;  -- HLSM representations
-			s, e                                 : in  bit
+			alu_ops                              : out std_logic_vector(4 downto 0);
+			alu_flags                            : in  std_logic_vector(2 downto 0);
+			rf_read_a, rf_read_b, rf_write       : out std_logic_vector(2 downto 0);
+			cache_w, mem_w, pers_w               : out std_logic;
+			cache_addr                           : out std_logic_vector(6 downto 0);
+			mem_addr                             : out std_logic_vector(15 downto 0);
+			pers_addr                            : out std_logic_vector(2 downto 0);
+			ir_out, pc_out, main_bus             : in  std_logic_vector(15 downto 0);  -- output from IR and PC regs
+			pc_a, pc_b                           : out std_logic_vector(15 downto 0);
+			mux_ctrl                             : out std_logic_vector(1 downto 0);
+			exec_en, fetch_en, next_s, next_e    : out std_logic;  -- HLSM representations
+			s, e                                 : in  std_logic
 		);
 	end component;
 
 	component Reg_1b is  -- D flip-flop
 		port(
-			input, write_en, clk : in  bit;
-			output               : out bit
+			input, write_en, clk : in  std_logic;
+			output               : out std_logic
 		);
 	end component;
 	
 	component Reg_3b is
 		port(
-			input    : in  BIT_VECTOR(2 downto 0);
-			output   : out BIT_VECTOR(2 downto 0);
-			write_en : in  bit;
-			clk      : in  bit
+			input    : in  std_logic_vector(2 downto 0);
+			output   : out std_logic_vector(2 downto 0);
+			write_en : in  std_logic;
+			clk      : in  std_logic
 		);
 	end component;
 	
 	component Reg_16b is
 		port(
-			input    : in  BIT_VECTOR(15 downto 0);
-			output   : out BIT_VECTOR(15 downto 0);
-			write_en : in  bit;
-			clk      : in  bit
+			input    : in  std_logic_vector(15 downto 0);
+			output   : out std_logic_vector(15 downto 0);
+			write_en : in  std_logic;
+			clk      : in  std_logic
 		);
 	end component;
 	
 	component Adder_16b is
 		port(
-			a, b : in  BIT_VECTOR(15 downto 0);
-			cin  : in  bit;
-			s    : out BIT_VECTOR(15 downto 0);
-			cout : out bit
+			a, b : in  std_logic_vector(15 downto 0);
+			cin  : in  std_logic;
+			s    : out std_logic_vector(15 downto 0);
+			cout : out std_logic
 		);
 	end component;
 
 	component Mux4x1_16b is
     port(
-        i00, i01, i10, i11 : in  BIT_VECTOR(15 downto 0);
-        s0, s1             : in  bit;
-        o                  : out BIT_VECTOR(15 downto 0)
+        i00, i01, i10, i11 : in  std_logic_vector(15 downto 0);
+        s0, s1             : in  std_logic;
+        o                  : out std_logic_vector(15 downto 0)
     );
 	end component;
 	
@@ -155,7 +151,6 @@ begin -- mapping
 			alu_ops => ALU_OPS,
 			alu_flags => FLAGR_OUT,
 			rf_read_a => RF_READ_A, rf_read_b => RF_READ_B, rf_write => RF_WRITE,
-			cache_r => CACHE_R,       mem_r => MEM_R,       pers_r => PERS_R,
 			cache_w => CACHE_W,       mem_w => MEM_W,       pers_w => PERS_W,
 			cache_addr => CACHE_ADDR, mem_addr => MEM_ADDR, pers_addr => PERS_ADDR,
 			ir_out => IR_OUT, pc_out => PC_OUT,
@@ -174,12 +169,11 @@ begin -- mapping
 	PC     : Reg_16b port map(input => PC_IN,    output => PC_OUT, write_en => EXEC_EN,  clk => clk);
 
 	-- Data Path
-	Cache1 : Cache port map(addr => CACHE_ADDR, r_en => CACHE_R, w_en => CACHE_W, input => MAIN_BUS, output => CACHE_OUT, clk => clk);
-	Mem1   : Mem   port map(addr => MEM_ADDR,   r_en => MEM_R,   w_en => MEM_W,   input => MAIN_BUS, output => MEM_OUT, clk => clk);
+	Cache1 : Cache port map(addr => CACHE_ADDR, w_en => CACHE_W, input => MAIN_BUS, output => CACHE_OUT, clk => clk);
+	Mem1   : Mem   port map(addr => MEM_ADDR,   w_en => MEM_W,   input => MAIN_BUS, output => MEM_OUT, clk => clk);
 	
 	PERS1 : PERS port map(
 		addr => PERS_ADDR,
-		r_en => PERS_R,
 		w_en => PERS_W,
 		bus_in => MAIN_BUS,
 		bus_out => PERS_OUT,
@@ -206,5 +200,4 @@ begin -- mapping
 
 	ALU1 : ALU port map(a => ALU_A, b => ALU_B, op => ALU_OPS, flags => ALU_FLAGS, r => ALU_OUT);
 	FLAGR : Reg_3b port map(input => ALU_FLAGS, output => FLAGR_OUT, write_en => EXEC_EN, clk => clk); -- flag register
-	
 end architecture behav;
