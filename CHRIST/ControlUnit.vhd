@@ -25,7 +25,6 @@ architecture behav of ControlUnit is
 	signal A, B, C : std_logic_vector(2 downto 0);
 	signal D       : std_logic;
 
-	signal
 	type mux_selector is (ALU, PERS, MEM, CACHE);
 begin
 	-- internal singals
@@ -38,7 +37,7 @@ begin
 
 	instruction_proc: process(s, e) is
 	variable mux_input : mux_selector := ALU;
-	variable PC_APPEND : std_logic_vector := ZERO;
+	variable PC_APPEND : std_logic_vector(15 downto 0) := ZERO;
 	begin
 		-- outputs with side effects (to overwrite)
 		rf_write <= "000";
@@ -76,12 +75,16 @@ begin
 				when "000001" =>  -- JMPRD
 					-- PC <- PC + ABCD
 					-- appends one if increment is negative
-					PC_APPEND <= ONE when A(2) else ZERO;
+					if A(2)='1' then
+						PC_APPEND := ONE;
+					end if;
 					pc_b <= PC_APPEND(5 downto 0)&A&B&C&D;
 				when "000101" =>  -- JMPRDC
 					if alu_flags = A then
 						-- PC <- PC + BCD
-						PC_APPEND <= ONE when B(2) else ZERO;
+						if B(2)='1' then
+							PC_APPEND := ONE;
+						end if;
 						pc_b <= PC_APPEND(8 downto 0)&B&C&D;
 					end if;
 				when "001100" =>  -- NOPE
