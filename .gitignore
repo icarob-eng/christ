@@ -70,3 +70,6 @@ incremental_db/
 db/
 _output_files/
 PLLJ_PLLSPE_INFO.txt
+
+# ignore IDE files
+*/.idea/
