@@ -23,7 +23,7 @@ parser.add_argument(
     help='source code binary file.',
 )
 
-# TODO: add update frequency
+# TODO: add update_frequency
 
 parser.add_argument(
     '-s', '--string',

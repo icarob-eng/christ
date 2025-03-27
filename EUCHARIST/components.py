@@ -1,6 +1,8 @@
 import abc
 import time
 from typing import Any
+from unittest import case
+
 from bitstring import Bits
 
 import json
@@ -14,14 +16,18 @@ def split_repr(word: str | DTYPE) -> tuple[str, str, str, str, str]:
     word = word if isinstance(word, str) else Bits(int=word, length=16).bin
     return word[:6], word[6:9], word[9:12], word[12:15], word[15]
 
+
+with open('instructions.json') as f:
+    _instructions = json.load(f)
+
 def opcode2mnemonic(opcode: str) -> str:
     """Converts opcode to mnemonic"""
-    with open('instructions.json') as f:
-        instructions = json.load(f)
-
-    for mnemonic, data in instructions.items():
+    if len(opcode) > 6: raise ValueError('Invalid opcode')
+    for mnemonic, data in _instructions.items():
         if opcode == data['bin']:
             return mnemonic.upper()
+    else:
+        raise ValueError('Unknown opcode')
 
 
 class RTLComponent(abc.ABC):
@@ -73,6 +79,7 @@ class DataComponent(RTLComponent):
             self._buffer_value = initials[self._buffer_key]
 
     def __setitem__(self, key: int, value: DTYPE) -> None:
+        assert isinstance(value, DTYPE)
         if key < 0 or key >= len(self._data):
             raise IndexError('Index out of range')
 
@@ -142,7 +149,7 @@ class CHRIST:
             self.ir,
             self.flagr,
             self.s
-        ]
+        ]  # RTL components
         self.delay = 1/frequency  # delay in secs
 
     @property
@@ -155,29 +162,74 @@ class CHRIST:
             if self.fetch_en:
                 self.ir.write(self.mem[self.pc.read()])
             if self.execute_en:
-                self.control_unit(*split_repr(Bits(int=self.ir.read(), length=16).bin))
+                self.execute_instruction(*split_repr(Bits(int=self.ir.read(), length=16).bin))
 
             for comp in self._on_clock:
                 comp.on_clock(self.clock_cycle)
             self.clock_cycle += 1
             time.sleep(self.delay)
 
-    def control_unit(self, opcode: str, a: str, b: str, c: str, d: str) -> None:
+    def execute_instruction(self, opcode: str, a: str, b: str, c: str, d: str) -> None:
         mnemonic = opcode2mnemonic(opcode)
 
-        if opcode[0:2] != '00':  # if not control
-            self.pc.write(self.pc.read() + 1)  # pc increment
+        ctrl = self.ctrl(mnemonic, opcode, a, b, c, d)
+        _ = self.data(mnemonic, opcode, a, b, c, d)
+        _ = self.alu(mnemonic, opcode, a, b, c, d)
 
+        if not ctrl or mnemonic == 'NOPE':  # if not control or NOPE
+            self.pc.write(self.pc.read() + 1)  # pc increment FIXME: PC overflow
+
+
+    def ctrl(self, mnemonic: str, _: str, a: str, b: str, c: str, d: str) -> bool:
         match mnemonic:
-            case 'JUMP':
-                ...
-            case _:
-                ...
+            case 'HALT': pass  # doesn't increment PC
+            case 'JMPRD': self.pc.write(self.pc.read() + ...)  # FIXME: PC overflow
+            case 'JMPRDC': self.pc.write(self.pc.read() + ...); raise NotImplementedError()  # TODO: Conditional
+            case 'NOPE': pass  # pc increment already implemented
+            case _: return False
+        return True
 
-    def compute_flags(self, number: int) -> tuple[bool, bool, bool]:
+    def data(self, mnemonic: str, opcode: str, a: str, b: str, c: str, d: str) -> bool:
+        match mnemonic:
+            case 'P2R': self.rf[Bits(bin=a).int] = self.pers[Bits(bin=b).int]
+            case 'M2R': raise NotImplementedError('Memory not implemented (M2R)')
+            case 'C2R': self.rf[Bits(bin=a).int] = self.cache[Bits(bin=b+c+d).int]
+            case 'R2R': self.rf[Bits(bin=b).int] = self.rf[Bits(bin=a).int]
+            case 'R2P': self.pers[Bits(bin=b).int] = self.rf[Bits(bin=a).int]
+            case 'R2M': raise NotImplementedError('Memory not implemented (M2R)')
+            case 'R2C': self.cache[Bits(bin=b+c+d).int] = self.rf[Bits(bin=a).int]
+            case  _: return False
+        return True
+
+    def alu(self, mnemonic: str, _: str, a: str, b: str, c: str, __: str) -> bool:
+        """
+        alu operation
+
+        :return bool: whether the mnemonic is known
+        """
+        # bin to int
+        a = Bits(bin=a).int
+        b = Bits(bin=b).int
+        c = Bits(bin=c).int
+        match mnemonic:
+            case 'TEST': r = self.rf[a]
+            case 'ADD': r = self.rf[b] + self.rf[c]
+            case 'SUB': r = self.rf[b] - self.rf[c]
+            case 'INC': r = self.rf[b] + 1
+            case 'DEC': r = self.rf[b] - 1
+            case 'AND': r = self.rf[b] & self.rf[c]
+            case 'OR':  r = self.rf[b] | self.rf[c]
+            case 'XOR': r = self.rf[b] ^ self.rf[c]
+            case 'NOT': r = ~self.rf[a]
+            case _: return False
+        self.flagr.write(self.compute_flags(int(r)))
+        self.rf[a] = DTYPE(r)
+        return True
+
+    @staticmethod
+    def compute_flags(number: int) -> tuple[bool, bool, bool]:
         neg = number < 0
         zero = number == 0
         overflow = number > Bits(bin='0111111111111111').int or number < Bits(bin='1000000000000000').int
         result = (neg, zero, overflow)
-        self.flagr.write(result)
         return result
