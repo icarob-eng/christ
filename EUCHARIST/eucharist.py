@@ -70,4 +70,8 @@ def print_formatted_code(lines: list[DTYPE] | np.ndarray[DTYPE], as_mnemonics=Fa
 
 if __name__ == '__main__':
     code = parse_args()
+    print('Code:')
     print_formatted_code(code, True)
+    print(20*'-' + '\nStarting PC:')
+    computer = CHRIST(code, 1)
+    computer.start()

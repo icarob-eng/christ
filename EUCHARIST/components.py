@@ -1,7 +1,6 @@
 import abc
 import time
 from typing import Any
-from unittest import case
 
 from bitstring import Bits
 
@@ -88,7 +87,7 @@ class DataComponent(RTLComponent):
     def __getitem__(self, key: int) -> DTYPE: return self._data[key]
 
     def on_clock(self, _: int) -> None:
-        self._data = self._buffer_value[self._buffer_key]
+        self._data[self._buffer_key] = self._buffer_value
 
 
 class RegisterFile(DataComponent):
@@ -120,14 +119,15 @@ class Peripherals(RegisterFile):
 
     def on_clock(self, cycle: int) -> None:
         super().on_clock(cycle)
+        # TODO: some input
         # TODO: proper output
         print('cycle:', cycle)
         print(f'LEDS: [{bin(int(self._data[1]))[2:]}]')
-        print(f'SEG_A: [{int(self._data[1])[2:]:04X}]')
-        print(f'SEG_B: [{int(self._data[2])[2:]:04X}]')
+        print(f'SEG_A: [{int(self._data[1]):04X}]')
+        print(f'SEG_B: [{int(self._data[2]):04X}]')
 
 class CHRIST:
-    def __init__(self, source: np.ndarray[DTYPE], frequency: float):
+    def __init__(self, source: np.ndarray[DTYPE] | list[DTYPE], frequency: float):
         self.mem = DataComponent(2**16, initials=source)
         self.cache = DataComponent(2**7)
         self.rf = RegisterFile(2**3)
@@ -181,10 +181,15 @@ class CHRIST:
 
 
     def ctrl(self, mnemonic: str, _: str, a: str, b: str, c: str, d: str) -> bool:
+        # FIXME: PC overflow
         match mnemonic:
             case 'HALT': pass  # doesn't increment PC
-            case 'JMPRD': self.pc.write(self.pc.read() + ...)  # FIXME: PC overflow
-            case 'JMPRDC': self.pc.write(self.pc.read() + ...); raise NotImplementedError()  # TODO: Conditional
+            case 'JMPRD': self.pc.write(self.pc.read() + Bits(bin=a+b+c+d).int)
+            case 'JMPRDC':
+                if self.flagr.read() == Bits(bin=a):
+                    self.pc.write(self.pc.read() + Bits(bin=b+c+d).int)
+                else:
+                    self.pc.write(self.pc.read() + 1)
             case 'NOPE': pass  # pc increment already implemented
             case _: return False
         return True
@@ -222,7 +227,11 @@ class CHRIST:
             case 'XOR': r = self.rf[b] ^ self.rf[c]
             case 'NOT': r = ~self.rf[a]
             case _: return False
-        self.flagr.write(self.compute_flags(int(r)))
+        self.flagr.write(
+            DTYPE(Bits(
+                self.compute_flags(int(r))
+            ).int)
+        )
         self.rf[a] = DTYPE(r)
         return True
 
