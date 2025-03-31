@@ -89,6 +89,10 @@ class DataComponent(RTLComponent):
     def on_clock(self, _: int) -> None:
         self._data[self._buffer_key] = self._buffer_value
 
+    def print_segment(self, start: int, size: int) -> None:
+        for i in range(start, start + size):
+            print(*split_repr(Bits(int=self[i], length=16).bin))
+
 
 class RegisterFile(DataComponent):
     def __init__(self, size: int):
@@ -125,9 +129,10 @@ class Peripherals(RegisterFile):
         print(f'LEDS: [{bin(int(self._data[1]))[2:]}]')
         print(f'SEG_A: [{int(self._data[1]):04X}]')
         print(f'SEG_B: [{int(self._data[2]):04X}]')
+        print('-'*20)
 
 class CHRIST:
-    def __init__(self, source: np.ndarray[DTYPE] | list[DTYPE], frequency: float):
+    def __init__(self, source: np.ndarray[DTYPE] | list[DTYPE], frequency: float, print_length=0):
         self.mem = DataComponent(2**16, initials=source)
         self.cache = DataComponent(2**7)
         self.rf = RegisterFile(2**3)
@@ -152,17 +157,25 @@ class CHRIST:
         ]  # RTL components
         self.delay = 1/frequency  # delay in secs
 
+        self.print_length = print_length
+
     @property
-    def fetch_en(self): return not self.s
+    def fetch_en(self): return not self.s.read()
     @property
-    def execute_en(self): return self.s
+    def execute_en(self): return self.s.read()
 
     def start(self) -> None:
         while True:
+            if self.print_length:
+                self.mem.print_segment(0, self.print_length)
+                print(f'ir[{self.pc.read()}] = ', *split_repr(Bits(int=self.ir.read(), length=16).bin))
+
             if self.fetch_en:
                 self.ir.write(self.mem[self.pc.read()])
+                self.s.write(not self.s.read())
             if self.execute_en:
                 self.execute_instruction(*split_repr(Bits(int=self.ir.read(), length=16).bin))
+                self.s.write(not self.s.read())
 
             for comp in self._on_clock:
                 comp.on_clock(self.clock_cycle)
@@ -183,7 +196,7 @@ class CHRIST:
     def ctrl(self, mnemonic: str, _: str, a: str, b: str, c: str, d: str) -> bool:
         # FIXME: PC overflow
         match mnemonic:
-            case 'HALT': pass  # doesn't increment PC
+            case 'HALT': print('HALT')
             case 'JMPRD': self.pc.write(self.pc.read() + Bits(bin=a+b+c+d).int)
             case 'JMPRDC':
                 if self.flagr.read() == Bits(bin=a):

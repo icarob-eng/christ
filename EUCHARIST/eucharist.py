@@ -73,5 +73,5 @@ if __name__ == '__main__':
     print('Code:')
     print_formatted_code(code, True)
     print(20*'-' + '\nStarting PC:')
-    computer = CHRIST(code, 1)
+    computer = CHRIST(code, 2, 10)
     computer.start()
