@@ -92,6 +92,7 @@ class DataComponent(RTLComponent):
     def print_segment(self, start: int, size: int) -> None:
         for i in range(start, start + size):
             print(*split_repr(Bits(int=self[i], length=16).bin))
+        print('')
 
 
 class RegisterFile(DataComponent):
@@ -132,7 +133,8 @@ class Peripherals(RegisterFile):
         print('-'*20)
 
 class CHRIST:
-    def __init__(self, source: np.ndarray[DTYPE] | list[DTYPE], frequency: float, print_length=0):
+    def __init__(self, source: np.ndarray[DTYPE] | list[DTYPE], frequency: float,
+                 print_length=0, print_ir=False, print_rf=False):
         self.mem = DataComponent(2**16, initials=source)
         self.cache = DataComponent(2**7)
         self.rf = RegisterFile(2**3)
@@ -157,7 +159,9 @@ class CHRIST:
         ]  # RTL components
         self.delay = 1/frequency  # delay in secs
 
-        self.print_length = print_length
+        self.PRINT_LENGTH = print_length
+        self.PRINT_IR = print_ir
+        self.PRINT_RF = print_rf
 
     @property
     def fetch_en(self): return not self.s.read()
@@ -166,16 +170,23 @@ class CHRIST:
 
     def start(self) -> None:
         while True:
-            if self.print_length:
-                self.mem.print_segment(0, self.print_length)
-                print(f'ir[{self.pc.read()}] = ', *split_repr(Bits(int=self.ir.read(), length=16).bin))
-
             if self.fetch_en:
+                print('FETCH')
                 self.ir.write(self.mem[self.pc.read()])
                 self.s.write(not self.s.read())
+
+                if self.PRINT_LENGTH:
+                    self.mem.print_segment(0, self.PRINT_LENGTH)
+                if self.PRINT_RF:
+                    self.rf.print_segment(0, 2 ** 3)
             if self.execute_en:
+                print('EXEC')
                 self.execute_instruction(*split_repr(Bits(int=self.ir.read(), length=16).bin))
                 self.s.write(not self.s.read())
+
+                if self.PRINT_IR:
+                    split = split_repr(Bits(int=self.ir.read(), length=16).bin)
+                    print(f'ir[{self.pc.read()}] = ', opcode2mnemonic(split[0]), *split[1:])
 
             for comp in self._on_clock:
                 comp.on_clock(self.clock_cycle)
@@ -199,7 +210,7 @@ class CHRIST:
             case 'HALT': print('HALT')
             case 'JMPRD': self.pc.write(self.pc.read() + Bits(bin=a+b+c+d).int)
             case 'JMPRDC':
-                if self.flagr.read() == Bits(bin=a):
+                if np.array(self.flagr.read() == Bits(bin=a)).all():
                     self.pc.write(self.pc.read() + Bits(bin=b+c+d).int)
                 else:
                     self.pc.write(self.pc.read() + 1)
@@ -207,7 +218,7 @@ class CHRIST:
             case _: return False
         return True
 
-    def data(self, mnemonic: str, opcode: str, a: str, b: str, c: str, d: str) -> bool:
+    def data(self, mnemonic: str, _: str, a: str, b: str, c: str, d: str) -> bool:
         match mnemonic:
             case 'P2R': self.rf[Bits(bin=a).int] = self.pers[Bits(bin=b).int]
             case 'M2R': raise NotImplementedError('Memory not implemented (M2R)')
@@ -231,7 +242,7 @@ class CHRIST:
         c = Bits(bin=c).int
         match mnemonic:
             case 'TEST': r = self.rf[a]
-            case 'ADD': r = self.rf[b] + self.rf[c]
+            case 'ADD': r = self.rf[b] + self.rf[c]  # FIXME: ADD not working
             case 'SUB': r = self.rf[b] - self.rf[c]
             case 'INC': r = self.rf[b] + 1
             case 'DEC': r = self.rf[b] - 1
