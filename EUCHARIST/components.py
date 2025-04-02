@@ -79,9 +79,9 @@ class DataComponent(RTLComponent):
 
     def __setitem__(self, key: int, value: DTYPE) -> None:
         assert isinstance(value, DTYPE)
-        if key < 0 or key >= len(self._data):
-            raise IndexError('Index out of range')
+        if key < 0 or key >= len(self._data): raise IndexError('Index out of range')
 
+        self._buffer_key = key
         self._buffer_value = value
 
     def __getitem__(self, key: int) -> DTYPE: return self._data[key]
@@ -210,7 +210,9 @@ class CHRIST:
             case 'HALT': print('HALT')
             case 'JMPRD': self.pc.write(self.pc.read() + Bits(bin=a+b+c+d).int)
             case 'JMPRDC':
-                if np.array(self.flagr.read() == Bits(bin=a)).all():
+                if (self.flagr.read()[0] == (Bits(bin=a).bin[0] == '1')
+                        and self.flagr.read()[1] == (Bits(bin=a).bin[1] == '1')
+                        and self.flagr.read()[2] == (Bits(bin=a).bin[2] == '1')):
                     self.pc.write(self.pc.read() + Bits(bin=b+c+d).int)
                 else:
                     self.pc.write(self.pc.read() + 1)
@@ -241,28 +243,27 @@ class CHRIST:
         b = Bits(bin=b).int
         c = Bits(bin=c).int
         match mnemonic:
-            case 'TEST': r = self.rf[a]
-            case 'ADD': r = self.rf[b] + self.rf[c]  # FIXME: ADD not working
-            case 'SUB': r = self.rf[b] - self.rf[c]
-            case 'INC': r = self.rf[b] + 1
-            case 'DEC': r = self.rf[b] - 1
-            case 'AND': r = self.rf[b] & self.rf[c]
-            case 'OR':  r = self.rf[b] | self.rf[c]
-            case 'XOR': r = self.rf[b] ^ self.rf[c]
-            case 'NOT': r = ~self.rf[a]
+            case 'TEST':
+                r = rv = self.rf[a]  # result and real value
+            case 'ADD':
+                r = self.rf[b] + self.rf[c]
+                rv = int(self.rf[b]) + int(self.rf[c])
+            case 'SUB':
+                r = self.rf[b] - self.rf[c]
+                rv = int(self.rf[b]) - int(self.rf[c])
+            case 'INC':
+                r = self.rf[a] + 1
+                rv = int(self.rf[b]) + 1
+            case 'DEC':
+                r = self.rf[a] - 1
+                rv = int(self.rf[b]) - 1
+            case 'AND': r = rv = self.rf[b] & self.rf[c]
+            case 'OR':  r = rv = self.rf[b] | self.rf[c]
+            case 'XOR': r = rv = self.rf[b] ^ self.rf[c]
+            case 'NOT': r = rv = ~self.rf[a]
             case _: return False
         self.flagr.write(
-            DTYPE(Bits(
-                self.compute_flags(int(r))
-            ).int)
+            (r==0, rv<0, r!=rv)
         )
         self.rf[a] = DTYPE(r)
         return True
-
-    @staticmethod
-    def compute_flags(number: int) -> tuple[bool, bool, bool]:
-        neg = number < 0
-        zero = number == 0
-        overflow = number > Bits(bin='0111111111111111').int or number < Bits(bin='1000000000000000').int
-        result = (neg, zero, overflow)
-        return result
